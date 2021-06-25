@@ -1,0 +1,11 @@
+:host {
+    color: var(--front-white-color);
+    max-width: 180px;
+    display: block;
+}
+.banner-preview-img{
+    width: 100%;
+}
+.banner-text{
+    color: var(--gray2-color);
+}

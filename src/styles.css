@@ -7,41 +7,59 @@ html, body {
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 *{
-    box-sizing: border-box;
-    --dark-color: rgba(0, 11, 13, 0.7);
-    --back-dark-color: #00181C;
-    --front-white-color: #fff;
-    --green-color: #00BA0F;
+  box-sizing: border-box;
+  --dark-color: rgba(0, 11, 13, 0.7);
+  --back-dark-color: #00181C;
+  --front-white-color: #fff;
+  --green-color: #00BA0F;
+  --gray2-color: #757575;
+}
+.extented-container,
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .extented-container{
+    max-width: 620px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .extented-container{
+    max-width: 800px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .extented-container{
+    max-width: 1040px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .extented-container{
+    max-width: 1220px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  .extented-container{
+    max-width: 1400px;
+  }
 }
 
-.container {
-    padding: 0 15px;
-}
-  
-@media (min-width: 575.98px){
-    .container {
-        max-width: 540px;
-        margin: auto;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 767.98px){
-    .container {
-        max-width: 720px;	
-    }
-}
-
-@media (min-width: 991.98px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1199.98px){
-    .container {
-        max-width: 1140px;
-    }
-}

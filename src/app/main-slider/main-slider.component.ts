@@ -23,6 +23,7 @@ export class MainSliderComponent implements OnInit {
     centerPadding: '160px',
     dots: true,
     arrows: false,
+    variableWidth: true
 };
 
   constructor() { }
