@@ -1,0 +1,22 @@
+:host{
+    background: var(--dark-color);
+    color: var(--front-white-color);
+    padding: 37px 70px 40px 63px;
+}
+
+.sentence-text{
+    margin-bottom: 60px;
+    font-size: 15px;
+}
+
+.sentense-title{
+    font-size: 23px;
+}
+
+.sentence-link{
+    color: var(--green-color);
+    text-decoration: none;
+    padding: 18px 60px;
+    border: 1px solid var(--green-color);
+    border-radius: 5px;
+}

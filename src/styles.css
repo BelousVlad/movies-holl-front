@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    background: var(--back-dark-color);
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*{
+    box-sizing: border-box;
+    --dark-color: rgba(0, 11, 13, 0.7);
+    --back-dark-color: #00181C;
+    --front-white-color: #fff;
+    --green-color: #00BA0F;
+}
+
+.container {
+    padding: 0 15px;
+}
+  
+@media (min-width: 575.98px){
+    .container {
+        max-width: 540px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 767.98px){
+    .container {
+        max-width: 720px;	
+    }
+}
+
+@media (min-width: 991.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1199.98px){
+    .container {
+        max-width: 1140px;
+    }
+}

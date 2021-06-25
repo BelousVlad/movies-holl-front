@@ -1,0 +1,42 @@
+ngx-slick-carousel .slick-dots{
+    bottom: 10px;
+}
+ngx-slick-carousel .slick-dots li{
+    width: 15px;
+    height: 15px;
+    transition: .3s all;
+}
+ngx-slick-carousel .slick-dots li>button{
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: unset;
+    height: unset;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+ngx-slick-carousel .slick-dots li>button::before{
+    width: unset;
+    height: unset;
+    line-height: 15px;
+    font-size: 0px;
+    text-align: center;
+    display: block;
+    text-align: center;
+    right: 0;
+    color: #fff;
+    transition: .3s all;
+}
+ngx-slick-carousel .slick-dots li.slick-active>button::before{
+    font-size: 8px;
+    color: #fff;
+}
+
+ngx-slick-carousel .slick-dots li.slick-active{
+    transform: scale(1.5);
+}
+
+
+
+
