@@ -1,0 +1,18 @@
+
+:host {
+    width: 218px;
+    color: var(--front-white-color);
+    background: var(--green-color);
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid var(--green-color);
+    transition: .4s all;
+    display: flex;
+    border-radius: 3px;
+}
+:host:active {
+    background: var(--green2-color);
+}
+p {
+    margin: auto;
+}

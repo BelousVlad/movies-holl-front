@@ -1,0 +1,25 @@
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    color: var(--front-white-color);
+    margin: 0 auto;
+}
+
+.name-input{
+    margin-bottom: 20px;
+}
+.tel-input {
+    margin-bottom: 40px;
+}
+app-basic-button {
+    width: 100%;
+}
+
+.terms {
+    margin-top: 10px;
+    color: var(--gray2-color);
+    font-size: 12px;
+    text-align: center;
+}

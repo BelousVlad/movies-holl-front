@@ -1,0 +1,11 @@
+.container{
+    justify-content: center;
+}
+section {
+    padding: 110px 0;
+    /* background: #000B0DB2; */
+    background-image: url('../../assets/images/callback-section-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+}

@@ -29,3 +29,9 @@ h3 {
 p {
     font-size: 21px;
 }
+.devices-links{
+    margin-top: 40px;
+}
+.device-link{
+    margin-right: 20px;
+}
