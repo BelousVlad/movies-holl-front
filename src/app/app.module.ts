@@ -22,7 +22,7 @@ import { CallbackSectionComponent } from './callback-section/callback-section.co
 import { InputDirective } from './directives/input/input-directive.directive';
 import { BasicButtonComponent } from './elements/basic-button/basic-button.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -50,7 +50,8 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
