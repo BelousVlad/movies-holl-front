@@ -1,0 +1,33 @@
+:host {
+    max-width: 284px;
+    height: 153px;
+    display: block;
+}
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+a::before,
+a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    background: var(--green-color);
+}
+a::after {
+    right: 0;
+}
+a::before {
+    left: 0;
+}
+
+
+

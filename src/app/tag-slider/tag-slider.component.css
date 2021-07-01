@@ -1,0 +1,7 @@
+:host {
+    position: relative;
+}
+.arrows-container {
+    position: absolute;
+    top: 50%;
+}

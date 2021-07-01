@@ -9,9 +9,11 @@ footer {
 }
 ul{
     list-style-type: none;
-    width: 25%;
     padding: 0;
     margin: 0;
+}
+.lists-block ul{
+    flex-grow: 1;
 }
 li {
     margin-bottom: 20px;
@@ -35,9 +37,12 @@ a{
     justify-content: space-between;
     width: 100%;
 }
+.support-block{
+    min-width: 288px;
+}
 .subscriber-list,
 .technical-list{
-    width: 35%;
+    width: 50%;
 }
 .social-list i{
     display: inline-flex;
@@ -65,4 +70,25 @@ a{
 }
 .documents-link{
     margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .lists-block{
+        display: none;
+    }
+    .lists-container {
+        justify-content: center;
+    }
+    .documents-link:not(.mobile-visible){
+        display: none;
+    }
+    .documents-container{
+        margin-top: 20px;
+        border-top: 1px solid var(--gray2-color);
+    }
+    .copyright-box {
+        padding-top: 0;
+        border-top: none;
+        text-align: center;
+    }
 }

@@ -35,3 +35,35 @@ p {
 .device-link{
     margin-right: 20px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        margin-bottom: 340px;
+    }
+    .devices-section-image{
+        position: absolute;
+        left: 50vw;
+        transform: translateX(-50%);
+        top: 0%;
+        width: 500px;
+        height: 500px;
+        /* transform: translateY(-50%); */
+    }
+    .info-box {
+        width: 100%;
+    }
+    p {
+        display: none;
+    }
+    .device-link{
+        display: inline-block;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+    }
+}
+

@@ -22,7 +22,8 @@ import { CallbackSectionComponent } from './callback-section/callback-section.co
 import { InputDirective } from './directives/input/input-directive.directive';
 import { BasicButtonComponent } from './elements/basic-button/basic-button.component';
 import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TagSlideComponent } from './tag-slider/tag-slide/tag-slide.component'
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     InputDirective,
     BasicButtonComponent,
     FooterComponent,
+    TagSlideComponent,
   ],
   imports: [
     BrowserModule,

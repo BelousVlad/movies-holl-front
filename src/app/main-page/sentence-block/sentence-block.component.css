@@ -16,7 +16,13 @@
 .sentence-link{
     color: var(--green-color);
     text-decoration: none;
-    padding: 18px 60px;
+    padding: 18px 50px;
     border: 1px solid var(--green-color);
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    :host {
+        padding: 40px 10px;
+    }
 }

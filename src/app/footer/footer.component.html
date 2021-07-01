@@ -1,5 +1,5 @@
 <footer>
-    <div class="container">
+    <div class="container lists-container">
         <div class="footer-block lists-block">
             <ul>
                 <a *ngFor="let record of list1" href="{{record.link}}"><li>{{record.text}}</li></a>
@@ -12,15 +12,19 @@
             </ul>
         </div>
         <div class="footer-block support-block">
-            <ul class="subscriber-list">
-                <li>Абонентский отдел</li>
-                <a *ngFor="let sub of subscriber_list" href="tel: {{sub.tel}}"><li><img src="../../assets/icons/telepgone.svg">{{sub.text}}</li></a>
-            </ul>
-            <ul class="technical-list">
-                <li>Техподдержка</li>
-                <a *ngFor="let tech of tech_sup_list" href="tel: {{tech.tel}}"><li><img src="../../assets/icons/telepgone.svg">{{tech.text}}</li></a>
-            </ul>
-
+            <div class="subscriber-list">
+                <ul>
+                    <li>Абонентский отдел</li>
+                    <a *ngFor="let sub of subscriber_list" href="tel: {{sub.tel}}"><li><img src="../../assets/icons/telepgone.svg">{{sub.text}}</li></a>
+                </ul>
+            </div>
+            <div class="technical-list">
+                <ul>
+                    <li>Техподдержка</li>
+                    <a *ngFor="let tech of tech_sup_list" href="tel: {{tech.tel}}"><li><img src="../../assets/icons/telepgone.svg">{{tech.text}}</li></a>
+                </ul>
+            </div>
+                
             <div class="social-list">
                 <a *ngFor="let social of social_list" href="{{social.link}}">
                     <i>
@@ -32,9 +36,9 @@
     </div>
     <div class="container documents-container">
         <a class="documents-link" href="">О компании</a>
-        <a class="documents-link" href="">О компании</a>
-        <a class="documents-link" href="">О компании</a>
-        <a class="documents-link" href="">О компании</a>
+        <a class="documents-link mobile-visible" href="">Политика конфидициальности</a>
+        <a class="documents-link mobile-visible" href="">Структура собственности</a>
+        <a class="documents-link" href="">Публичный договор</a>
     </div>
     <div class="copyright-box">
         <div class="container">
