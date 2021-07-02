@@ -1,36 +1,7 @@
 <app-main-slider></app-main-slider>
 
-<section class="sentence-section">
-    <div class="extented-container">
-        <app-sentence-block
-            title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus pariatur reprehenderit quidem unde facere officia."
-            text="Lorem ipsum dolor sit amet."
-            link_text="Lorem, ipsum dolor."
-            href="#"
-            class="sentence-block-margin"
-            >
-        </app-sentence-block>
-        
-        <app-sentence-block
-            title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus pariatur reprehenderit quidem unde facere officia."
-            text="Lorem ipsum dolor sit amet."
-            link_text="Lorem, ipsum dolor."
-            href="#"
-            >
-        </app-sentence-block>  
-    </div>
+<router-outlet>
 
-</section>
-
-<section class="tag-slider-section">
-    <div class="container">
-        <app-tag-slider [style.width]="'100%'"></app-tag-slider>
-    </div>
-</section>
-
-<div class="container">
-    <app-movies-banners-slider [style.width]="'100%'">
-    </app-movies-banners-slider>
-</div>
+</router-outlet>
 
 <app-devices-applications-section></app-devices-applications-section>

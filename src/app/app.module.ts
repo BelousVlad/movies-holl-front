@@ -26,6 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TagSlideComponent } from './tag-slider/tag-slide/tag-slide.component';
 import { ArrowRightComponent } from './elements/arrows/arrow-right/arrow-right.component';
 import { ArrowLeftComponent } from './elements/arrows/arrow-left/arrow-left.component';
+import { MoviesListComponent } from './movies-list/movies-list.component';
+import { BasicContentComponent } from './main-page/basic-content/basic-content.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { ArrowLeftComponent } from './elements/arrows/arrow-left/arrow-left.comp
     TagSlideComponent,
     ArrowRightComponent,
     ArrowLeftComponent,
+    MoviesListComponent,
+    BasicContentComponent,
   ],
   imports: [
     BrowserModule,
