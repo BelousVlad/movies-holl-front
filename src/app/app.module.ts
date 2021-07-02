@@ -23,7 +23,9 @@ import { InputDirective } from './directives/input/input-directive.directive';
 import { BasicButtonComponent } from './elements/basic-button/basic-button.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TagSlideComponent } from './tag-slider/tag-slide/tag-slide.component'
+import { TagSlideComponent } from './tag-slider/tag-slide/tag-slide.component';
+import { ArrowRightComponent } from './elements/arrows/arrow-right/arrow-right.component';
+import { ArrowLeftComponent } from './elements/arrows/arrow-left/arrow-left.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { TagSlideComponent } from './tag-slider/tag-slide/tag-slide.component'
     BasicButtonComponent,
     FooterComponent,
     TagSlideComponent,
+    ArrowRightComponent,
+    ArrowLeftComponent,
   ],
   imports: [
     BrowserModule,

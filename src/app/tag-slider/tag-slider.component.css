@@ -4,4 +4,21 @@
 .arrows-container {
     position: absolute;
     top: 50%;
+    color: var(--green-color);
+    z-index: 1;
+}
+.tag-slider-next-arrow,
+.tag-slider-prev-arrow{
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.tag-slider-prev-arrow{
+    left: 0;
+    transform: translateX(-50%);
+}
+.tag-slider-next-arrow{
+    right: 0;
+    transform: translateX(50%);
 }

@@ -1,9 +1,3 @@
 app-tag-slider .slick-list {
     overflow: visible;
 }
-app-tag-slider .arrows-container .slick-next{
-    right: -12px;
-}
-app-tag-slider .arrows-container .slick-prev{
-    left: -12px;
-}
