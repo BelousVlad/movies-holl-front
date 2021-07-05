@@ -9,3 +9,14 @@ section {
     background-size: auto 100%;
     background-position: right;
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 25px 0;
+        background-position: calc(100% + 30vw) 0;
+    }
+}
+
+
+
+

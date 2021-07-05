@@ -16,6 +16,9 @@ app-sentence-block {
     padding: 20px 0;
     margin-bottom: 100px;
 }
+.extented-container{
+    flex-wrap: nowrap;
+}
 @media (max-width: 768px) {
     app-sentence-block {
         width: 100%;

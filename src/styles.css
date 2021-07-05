@@ -23,6 +23,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 576px) {
   .container {

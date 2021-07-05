@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/images/logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <a *ngFor="let item of nav_menu" href="{{ item.link }}"><li>{{ item.text }}</li></a>
+            </ul>
+        </nav>
+        <div class="localization-box">
+            <a href="">UA</a>
+            <a href="">RU</a>
+        </div>
+        <a href="">
+            Tel
+        </a>
+    </div>
+</header>

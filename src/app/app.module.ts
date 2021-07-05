@@ -28,6 +28,9 @@ import { ArrowRightComponent } from './elements/arrows/arrow-right/arrow-right.c
 import { ArrowLeftComponent } from './elements/arrows/arrow-left/arrow-left.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { BasicContentComponent } from './main-page/basic-content/basic-content.component';
+import { HeaderSectionComponent } from './header-section/header-section.component';
+import { HeaderComponent } from './header-section/header/header.component';
+import { SearchSectionComponent } from './search-section/search-section.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { BasicContentComponent } from './main-page/basic-content/basic-content.c
     ArrowLeftComponent,
     MoviesListComponent,
     BasicContentComponent,
+    HeaderSectionComponent,
+    HeaderComponent,
+    SearchSectionComponent,
   ],
   imports: [
     BrowserModule,
