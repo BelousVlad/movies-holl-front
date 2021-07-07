@@ -1,19 +1,18 @@
 <header>
     <div class="container">
-        <div class="logo">
-            <img src="../../../assets/images/logo.png" alt="">
-        </div>
-        <nav>
-            <ul>
-                <a *ngFor="let item of nav_menu" href="{{ item.link }}"><li>{{ item.text }}</li></a>
-            </ul>
-        </nav>
-        <div class="localization-box">
-            <a href="">UA</a>
-            <a href="">RU</a>
-        </div>
-        <a href="">
-            Tel
-        </a>
+        <app-burger-menu (onActiveChange)="_onMobileNavActiveChange($event)"></app-burger-menu>
+        <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
+        <ng-template #content>
+            <ng-content></ng-content>
+        </ng-template>
+        <ng-template #local_tel>
+            <div class="localization-box">
+                <a href="">UA</a>
+                <a href="">RU</a>
+            </div>
+            <a href="">
+                Tel
+            </a>
+        </ng-template>
     </div>
 </header>

@@ -1,17 +1,24 @@
-nav ul {
-    display: flex;
-}
-nav li {
-    list-style-type: none;
-}
-nav a {
-    padding: 10px;
-    margin-right: 10px;
-}
+
 a {
     color: var(--front-white-color);
     text-decoration: none;
 }
 header {
     padding: 5px 0;
+    height: 100%;
+}
+
+:host {
+    display: block;
+    background: rgba(0, 15, 16, 0.7);
+}
+.container {
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+@media (min-width: 768px) {
+    app-burger-menu {
+        display: none;
+    }
 }

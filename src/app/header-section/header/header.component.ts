@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem, MenusService } from 'src/app/services/menus-service/menus.service';
+import { EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +8,18 @@ import { MenuItem, MenusService } from 'src/app/services/menus-service/menus.ser
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private menus: MenusService) { }
+  @Output() onMobileNavActiveChange = new EventEmitter<boolean>()
 
-  nav_menu!: Array<MenuItem>
+  is_mobile_nav_active!: boolean;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.nav_menu = [];
-    this.menus.getHeaderNavMenu().subscribe(item =>
-      this.nav_menu.push(item)
-    )
+  }
+
+  _onMobileNavActiveChange(is_active: boolean)
+  {
+    this.onMobileNavActiveChange.emit(is_active);
+    this.is_mobile_nav_active = is_active;
   }
 }

@@ -17,7 +17,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .extented-container,
 .container{
-  width: 100%;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -26,48 +25,54 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   flex-wrap: wrap;
 }
 @media (min-width: 576px) {
+  .container,
+  .extented-container{
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    width: 540px;
     
   }
   .extented-container{
-    max-width: 620px;
+    width: 620px;
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    width: 720px;
     justify-content: space-between;
     flex-direction: row;
   }
   .extented-container{
-    max-width: 800px;
+    width: 800px;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    width: 960px;
   }
   .extented-container{
-    max-width: 1040px;
+    width: 1040px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    width: 1140px;
   }
   .extented-container{
-    max-width: 1220px;
+    width: 1220px;
   }
 }
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    width: 1320px;
   }
   .extented-container{
-    max-width: 1400px;
+    width: 1400px;
   }
 }
 

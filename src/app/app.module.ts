@@ -31,6 +31,10 @@ import { BasicContentComponent } from './main-page/basic-content/basic-content.c
 import { HeaderSectionComponent } from './header-section/header-section.component';
 import { HeaderComponent } from './header-section/header/header.component';
 import { SearchSectionComponent } from './search-section/search-section.component';
+import { HeaderNavComponent } from './header-section/header-nav/header-nav.component';
+import { MobileNavMenuComponent } from './header-section/mobile-nav-menu/mobile-nav-menu.component';
+import { BurgerMenuComponent } from './header-section/header/burger-menu/burger-menu.component';
+import { SearchComponent } from './elements/search/search.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { SearchSectionComponent } from './search-section/search-section.componen
     BasicContentComponent,
     HeaderSectionComponent,
     HeaderComponent,
+    HeaderNavComponent,
     SearchSectionComponent,
+    MobileNavMenuComponent,
+    BurgerMenuComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

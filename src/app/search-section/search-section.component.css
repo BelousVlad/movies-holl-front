@@ -5,28 +5,9 @@ nav a {
     padding: 28px 10px;
     color: var(--front-white-color);
     text-decoration: none;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
-.search-box {
-    display: flex;
-    height: 40px;
-    width: 340px;
-    border: 1px solid var(--gray2-color);
-    align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.search-box input {
-    height: 100%;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-img {
-    margin-right: 10px;
-}
 section {
     border-top: 1px solid var(--green-color);
     border-bottom: 1px solid var(--green-color);

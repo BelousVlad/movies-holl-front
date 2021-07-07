@@ -1,7 +1,9 @@
 <ngx-slick-carousel class="carousel"
         [config]="slideConfig"  
         #slickModal="slick-carousel">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide extented-container">
-        <img src="{{ slide.image }}">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <div class="slide-content extented-container">
+            <img src="{{ slide.image }}">
+        </div>
     </div>
 </ngx-slick-carousel>

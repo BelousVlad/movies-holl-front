@@ -1,0 +1,8 @@
+<div class="logo">
+    <img src="../../../assets/images/logo.png" alt="">
+</div>
+<nav>
+    <ul>
+        <a *ngFor="let item of nav_menu" href="{{ item.link }}"><li>{{ item.text }}</li></a>
+    </ul>
+</nav>

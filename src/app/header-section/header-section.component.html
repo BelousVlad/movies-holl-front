@@ -1,2 +1,22 @@
-<app-header></app-header>
-<app-search-section></app-search-section>
+ <app-header #header 
+            [style.height.px]='82'
+            (onMobileNavActiveChange)="onMobileNavActiveChange($event)"
+            [ngClass]="{mobile: isMobile}">
+
+    <div *ngIf="isMobile; then mobileBlock; else desktopBlock"></div>
+    <ng-template #desktopBlock><app-header-nav></app-header-nav></ng-template>
+    <ng-template #mobileBlock>
+        <img src="../../assets/images/logo.png" alt="">
+    </ng-template>
+
+</app-header>
+
+<div *ngIf="isMobile" [style.height.px]="82"></div>
+
+<div *ngIf="isMobile; then mobileMenuTemp; else searchSection"></div>
+<ng-template #searchSection>
+    <app-search-section></app-search-section>
+</ng-template>
+<ng-template #mobileMenuTemp>
+    <app-mobile-nav-menu [is_show]="show_mobile_nav" [style.top.px]='82'></app-mobile-nav-menu>
+</ng-template>
