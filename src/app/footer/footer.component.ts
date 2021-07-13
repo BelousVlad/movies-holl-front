@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faFacebookF, faInstagram, faYoutube, IconDefinition } from '@fortawesome/free-brands-svg-icons'
 import { MenuItem, MenusService } from '../services/menus-service/menus.service';
 
 @Component({
@@ -11,8 +10,6 @@ export class FooterComponent implements OnInit {
 
   tech_sup_list!: Array<{text:string, tel:string}>
   subscriber_list!: Array<{text:string, tel:string}>
-
-  social_list!: Array<{icon: IconDefinition, link: string}>
 
   list1!: Array<MenuItem>;
   list2!: Array<MenuItem>;
@@ -35,14 +32,15 @@ export class FooterComponent implements OnInit {
       {text: '(0629) 416-433', tel: '+380629416433'},
     ]
 
-    this.social_list = [
-      { icon: faFacebookF, link: 'google.com'},
-      { icon: faInstagram, link: 'google.com'},
-      { icon: faYoutube,   link: 'google.com'},
-      { icon: faFacebookF, link: 'google.com'},
-      { icon: faFacebookF, link: 'google.com'},
-      { icon: faFacebookF, link: 'google.com'},
-    ]
+    // this.social_list = [
+    //   { icon: faFacebookF, link: 'google.com'},
+    //   { icon: faInstagram, link: 'google.com'},
+    //   { icon: faYoutube,   link: 'google.com'},
+    //   { icon: faFacebookF, link: 'google.com'},
+    //   { icon: faFacebookF, link: 'google.com'},
+    //   { icon: faFacebookF, link: 'google.com'},
+    // ]
+
 
     this.list1 = [];
     this.menus.getFirstMenu().subscribe(item => this.list1.push(item))

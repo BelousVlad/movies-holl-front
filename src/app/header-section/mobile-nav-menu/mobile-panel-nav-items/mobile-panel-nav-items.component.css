@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    color: var(--gray2-color);
+    text-decoration: none;
+    margin-bottom: 40px;
+    font-size: 18px;
+}

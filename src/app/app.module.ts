@@ -35,6 +35,18 @@ import { HeaderNavComponent } from './header-section/header-nav/header-nav.compo
 import { MobileNavMenuComponent } from './header-section/mobile-nav-menu/mobile-nav-menu.component';
 import { BurgerMenuComponent } from './header-section/header/burger-menu/burger-menu.component';
 import { SearchComponent } from './elements/search/search.component';
+import { HidingSearchComponent } from './elements/search/hiding-search/hiding-search.component';
+import { LocalizationSelectComponent } from './elements/localization-select/localization-select.component';
+import { MobilePanelNavItemsComponent } from './header-section/mobile-nav-menu/mobile-panel-nav-items/mobile-panel-nav-items.component';
+import { HeaderNavItemsComponent } from './header-section/header-nav/header-nav-items/header-nav-items.component';
+import { AdditionNavItemsComponent } from './header-section/addtion-nav/addition-nav-items/addition-nav-items.component';
+import { AdditionMobileNavItemsComponent } from './header-section/addtion-nav/addition-mobile-nav-items/addition-mobile-nav-items.component';
+import { SocialIconsComponent } from './elements/social-icons/social-icons.component';
+import { FacebookIconComponent } from './elements/social-icons/facebook-icon/facebook-icon.component';
+import { CommonModule } from '@angular/common';
+import { SocialIconsListComponent } from './elements/social-icons/social-icons-list/social-icons-list.component';
+import { InstagramIconComponent } from './elements/social-icons/instagram-icon/instagram-icon.component';
+import { YoutubeIconComponent } from './elements/social-icons/youtube-icon/youtube-icon.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +76,17 @@ import { SearchComponent } from './elements/search/search.component';
     MobileNavMenuComponent,
     BurgerMenuComponent,
     SearchComponent,
+    HidingSearchComponent,
+    LocalizationSelectComponent,
+    MobilePanelNavItemsComponent,
+    HeaderNavItemsComponent,
+    AdditionNavItemsComponent,
+    AdditionMobileNavItemsComponent,
+    SocialIconsComponent,
+    FacebookIconComponent,
+    SocialIconsListComponent,
+    InstagramIconComponent,
+    YoutubeIconComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +98,7 @@ import { SearchComponent } from './elements/search/search.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

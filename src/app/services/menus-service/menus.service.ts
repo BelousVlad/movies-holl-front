@@ -1,5 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Type } from '@angular/core';
 import { from, Observable } from 'rxjs';
+import { FacebookIconComponent } from 'src/app/elements/social-icons/facebook-icon/facebook-icon.component';
+import { SocialIconsComponent } from 'src/app/elements/social-icons/social-icons.component';
 
 @Injectable({
   providedIn: 'root'
@@ -36,15 +38,31 @@ export class MenusService {
   ]
 
   nav_list = [
-    { text: 'Услуги', link: '#' }, 
-    { text: 'Услуги', link: '#' }, 
-    { text: 'Услуги', link: '#' }, 
-    { text: 'Услуги', link: '#' }, 
-    { text: 'Услуги', link: '#' }, 
+    { text: 'Услуги', link: '#' },
+    { text: 'Услуги', link: '#' },
+    { text: 'Услуги', link: '#' },
+    { text: 'Услуги', link: '#' },
+    { text: 'Услуги', link: '#' },
   ]
+
+  addition_nav_list = [
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Новости', link: '#' },
+  ]
+  
 
   getFirstMenu() : Observable<MenuItem> {
     return from(this.list1)
+  }
+
+  getAdditionalNavMenu() : Observable<MenuItem> {
+    return from(this.addition_nav_list);
   }
 
   getSecondMenu(): Observable<MenuItem> {

@@ -4,21 +4,32 @@ a {
     text-decoration: none;
 }
 header {
-    padding: 5px 0;
     height: 100%;
 }
 
 :host {
     display: block;
     background: rgba(0, 15, 16, 0.7);
+    color: var(--front-white-color);
 }
 .container {
     flex-direction: row;
+    justify-content: space-between;
     padding-left: 16px;
     padding-right: 16px;
+    height: 100%;
+}
+.mobile-login-localization{
+    display: flex;
+}
+.mobile-login-localization app-localization-select{
+    margin-right: 30px;
 }
 @media (min-width: 768px) {
     app-burger-menu {
+        display: none;
+    }
+    app-hiding-search {
         display: none;
     }
 }

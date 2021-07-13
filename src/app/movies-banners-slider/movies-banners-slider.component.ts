@@ -11,7 +11,10 @@ export class MoviesBannersSliderComponent implements OnInit {
   sliderConfig = {
     slidesToShow: 6,
     arrows: false,
-    infinite: false
+    infinite: false,
+    responsive: {
+      
+    }
   }
   movies!: Array<Movie>
 

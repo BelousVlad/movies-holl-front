@@ -1,13 +1,3 @@
-nav {
-    display: flex;
-}
-nav a {
-    padding: 28px 10px;
-    color: var(--front-white-color);
-    text-decoration: none;
-    margin-right: 40px;
-}
-
 section {
     border-top: 1px solid var(--green-color);
     border-bottom: 1px solid var(--green-color);

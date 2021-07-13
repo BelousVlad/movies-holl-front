@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem, MenusService } from 'src/app/services/menus-service/menus.service';
 
 @Component({
@@ -8,15 +8,17 @@ import { MenuItem, MenusService } from 'src/app/services/menus-service/menus.ser
 })
 export class HeaderNavComponent implements OnInit {
 
-  nav_menu!: Array<MenuItem>
+  @Input() nav_menu!: Array<MenuItem>
 
   constructor(private menus: MenusService) { }
 
   ngOnInit(): void {
-    this.nav_menu = [];
-    this.menus.getHeaderNavMenu().subscribe(item =>
-      this.nav_menu.push(item)
-    )
+    if (!this.nav_menu) {
+      this.nav_menu = [];
+      this.menus.getHeaderNavMenu().subscribe(item =>
+        this.nav_menu.push(item)
+      )
+    }
   }
 
 }

@@ -26,11 +26,7 @@
             </div>
                 
             <div class="social-list">
-                <a *ngFor="let social of social_list" href="{{social.link}}">
-                    <i>
-                        <fa-icon [icon]="social.icon"></fa-icon>
-                    </i>
-                </a>
+                <app-social-icons-list></app-social-icons-list>
             </div>
         </div>
     </div>

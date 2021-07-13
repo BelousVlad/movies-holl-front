@@ -7,4 +7,5 @@
     background: var(--back-dark-color);
     z-index: 30;
     padding: 35px 17px;
+    overflow-y: auto;
 }

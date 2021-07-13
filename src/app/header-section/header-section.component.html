@@ -4,7 +4,16 @@
             [ngClass]="{mobile: isMobile}">
 
     <div *ngIf="isMobile; then mobileBlock; else desktopBlock"></div>
-    <ng-template #desktopBlock><app-header-nav></app-header-nav></ng-template>
+    <ng-template #desktopBlock>
+        <app-header-nav [nav_menu]='nav_menu'></app-header-nav>
+
+        <div class="localization-tel-box">
+            <app-localization-select></app-localization-select>
+            <a href="">
+                tel
+            </a>
+        </div>
+    </ng-template>
     <ng-template #mobileBlock>
         <img src="../../assets/images/logo.png" alt="">
     </ng-template>
@@ -15,8 +24,21 @@
 
 <div *ngIf="isMobile; then mobileMenuTemp; else searchSection"></div>
 <ng-template #searchSection>
-    <app-search-section></app-search-section>
+    <app-search-section>
+        <nav class="search-section-list">
+            <app-addition-nav-items [items]='addition_nav_menu'></app-addition-nav-items>
+        </nav>
+    </app-search-section>
 </ng-template>
 <ng-template #mobileMenuTemp>
-    <app-mobile-nav-menu [is_show]="show_mobile_nav" [style.top.px]='82'></app-mobile-nav-menu>
+    <app-mobile-nav-menu [is_show]="show_mobile_nav" [style.top.px]='82'>
+        <nav>
+            <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
+        </nav>
+        <nav class="mobile-panel-nav">
+            <img class="mobile-panel-nav-img" src="../../assets/images/logo.png" alt="">
+            <app-mobile-panel-nav-items [items]='nav_menu'></app-mobile-panel-nav-items>
+        </nav>
+        <app-social-icons-list></app-social-icons-list>
+    </app-mobile-nav-menu>
 </ng-template>

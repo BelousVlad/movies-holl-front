@@ -1,1 +1,14 @@
-<p>123</p>
+<div *ngIf="isActive; then cancel; else lines"></div>
+<ng-template #lines>
+    <div class="line-box"><div class="dot"></div><div class="line" [style.width.px]='17'></div></div>
+    <div class="line-box"><div class="dot"></div><div class="line" [style.width.px]='10'></div></div>
+    <div class="line-box"><div class="dot"></div><div class="line" [style.width.px]='16'></div></div>
+</ng-template>
+<ng-template #cancel>
+    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 26L25.5304 1.22591L1 26Z" fill="#757575"/>
+        <path d="M1 26L25.5304 1.22591" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.46973 1L26.0001 25.7741L1.46973 1Z" fill="#757575"/>
+        <path d="M1.46973 1L26.0001 25.7741" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>        
+</ng-template>

@@ -3,6 +3,6 @@
 </div>
 <nav>
     <ul>
-        <a *ngFor="let item of nav_menu" href="{{ item.link }}"><li>{{ item.text }}</li></a>
+        <app-header-nav-items [items]="nav_menu"></app-header-nav-items>
     </ul>
 </nav>

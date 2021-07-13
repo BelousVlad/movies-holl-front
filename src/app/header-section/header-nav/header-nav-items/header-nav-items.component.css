@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+}
+a {
+    padding: 10px;
+    margin-right: 10px;
+}
+a {
+    color: var(--front-white-color);
+    text-decoration: none;
+}
+:host {
+    display: flex;
+}

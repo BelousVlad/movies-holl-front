@@ -44,14 +44,12 @@ a{
 .technical-list{
     width: 50%;
 }
-.social-list i{
+.social-list a{
     display: inline-flex;
     width: 40px;
     height: 40px;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    background: var(--green2-color);
     color: #000;
     font-size: 20px;
 }
@@ -70,6 +68,9 @@ a{
 }
 .documents-link{
     margin-right: 30px;
+}
+.lists-container {
+    align-items: flex-start;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+}
+a {
+    padding: 28px 10px;
+    color: var(--front-white-color);
+    text-decoration: none;
+    margin-right: 40px;
+}
