@@ -12,9 +12,14 @@ export class MoviesBannersSliderComponent implements OnInit {
     slidesToShow: 6,
     arrows: false,
     infinite: false,
-    responsive: {
-      
-    }
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
   }
   movies!: Array<Movie>
 
