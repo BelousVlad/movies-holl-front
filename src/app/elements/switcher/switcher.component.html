@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let item of items; index as i">
+        <ng-container
+        [ngTemplateOutlet]="template"
+        [ngTemplateOutletContext]="{ $implicit: item, index: i }"
+        >
+    
+        </ng-container>
+    </li>
+</ul>

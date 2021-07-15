@@ -1,1 +1,7 @@
-<p>movies-list works!</p>
+<h2>Фильмы</h2>
+
+<app-switcher [items]="swichItems">
+    <ng-template #template1 let-item let-id="index">
+        <a href="#">{{item.text}}</a>
+    </ng-template>
+</app-switcher>

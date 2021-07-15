@@ -47,6 +47,7 @@ import { CommonModule } from '@angular/common';
 import { SocialIconsListComponent } from './elements/social-icons/social-icons-list/social-icons-list.component';
 import { InstagramIconComponent } from './elements/social-icons/instagram-icon/instagram-icon.component';
 import { YoutubeIconComponent } from './elements/social-icons/youtube-icon/youtube-icon.component';
+import { SwitcherComponent } from './elements/switcher/switcher.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { YoutubeIconComponent } from './elements/social-icons/youtube-icon/youtu
     SocialIconsListComponent,
     InstagramIconComponent,
     YoutubeIconComponent,
+    SwitcherComponent,
   ],
   imports: [
     BrowserModule,

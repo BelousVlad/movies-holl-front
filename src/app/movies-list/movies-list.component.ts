@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListComponent implements OnInit {
 
+  swichItems: Array<{text: string}> = [
+    { text: 'test'},
+    { text: 'test'},
+    { text: 'test'},
+    { text: 'test'},
+    { text: 'test'}
+  ]
+
+
   constructor() { }
 
   ngOnInit(): void {
