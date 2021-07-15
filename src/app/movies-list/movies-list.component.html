@@ -6,26 +6,47 @@
     </ng-template> -->
 <!-- </app-switcher> -->
 
-<section class="control-section">
-    <div class="container control-panel">
-        <div class="lists-box panel-item">
-            <mat-button-toggle-group class="lists" [(value)]="selectedList">
-                <mat-button-toggle *ngFor="let item of lists" [value]="item">{{item.text}}</mat-button-toggle>
-            </mat-button-toggle-group>
-        </div>
-        <div class="panel-item genres-list">
-            <mat-form-field >
-                <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event)">
-                    <mat-option *ngFor="let genre of genres" [value]="genre">
-                        {{genre.title}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
-        <div class="panel-item sorts-box">
-            <mat-button-toggle-group class="lists" [(value)]="selectedSort">
-                <mat-button-toggle *ngFor="let sort of sorts" [value]="sort">{{sort.title}}</mat-button-toggle>
-            </mat-button-toggle-group>
-        </div>
+<ng-template #lists_component>
+    <div class="lists-box panel-item">
+        <mat-button-toggle-group class="lists" [(value)]="selectedList">
+            <mat-button-toggle *ngFor="let item of lists" [value]="item">{{item.text}}</mat-button-toggle>
+        </mat-button-toggle-group>
     </div>
+</ng-template>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+</mat-sidenav-container>
+
+<section class="control-section">
+    <ng-template [ngIf]="!isMobile">
+        <div class="container control-panel">
+            <ng-template [ngTemplateOutlet]='lists_component'></ng-template>
+            <div class="panel-item genres-list">
+                <mat-form-field >
+                    <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event)">
+                        <mat-option *ngFor="let genre of genres" [value]="genre">
+                            {{genre.title}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="panel-item sorts-box">
+                <mat-button-toggle-group class="lists" [(value)]="selectedSort">
+                    <mat-button-toggle *ngFor="let sort of sorts" [value]="sort">{{sort.title}}</mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="isMobile">
+        
+        <ng-template [ngTemplateOutlet]='lists_component'></ng-template>
+
+    </ng-template>
+
+
+
+    
 </section>

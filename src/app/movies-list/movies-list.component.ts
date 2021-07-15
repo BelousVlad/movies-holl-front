@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 import { Genre } from '../domain-model/Genre';
 import { Movie } from '../domain-model/Movie';
@@ -44,16 +44,25 @@ export class MoviesListComponent implements OnInit {
 
   selectedSort = this.sorts[0];
 
+  isMobile!: boolean;
+
   constructor(private genresService: GenresService) { }
 
   ngOnInit(): void {
     this.genresService.getGenres().subscribe(
       item => this.genres.push(item)
     );
+    this.onResize();
   }
   onGenreChanged(event: MatSelectChange)
   {
     //TODO
+  }
+
+  @HostListener('window:resize')
+  onResize()
+  {
+    this.isMobile = window.innerWidth < 768;
   }
 
 

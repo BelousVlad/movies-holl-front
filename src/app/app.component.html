@@ -1,6 +1,16 @@
-<app-header-section></app-header-section>
 
-<router-outlet>
-</router-outlet>
+<ng-template #content>
+    <app-header-section></app-header-section>
+    
+    <router-outlet>
+    </router-outlet>
+    
+    <app-section-footer></app-section-footer>
+</ng-template>
 
-<app-section-footer></app-section-footer>
+<mat-sidenav-container>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav-content>
+        <ng-template [ngTemplateOutlet]='content'></ng-template>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

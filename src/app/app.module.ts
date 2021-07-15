@@ -50,6 +50,8 @@ import { SwitcherComponent } from './elements/switcher/switcher.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { DropdownMenuComponent } from './elements/dropdown-menu/dropdown-menu.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -106,6 +108,7 @@ import { DropdownMenuComponent } from './elements/dropdown-menu/dropdown-menu.co
     MatSelectModule,
     MatButtonToggleModule,
     FontAwesomeModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
