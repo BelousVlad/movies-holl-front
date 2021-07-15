@@ -48,6 +48,7 @@ import { SocialIconsListComponent } from './elements/social-icons/social-icons-l
 import { InstagramIconComponent } from './elements/social-icons/instagram-icon/instagram-icon.component';
 import { YoutubeIconComponent } from './elements/social-icons/youtube-icon/youtube-icon.component';
 import { SwitcherComponent } from './elements/switcher/switcher.component';
+import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { SwitcherComponent } from './elements/switcher/switcher.component';
     InstagramIconComponent,
     YoutubeIconComponent,
     SwitcherComponent,
+    HeaderNavItemComponent,
   ],
   imports: [
     BrowserModule,

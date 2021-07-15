@@ -37,9 +37,39 @@ export class MenusService {
     {text: 'Отсавить отзыв', link: 'https://format-tv.net/reviews'},
   ]
 
-  nav_list = [
-    { text: 'Услуги', link: '#' },
-    { text: 'Услуги', link: '#' },
+  nav_list: MenuItem[] = [
+    {
+      text: 'Услуги',
+      link: '#',
+      childrenItems: [
+        {
+          text: 'Интернет',
+          link: 'https://format-tv.net/tariffs/',
+          logo: 'https://format-tv.net/wp-content/uploads/2019/06/web-icon.png'
+        },
+        {
+          text: 'Телевидение',
+          link: 'https://format-tv.net/tariffs/',
+          logo: 'https://format-tv.net/wp-content/uploads/2019/06/tv-icon.png'
+        },
+        {
+          text: 'Умный дом',
+          link: 'https://format-tv.net/video/',
+          logo: 'https://format-tv.net/wp-content/uploads/2019/06/cctv-icon.png'
+        },
+      ]
+    },
+    {
+      text: 'Услуги',
+      link: '#',
+      childrenItems: [
+        {
+          text: 'Умный дом',
+          link: 'https://format-tv.net/video/',
+          logo: 'https://format-tv.net/wp-content/uploads/2019/06/cctv-icon.png'
+        },
+      ]
+    },
     { text: 'Услуги', link: '#' },
     { text: 'Услуги', link: '#' },
     { text: 'Услуги', link: '#' },
@@ -55,7 +85,7 @@ export class MenusService {
     { text: 'Новости', link: '#' },
     { text: 'Новости', link: '#' },
   ]
-  
+
 
   getFirstMenu() : Observable<MenuItem> {
     return from(this.list1)
@@ -80,5 +110,10 @@ export class MenusService {
 
 export type MenuItem = {
   text: string,
-  link: string
+  link: string,
+  childrenItems?: ChildMenuItem[],
+}
+
+export type ChildMenuItem = MenuItem & {
+  logo: string,
 }

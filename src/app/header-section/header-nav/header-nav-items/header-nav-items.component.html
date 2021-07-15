@@ -1,1 +1,8 @@
-<a *ngFor="let item of items" href="{{ item.link }}"><li>{{ item.text }}</li></a>
+<!-- <a *ngFor="let item of items" href="{{ item.link }}">
+  <li *ngIf="!item.childrenItems?.length">{{ item.text }}</li>
+  <li *ngIf="item.childrenItems?.length" class="menu-item-children">
+    {{ item.text }}
+    <img src="assets/icons/arrow-down.svg" alt="arrow">
+  </li>
+</a> -->
+<app-header-nav-item *ngFor="let item of items" [item]="item"></app-header-nav-item>

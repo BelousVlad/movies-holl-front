@@ -1,0 +1,14 @@
+<a href="{{ item.link }}" #elRoot>
+  <li *ngIf="!item.childrenItems?.length">{{ item.text }}</li>
+  <li *ngIf="item.childrenItems?.length" class="menu-item-children" (click)="showChildMenu = !showChildMenu">
+    {{ item.text }}
+    <img src="assets/icons/arrow-down.svg" alt="arrow" [ngClass]="{'arrow-top': showChildMenu}">
+  </li>
+</a>
+
+<div *ngIf="item.childrenItems?.length" class="child-menu" [ngClass]="{'show': showChildMenu}">
+  <a *ngFor="let childItem of item.childrenItems" href="{{childItem.link}}" class="child-menu-item">
+    <li>{{childItem.text}}</li>
+    <img src="{{childItem.logo}}" alt="logo">
+  </a>
+</div>
