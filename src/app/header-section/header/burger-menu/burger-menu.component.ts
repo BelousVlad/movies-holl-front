@@ -35,7 +35,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class BurgerMenuComponent implements OnInit {
 
   @Output() onActiveChange = new EventEmitter<boolean>()
-  isActive: boolean = true //TODO false
+  isActive: boolean = false //TODO false
 
   constructor() { }
 

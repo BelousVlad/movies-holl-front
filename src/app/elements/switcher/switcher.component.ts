@@ -1,4 +1,4 @@
-import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-switcher',
@@ -7,14 +7,33 @@ import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/co
 })
 export class SwitcherComponent<T extends {text: string}> implements OnInit {
 
-  @ContentChild("template1", { static: false })
-  template!: TemplateRef<any>;
+  @ContentChild("template", { static: false })
+  template!: TemplateRef<any>
 
-  @Input() items!: Array<T>;
+  _items!: Array<{ item: T, selected: boolean}>
+  
+  @Input() set items(val: Array<T>) {
+    this._items = []
+    val.forEach(item => this._items.push({item, selected: false}))
+  }
+
+  @Output() onSelect = new EventEmitter<T>();
+
+  @Input() set selectedItem(val: T) {
+    const item = this._items.find(item => item.item == val)
+    if (item) 
+      item.selected = true;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  selectItem(item: { item: T, selected: boolean })
+  {
+    this._items.forEach(item => item.selected = false)
+    item.selected = true
+    this.onSelect.emit(item.item);
+  }
 }

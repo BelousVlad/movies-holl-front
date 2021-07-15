@@ -43,11 +43,13 @@ import { AdditionNavItemsComponent } from './header-section/addtion-nav/addition
 import { AdditionMobileNavItemsComponent } from './header-section/addtion-nav/addition-mobile-nav-items/addition-mobile-nav-items.component';
 import { SocialIconsComponent } from './elements/social-icons/social-icons.component';
 import { FacebookIconComponent } from './elements/social-icons/facebook-icon/facebook-icon.component';
-import { CommonModule } from '@angular/common';
 import { SocialIconsListComponent } from './elements/social-icons/social-icons-list/social-icons-list.component';
 import { InstagramIconComponent } from './elements/social-icons/instagram-icon/instagram-icon.component';
 import { YoutubeIconComponent } from './elements/social-icons/youtube-icon/youtube-icon.component';
 import { SwitcherComponent } from './elements/switcher/switcher.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { DropdownMenuComponent } from './elements/dropdown-menu/dropdown-menu.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +91,7 @@ import { SwitcherComponent } from './elements/switcher/switcher.component';
     InstagramIconComponent,
     YoutubeIconComponent,
     SwitcherComponent,
+    DropdownMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,6 +103,8 @@ import { SwitcherComponent } from './elements/switcher/switcher.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatButtonToggleModule,
     FontAwesomeModule,
   ],
   providers: [],

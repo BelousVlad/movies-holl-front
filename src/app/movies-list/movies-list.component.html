@@ -1,7 +1,31 @@
 <h2>Фильмы</h2>
 
-<app-switcher [items]="swichItems">
-    <ng-template #template1 let-item let-id="index">
+<!-- <app-switcher [items]="swichItems"> -->
+    <!-- <ng-template #template1 let-item let-id="index">
         <a href="#">{{item.text}}</a>
-    </ng-template>
-</app-switcher>
+    </ng-template> -->
+<!-- </app-switcher> -->
+
+<section class="control-section">
+    <div class="container control-panel">
+        <div class="lists-box panel-item">
+            <mat-button-toggle-group class="lists" [(value)]="selectedList">
+                <mat-button-toggle *ngFor="let item of lists" [value]="item">{{item.text}}</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div class="panel-item genres-list">
+            <mat-form-field >
+                <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event)">
+                    <mat-option *ngFor="let genre of genres" [value]="genre">
+                        {{genre.title}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="panel-item sorts-box">
+            <mat-button-toggle-group class="lists" [(value)]="selectedSort">
+                <mat-button-toggle *ngFor="let sort of sorts" [value]="sort">{{sort.title}}</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+</section>

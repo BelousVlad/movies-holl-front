@@ -1,10 +1,13 @@
 <ul>
-    <li *ngFor="let item of items; index as i">
+    <li *ngFor="let item of _items; index as i" (click)="selectItem(item)" [ngClass]="{'selected': item.selected}">
         <ng-container
         [ngTemplateOutlet]="template"
-        [ngTemplateOutletContext]="{ $implicit: item, index: i }"
-        >
+        [ngTemplateOutletContext]="{ $implicit: item.item, index: i }">
     
+        </ng-container>
+
+        <ng-container *ngIf="!template">
+            <span>{{item.item.text}}</span>
         </ng-container>
     </li>
 </ul>
