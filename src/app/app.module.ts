@@ -51,6 +51,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { DropdownMenuComponent } from './elements/dropdown-menu/dropdown-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MobileHeaderNavComponent } from './header-section/mobile-header-nav/mobile-header-nav.component';
 
 
 @NgModule({
@@ -94,6 +95,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     YoutubeIconComponent,
     SwitcherComponent,
     DropdownMenuComponent,
+    MobileHeaderNavComponent,
   ],
   imports: [
     BrowserModule,

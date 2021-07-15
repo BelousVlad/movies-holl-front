@@ -4,7 +4,7 @@
         <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
         <ng-template #content>
             <ng-content></ng-content>
-            <app-hiding-search></app-hiding-search>
+            <!-- <app-hiding-search></app-hiding-search> -->
         </ng-template>
         <ng-template #local_tel>
             <div class="mobile-login-localization">
