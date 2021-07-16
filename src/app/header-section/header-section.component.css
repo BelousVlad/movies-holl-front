@@ -22,3 +22,6 @@ app-header.mobile {
 .mobile-panel-nav app-mobile-panel-nav-items{
     margin-top: 20px;
 }
+app-mobile-header-nav {
+    flex-grow: 1;
+}

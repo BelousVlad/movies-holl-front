@@ -1,10 +1,11 @@
 <header>
     <div class="container">
         <app-burger-menu (onActiveChange)="_onMobileNavActiveChange($event)"></app-burger-menu>
-        <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
+        <ng-content></ng-content>
+        <!-- <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
         <ng-template #content>
             <ng-content></ng-content>
-            <!-- <app-hiding-search></app-hiding-search> -->
+            
         </ng-template>
         <ng-template #local_tel>
             <div class="mobile-login-localization">
@@ -13,6 +14,6 @@
                     Войти
                 </a>
             </div>
-        </ng-template>
+        </ng-template> -->
     </div>
 </header>

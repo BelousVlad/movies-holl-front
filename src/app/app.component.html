@@ -1,21 +1,14 @@
 
-<ng-template #content>
-    <router-outlet>
-    </router-outlet>
-    
-    <app-section-footer></app-section-footer>
-</ng-template>
+<app-header-section #header></app-header-section>
 
-<app-header-section></app-header-section>
 <mat-sidenav-container>
-    <mat-sidenav opened [style.width.vw]='100'>
-        <ng-template #test_template>
-            <div>fhudsihfsdouhfdispfa</div>
-        </ng-template>
-        <div (click)="test()">next</div>
-        <div (click)="test1()">pop</div>
+    <mat-sidenav [opened]="isOpenSidenav" [style.width.vw]='100' [fixedInViewport]="true" [fixedTopGap]="82">
+        <ng-template [ngTemplateOutlet]="sidenav_template"></ng-template>
     </mat-sidenav>
     <mat-sidenav-content>
-        <ng-template [ngTemplateOutlet]='content'></ng-template>
+        <router-outlet>
+        </router-outlet>
+        
+        <app-section-footer></app-section-footer>
     </mat-sidenav-content>
-  </mat-sidenav-container>
+</mat-sidenav-container>

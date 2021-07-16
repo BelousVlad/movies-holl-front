@@ -1,4 +1,4 @@
- <app-header #header 
+ <app-header
             [style.height.px]='82'
             (onMobileNavActiveChange)="onMobileNavActiveChange($event)"
             [ngClass]="{mobile: isMobile}">
@@ -6,7 +6,6 @@
     <div *ngIf="isMobile; then mobileBlock; else desktopBlock"></div>
     <ng-template #desktopBlock>
         <app-header-nav [nav_menu]='nav_menu'></app-header-nav>
-
         <div class="localization-tel-box">
             <app-localization-select></app-localization-select>
             <a href="">
@@ -15,15 +14,17 @@
         </div>
     </ng-template>
     <ng-template #mobileBlock>
-        <!-- <img src="../../assets/images/logo.png" alt=""> -->
-        <app-mobile-header-nav></app-mobile-header-nav>
+        <app-mobile-header-nav>
+            <img src="../../assets/images/logo.png" alt="">
+            <app-hiding-search></app-hiding-search>
+        </app-mobile-header-nav>
     </ng-template>
 
 </app-header>
 
 <div *ngIf="isMobile" [style.height.px]="82"></div>
 
-<div *ngIf="isMobile; then mobileMenuTemp; else searchSection"></div>
+<div *ngIf="isMobile; else searchSection"></div>
 <ng-template #searchSection>
     <app-search-section>
         <nav class="search-section-list">
@@ -31,15 +32,12 @@
         </nav>
     </app-search-section>
 </ng-template>
+
 <ng-template #mobileMenuTemp>
-    <app-mobile-nav-menu [is_show]="show_mobile_nav" [style.top.px]='82'>
-        <nav>
-            <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
-        </nav>
-        <nav class="mobile-panel-nav">
-            <img class="mobile-panel-nav-img" src="../../assets/images/logo.png" alt="">
-            <app-mobile-panel-nav-items [items]='nav_menu'></app-mobile-panel-nav-items>
-        </nav>
-        <app-social-icons-list></app-social-icons-list>
-    </app-mobile-nav-menu>
+    <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
+    <nav class="mobile-panel-nav">
+        <img class="mobile-panel-nav-img" src="../../assets/images/logo.png" alt="">
+        <app-mobile-panel-nav-items [items]='nav_menu'></app-mobile-panel-nav-items>
+    </nav>
+    <app-social-icons-list></app-social-icons-list>
 </ng-template>

@@ -1,25 +1,31 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MobileNavContentService } from './services/mobile-nav-content/mobile-nav-content.service';
+import { SidenavService } from './services/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'movies-front';
 
-  @ViewChild('test_template') template!: TemplateRef<any>;
+  isOpenSidenav: boolean = false;
+  sidenav_template!: TemplateRef<any>
 
-  constructor(private service: MobileNavContentService) {}
+  constructor(private sidenavService: SidenavService) {}
 
-  test()
-  {
-    this.service.setView(this.template);
+  ngOnInit(): void {
+    this.sidenavService.getStateObserver().subscribe(
+      status => this.isOpenSidenav = status
+    )
+      
+    this.sidenavService.getTemplateObserver().subscribe(
+      template =>  this.sidenav_template = template
+    )
   }
 
-  test1()
-  {
-    this.service.pop();
-  }
+  
+
+
 }
