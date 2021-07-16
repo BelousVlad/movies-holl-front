@@ -9,6 +9,7 @@ export class SidenavService {
   constructor() { }
   isActive: boolean = false;
   private observer: Subject<boolean> = new Subject<boolean>();
+  private template_stack: Array<TemplateRef<any>> = []
   private template_observer: Subject<TemplateRef<any>> = new Subject<TemplateRef<any>>();
 
   getStateObserver(): Observable<boolean>
@@ -22,7 +23,14 @@ export class SidenavService {
 
   setTemplate(temp: TemplateRef<any>)
   {
+    this.template_stack.push(temp);
     this.template_observer.next(temp);
+  }
+
+  popTemplate()
+  {
+    this.template_stack.pop();
+    this.template_observer.next(this.template_stack[this.template_stack.length-1])
   }
 
   setState(isActive: boolean)

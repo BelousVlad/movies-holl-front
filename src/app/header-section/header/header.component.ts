@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   constructor(private sidenavService: SidenavService) { }
 
   ngOnInit(): void {
+    this.sidenavService.getStateObserver().subscribe(
+      state => this.is_mobile_nav_active = state
+    )
   }
 
   _onMobileNavActiveChange(is_active: boolean)

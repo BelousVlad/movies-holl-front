@@ -34,7 +34,9 @@
 </ng-template>
 
 <ng-template #mobileMenuTemp>
-    <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
+    <nav>
+        <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
+    </nav>
     <nav class="mobile-panel-nav">
         <img class="mobile-panel-nav-img" src="../../assets/images/logo.png" alt="">
         <app-mobile-panel-nav-items [items]='nav_menu'></app-mobile-panel-nav-items>

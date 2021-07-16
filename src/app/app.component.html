@@ -2,7 +2,7 @@
 <app-header-section #header></app-header-section>
 
 <mat-sidenav-container>
-    <mat-sidenav [opened]="isOpenSidenav" [style.width.vw]='100' [fixedInViewport]="true" [fixedTopGap]="82">
+    <mat-sidenav [(opened)]="isOpenSidenav" [style.width.vw]='100' [fixedInViewport]="true" [fixedTopGap]="82" (closedStart)="openedChange()">
         <ng-template [ngTemplateOutlet]="sidenav_template"></ng-template>
     </mat-sidenav>
     <mat-sidenav-content>

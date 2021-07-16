@@ -1,5 +1,5 @@
 import { animate, animateChild, group, query, stagger, state, style, transition, trigger } from '@angular/animations';
-import { HostListener } from '@angular/core';
+import { HostListener, Input } from '@angular/core';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -35,7 +35,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class BurgerMenuComponent implements OnInit {
 
   @Output() onActiveChange = new EventEmitter<boolean>()
-  isActive: boolean = false //TODO false
+  @Input() isActive!: boolean //TODO false
 
   constructor() { }
 

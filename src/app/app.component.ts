@@ -25,7 +25,9 @@ export class AppComponent implements OnInit {
     )
   }
 
-  
-
-
+  openedChange()
+  {
+    this.sidenavService.setState(this.isOpenSidenav);
+    // console.log(this.isOpenSidenav);
+  }
 }

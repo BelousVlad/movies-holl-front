@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <app-burger-menu (onActiveChange)="_onMobileNavActiveChange($event)"></app-burger-menu>
+        <app-burger-menu [isActive]="is_mobile_nav_active" (onActiveChange)="_onMobileNavActiveChange($event)"></app-burger-menu>
         <ng-content></ng-content>
         <!-- <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
         <ng-template #content>
