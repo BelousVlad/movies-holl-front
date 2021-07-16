@@ -4,7 +4,7 @@ ul {
 li {
   list-style-type: none;
 }
-a {
+a, .with-menu {
   padding: 10px;
   margin-right: 10px;
 }
@@ -32,20 +32,8 @@ li.menu-item-children img {
 li.menu-item-children img.arrow-top {
   transform: rotate(180deg);
 }
-
-.child-menu {
-  display: none;
-  position: absolute;
-  top: 83px;
-  left: 0;
-  width: 100%;
-  background: rgb(0 0 0 / 90%);
-  z-index: 999;
-}
-
-
-.show {
-  display: flex;
+.sg-vertical-sub-menu{
+  background-color: black;
 }
 
 .child-menu-item {
@@ -56,4 +44,12 @@ li.menu-item-children img.arrow-top {
 
 .child-menu-item img {
   width: 100% !important;
+}
+
+.child-menu-item-link {
+  color: rgb(255, 255, 255);
+}
+
+::ng-deep .customize {
+  background: #757575;
 }

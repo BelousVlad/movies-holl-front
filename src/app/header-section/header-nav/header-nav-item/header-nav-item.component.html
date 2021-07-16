@@ -1,14 +1,24 @@
-<a href="{{ item.link }}" #elRoot>
-  <li *ngIf="!item.childrenItems?.length">{{ item.text }}</li>
-  <li *ngIf="item.childrenItems?.length" class="menu-item-children" (click)="showChildMenu = !showChildMenu">
+<a *ngIf="!item.childrenItems?.length" href="{{ item.link }}">
+  <li>{{ item.text }}</li>
+</a>
+
+<div *ngIf="item.childrenItems?.length" class="with-menu">
+  <li
+    mat-button
+    [matMenuTriggerFor]="menu"
+    class="menu-item-children"
+    (menuClosed)="showChildMenu = false"
+    (click)="showChildMenu = !showChildMenu"
+  >
     {{ item.text }}
     <img src="assets/icons/arrow-down.svg" alt="arrow" [ngClass]="{'arrow-top': showChildMenu}">
   </li>
-</a>
-
-<div *ngIf="item.childrenItems?.length" class="child-menu" [ngClass]="{'show': showChildMenu}">
-  <a *ngFor="let childItem of item.childrenItems" href="{{childItem.link}}" class="child-menu-item">
-    <li>{{childItem.text}}</li>
-    <img src="{{childItem.logo}}" alt="logo">
-  </a>
+  <mat-menu #menu="matMenu" class="customize">
+    <button mat-menu-item *ngFor="let childItem of item.childrenItems">
+      <a class="child-menu-item-link" href="{{childItem.link}}">{{childItem.text}}</a>
+    </button>
+  </mat-menu>
+  <!-- <div #menu="matMenu">
+    custom mat menu
+  </div> -->
 </div>

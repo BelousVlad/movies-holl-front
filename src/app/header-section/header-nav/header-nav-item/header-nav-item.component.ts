@@ -8,18 +8,8 @@ import { MenuItem } from 'src/app/services/menus-service/menus.service';
 })
 export class HeaderNavItemComponent implements OnInit {
 
-  @ViewChild("elRoot", {static: false}) elRoot: ElementRef | undefined;
   @Input() item!: MenuItem;
   showChildMenu: boolean = false;
-
-  @HostListener('document:click', ['$event'])
-  clickOutside(event: any) {
-
-   if (!event.path.includes(this.elRoot?.nativeElement)) {
-     this.showChildMenu = false;
-   }
-
-  }
 
   constructor() { }
 
