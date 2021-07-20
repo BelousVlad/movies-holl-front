@@ -1,0 +1,13 @@
+:host {
+    width: 100%;
+}
+.list-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .list-content {
+        justify-content: space-around;
+    }
+}

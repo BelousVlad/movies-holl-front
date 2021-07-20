@@ -1,4 +1,5 @@
 export class Movie {
+    id: number = 1;
     constructor(
         public title: string,
         public image: string,

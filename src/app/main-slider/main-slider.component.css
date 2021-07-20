@@ -55,11 +55,19 @@
 }
 
 .slide img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     height: 100%;
-    /* width: 100%; */
-    /* max-width: 100%; */
+    z-index: 1;
 }
-
+.slide-title {
+    z-index: 2;
+    color: var(--front-white-color);
+    font-size: 48px;
+    width: 436px;
+}
 ul.slick-dots li {
     border-radius: 50%;
     border: 2px solid #fff;   

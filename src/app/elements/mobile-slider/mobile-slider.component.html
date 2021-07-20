@@ -1,0 +1,7 @@
+<ngx-slick-carousel
+    [config]="sliderConfig"
+    #slickModal="slick-carousel">
+    <app-mobile-slider-item *ngFor="let item of items" [selected]="selected == item" (click)="onItemClick(item)" ngxSlickItem>
+        {{item.title}}
+    </app-mobile-slider-item>
+</ngx-slick-carousel>

@@ -1,5 +1,4 @@
 .control-section {
-    background: var(--dark-color);
     margin-bottom: 100px;
 }
 .control-panel{
@@ -30,12 +29,14 @@
 ::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
     transform: translateY(0) !important;
 }
-
-.lists-box mat-button-toggle-group {
+::ng-deep mat-button-toggle-group.lists-box-group .mat-button-toggle-label-content {
+    line-height: 37px;
+}
+mat-button-toggle-group.lists-box-group {
     border-radius: 0;
     border: 1px solid var(--green-color)
 }
-.lists-box mat-button-toggle-group .mat-button-toggle-appearance-standard {
+mat-button-toggle-group.lists-box-group .mat-button-toggle-appearance-standard {
     background: transparent;
     transition: .2s all;
 }
@@ -43,7 +44,7 @@
     border-left: none;
 }
 
-.lists-box mat-button-toggle-group .mat-button-toggle-checked {
+mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
     background: var(--green-color);
 }
 .sorts-box mat-button-toggle-group{
@@ -106,4 +107,29 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .control-section{
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .control-section {
+        background: var(--dark-color);
+    }
+}
+
+.filters-btn{
+    padding: 18px 60px;
+    line-height: unset;
+    margin: 0 auto;
+    display: block;
+}
+.slidenav-menu{
+    padding: 30px 20px;
+}
+.slidenav-lists-box {
+    margin-bottom: 18px;
+}
+.slidenav-menu app-mobile-slider {
+    margin-bottom:  18px;
+    display: block;
 }

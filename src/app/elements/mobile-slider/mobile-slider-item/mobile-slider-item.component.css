@@ -1,0 +1,16 @@
+button {
+    padding: 10px 30px 7px;
+    border-radius: 5px;
+}
+.mat-stroked-button:not(.mat-button-disabled) {
+    border: 1px solid var(--front-white-color);
+}
+.slidenav-menu .lists-box-group {
+    margin-bottom: 20px;
+}
+.selected .mat-stroked-button:not(.mat-button-disabled) {
+    border-color: var(--green-color);
+}
+.selected button {
+    color: var(--green-color);
+}

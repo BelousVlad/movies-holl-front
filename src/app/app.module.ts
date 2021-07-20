@@ -7,7 +7,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainSliderComponent } from './main-slider/main-slider.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
 import { SentenceBlockComponent } from './main-page/sentence-block/sentence-block.component';
 import { TagSliderComponent } from './tag-slider/tag-slider.component';
 import { MovieBannerComponent } from './elements/movie-banner/movie-banner.component';
@@ -52,7 +52,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { DropdownMenuComponent } from './elements/dropdown-menu/dropdown-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MobileHeaderNavComponent } from './header-section/mobile-header-nav/mobile-header-nav.component';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MoviesListContainerComponent } from './movies-list/movies-list-container/movies-list-container.component';
+import { MovieElementComponent } from './movies-list/movies-list-container/movie-element/movie-element.component';
+import { MoviesSectionComponent } from './movies-list/movies-section/movies-section.component';
+import { MobileSliderComponent } from './elements/mobile-slider/mobile-slider.component';
+import { MobileSliderItemComponent } from './elements/mobile-slider/mobile-slider-item/mobile-slider-item.component';
+import { MatListModule } from '@angular/material/list';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +103,12 @@ import { MobileHeaderNavComponent } from './header-section/mobile-header-nav/mob
     SwitcherComponent,
     DropdownMenuComponent,
     MobileHeaderNavComponent,
+    MoviesListContainerComponent,
+    MovieElementComponent,
+    MoviesSectionComponent,
+    MobileSliderComponent,
+    MobileSliderItemComponent,
+    MoviePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,8 +124,10 @@ import { MobileHeaderNavComponent } from './header-section/mobile-header-nav/mob
     MatButtonToggleModule,
     FontAwesomeModule,
     MatSidenavModule,
+    MatButtonModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [SlickCarouselComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

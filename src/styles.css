@@ -14,6 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --green-color: #00BA0F;
   --green2-color: #008C0B;
   --gray2-color: #757575;
+  font-family: 'Montserrat', sans-serif;
 }
 .extented-container,
 .container{
@@ -77,3 +78,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+.app-btn{
+  background: var(--green-color);
+}

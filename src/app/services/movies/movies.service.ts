@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { Genre } from 'src/app/domain-model/Genre';
 import { Movie } from 'src/app/domain-model/Movie';
 
 @Injectable({
@@ -23,7 +24,7 @@ export class MoviesService {
     new Movie('test 10','https://s1.vcdn.biz/static/f/3056538781/image.jpg/pt/r193x272x4', new Date()),
   ]
 
-  getFiltered(text: string): Observable<Movie> {
-    return from(this.movies).pipe(filter((item) => item.title.includes(text)));
+  getFiltered(group: string|null = "all", genre: Genre|null = null , sort_by: string|null = null ): Observable<Movie> {
+    return from(this.movies);
   }
 }

@@ -33,13 +33,13 @@ export class MainSliderComponent implements OnInit {
         }
       }
     ]
-};
+  };
 
   constructor() { }
 
   ngOnInit(): void {
     this.slides = [
-      new SlideItem('https://lh3.googleusercontent.com/proxy/uRyfKomjLP3-Rmw2ZE2kGgxXriztjNREr1lRzRFaz-Dq4aJBBrdzuLWll3P7uVtm1sT7y6awHljpf4j37vdX70LhUnr-o8KYfg'),
+      new SlideItem('../assets/images/banner.png', 'Удивительное путешествие доктора Дулиттла'),
       new SlideItem('https://format-tv.net/bonus2/uploads/1625486589-item-image-596-uk.png'),
       new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
       new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
