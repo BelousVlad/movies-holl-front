@@ -8,4 +8,8 @@
 }
 .banner-text{
     color: var(--gray2-color);
+    font-size: 12px;
+}
+.banner-title{
+    margin-bottom: 1px;
 }

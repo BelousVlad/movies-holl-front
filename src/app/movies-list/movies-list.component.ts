@@ -7,6 +7,7 @@ import { Movie } from '../domain-model/Movie';
 import { GenresService } from '../services/genres/genres.service';
 import { MenuItem } from '../services/menus-service/menus.service';
 import { SidenavService } from '../services/sidenav/sidenav.service';
+import { MoviesSectionComponent } from './movies-section/movies-section.component';
 
 @Component({
   selector: 'app-movies-list',
@@ -36,11 +37,11 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     },
     {
       title: 'По дате добавления',
-      sort_by: 'title'
+      sort_by: 'id'
     },
     {
       title: 'По дате выпуска',
-      sort_by: 'title'
+      sort_by: 'premier_date'
     },
 
   ]
@@ -50,6 +51,7 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   isMobile!: boolean;
 
   @ViewChild('mobile_filters') mobile_filters!: TemplateRef<any>;
+  @ViewChild(MoviesSectionComponent) movies_section!: MoviesSectionComponent;
 
   constructor(private genresService: GenresService, private sidenavService: SidenavService) { }
   
@@ -57,19 +59,29 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     this.genresService.getGenres().subscribe(
       item => this.genres.push(item)
     );
+    // this.movies_section.list = this.selectedList.;
+    
   }
   
   ngAfterViewInit(): void {
     this.onResize();
+    this.movies_section.genre = this.selectedGenre;
+    this.movies_section.order_by = this.selectedSort.sort_by;
+    this.movies_section.refereshList();
+
   }
 
   onGenreChanged(event: MatSelectChange)
   {
-    //TODO
+    // console.log(this.selectedGenre)
+    this.movies_section.genre = this.selectedGenre
+    this.movies_section.refereshList();
   }
   onSortChange(event: MatButtonToggleChange)
   {
-    //TODO
+    this.selectedSort = event.value;
+    this.movies_section.order_by = this.selectedSort.sort_by;
+    this.movies_section.refereshList();
   }
   onListChange(event: MatButtonToggleChange)
   {

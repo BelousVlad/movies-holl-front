@@ -20,8 +20,8 @@ export class SearchComponent implements OnInit {
   applyFilter(val: string)
   {
     this.movies.splice(0,this.movies.length);
-    this.moviesService.getFiltered(val).subscribe(
-      item => this.movies.push(item)
-    )
+    // this.moviesService.getFiltered(val).subscribe(
+    //   item => this.movies.push(item)
+    // )
   }
 }

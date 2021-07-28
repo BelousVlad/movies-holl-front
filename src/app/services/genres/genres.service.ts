@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
 import { Genre } from 'src/app/domain-model/Genre';
 
 @Injectable({
@@ -7,7 +9,7 @@ import { Genre } from 'src/app/domain-model/Genre';
 })
 export class GenresService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   list = [
     new Genre(1,'Боевик'),
@@ -18,6 +20,12 @@ export class GenresService {
   ]
 
   getGenres(): Observable<Genre> {
-    return from(this.list);
+    return this.httpClient.get('http://localhost:8080/api/genres')
+      .pipe(
+        mergeMap(item => from(item as any[]))
+      )
+      .pipe(
+        map(item => new Genre(item.id, item.title))
+      )
   }
 }

@@ -60,6 +60,7 @@ import { MobileSliderComponent } from './elements/mobile-slider/mobile-slider.co
 import { MobileSliderItemComponent } from './elements/mobile-slider/mobile-slider-item/mobile-slider-item.component';
 import { MatListModule } from '@angular/material/list';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -125,7 +126,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
     FontAwesomeModule,
     MatSidenavModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [SlickCarouselComponent],
   bootstrap: [AppComponent]
