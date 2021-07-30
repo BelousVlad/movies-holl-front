@@ -71,15 +71,19 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
 
   }
 
-  onGenreChanged(event: MatSelectChange)
+  onGenreChanged(value: Genre)
   {
     // console.log(this.selectedGenre)
+    this.selectedGenre = value;
     this.movies_section.genre = this.selectedGenre
     this.movies_section.refereshList();
   }
-  onSortChange(event: MatButtonToggleChange)
+  onSortChange(value: {
+    title: string,
+    sort_by: string
+  })
   {
-    this.selectedSort = event.value;
+    this.selectedSort = value;
     this.movies_section.order_by = this.selectedSort.sort_by;
     this.movies_section.refereshList();
   }

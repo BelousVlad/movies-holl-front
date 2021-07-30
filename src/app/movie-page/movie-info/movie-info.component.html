@@ -1,0 +1,39 @@
+<div class="info-container">
+    <div class="info">
+        <div class="info-field">
+            <div class="info-field-title">Продолжительность:</div>
+            <div>{{ movie.duraction / 60 | number:'1.0-0'}} мин.</div>
+        </div>
+        <div class="info-field">
+            <div class="info-field-title">Imdb:</div>
+            <div>{{movie.imdb || 'Отсутствует'}}</div>
+        </div>
+        <div class="info-field">
+            <div class="info-field-title">Жанры:</div>
+            <div>
+                <span *ngFor="let genre of movie.genres">{{genre.title}} </span>
+            </div>
+        </div>
+        <div class="info-field">
+            <div class="info-field-title">Год:</div>
+            <div>{{movie.year}}</div>
+        </div>
+        <div class="info-field">
+            <div class="info-field-title">Страна:</div>
+            <div>{{movie.country}}</div>
+        </div>
+    </div>
+    <div class="people">
+        <div class="info-field">
+            <div class="info-field-title">Режиссёр:</div>
+            <div>{{movie.director}}</div>
+        </div>
+        <div class="info-field">
+            <div class="info-field-title">Актёры:</div>
+            <div>{{movie.actors}}</div>
+        </div>
+    </div>
+</div>
+<div class="story">
+    {{movie.description}}
+</div>

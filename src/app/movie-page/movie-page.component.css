@@ -1,3 +1,138 @@
 .movie-page-banner {
     width: 100%;
+    position: relative;
+    margin: 50px 0;
 }
+.frame-preview{
+    width: 100%;
+    position: relative;
+}
+.frame-preview:after{
+    content: '';
+    background: #000a;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+.frame-preview img {
+    width: 100%;
+    height: 100%;
+}
+.banner-image{
+    width: 179px;
+    height: 250px;
+}
+.movie-page-banner-title-box{
+    position: absolute;
+    bottom: 0;
+    padding: 49px 110px;
+    z-index: 5;
+    display: flex;
+}
+.movie-page-banner-title{
+    width: 35%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    flex-grow: 1;
+}
+.movie-title{
+    font-size: 36px;
+}
+.info-panel{
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+.watch-btn{
+    width: 195px;
+    height: 58px;
+    background: var(--green2-color);
+}
+.movie-description{
+    width: 100%;
+}
+::ng-deep .movie-description .mat-tab-nav-bar,
+::ng-deep .movie-description .mat-tab-header {
+    border-bottom: none;
+}
+.gallery-img{
+    max-width: 220px;
+    display: block;
+}
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 494px) {
+    .gallery-container{
+        justify-content: space-around;
+    }    
+    .gallery-img{
+        margin-top: 5px;
+    }
+}
+.info-panel{
+    display: flex;
+}
+.mobile-movie-title{
+    display: none;
+}
+.banner-image img {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .frame-preview {
+        display: none;
+    }
+    .movie-page-banner-title-box{
+        position: static;
+        padding: 0;
+    }
+    .banner-image{
+        width: 100%;
+        height: auto;
+    }
+    .movie-page-banner-title-box{
+        flex-direction: column;
+    }
+    .movie-page-banner{
+        margin: 0;
+    }
+    .movie-page-banner-title{
+        width: 100%;
+        padding-left: 0;
+    }
+    .info-panel{
+        flex-direction: column;
+    }
+    .movie-title{
+        display: none;
+    }
+    .banner-image{
+        position: relative;
+    }
+    .banner-image:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.9%, #000000 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    }
+    .mobile-movie-title{
+        font-size: 32px;
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        z-index: 2;
+        padding-left: 15px;
+    }
+}
+
+

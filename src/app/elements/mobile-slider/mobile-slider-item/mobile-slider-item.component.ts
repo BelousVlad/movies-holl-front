@@ -12,7 +12,7 @@ export class MobileSliderItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.selected)
+    
   }
 
 }

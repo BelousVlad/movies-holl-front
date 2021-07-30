@@ -25,7 +25,6 @@ export class MoviesSectionComponent implements OnInit {
 
   refereshList()
   {
-    // console.log(this.moviesService);
     this.loadMovies();
   }
 

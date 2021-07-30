@@ -1,15 +1,41 @@
 <section>
     <div class="container">
         <div class="movie-page-banner">
+            <div class="frame-preview">
+                <img [src]="frame_preview" alt="">
+            </div>
             <div class="movie-page-banner-title-box">
-                <img [src]="movie?.image" alt="">
+                <div class="banner-image">
+                    <img [src]="movie?.image" alt="">
+                    <h2 class="mobile-movie-title">{{movie?.title}}</h2>
+                </div>
                 <div class="movie-page-banner-title">
-                    <h2>{{movie?.title}}</h2>
-                    <button mat-flat-button>
+                    <h2 class="movie-title">{{movie?.title}}</h2>
+                    <div class="info-panel">
+                        <span>В избранное</span>
+                        <span>Добавить на будущее</span>
+                        <span class="likes">likes</span>
+                    </div>
+                    <button class="watch-btn" mat-flat-button>
                         Смотреть
                     </button>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section>
+    <div *ngIf="movie" class="container">
+        <mat-tab-group class="movie-description" dynamicHeight>
+            <mat-tab label="Short tab">
+                <app-movie-info [movie]="movie"></app-movie-info>
+            </mat-tab>
+            <mat-tab label="Long tab">
+                <div class="gallery-container">
+                    <img class="gallery-img" *ngFor="let url of movie.gallery" [src]="url" alt="">
+                </div>
+            </mat-tab>
+          </mat-tab-group>
     </div>
 </section>

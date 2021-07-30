@@ -61,6 +61,9 @@ import { MobileSliderItemComponent } from './elements/mobile-slider/mobile-slide
 import { MatListModule } from '@angular/material/list';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MovieInfoComponent } from './movie-page/movie-info/movie-info.component';
+
 
 @NgModule({
   declarations: [
@@ -110,6 +113,7 @@ import { HttpClientModule } from '@angular/common/http';
     MobileSliderComponent,
     MobileSliderItemComponent,
     MoviePageComponent,
+    MovieInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -127,7 +131,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule,
   ],
   providers: [SlickCarouselComponent],
   bootstrap: [AppComponent]

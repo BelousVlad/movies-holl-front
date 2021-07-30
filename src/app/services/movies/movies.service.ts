@@ -43,16 +43,34 @@ export class MoviesService {
           item.imdb,
           item.duraction,
           item.description,
-          new Date(),
+          item.premier_date ? new Date(item.premier_date) : null,
           item.genres,
         ))
       )
   }
-  getMovie(id: number): Observable<Movie>|null
-  {
-    // return new Observable(observer => {
-    //   observer.next(new Movie('test 1','https://s1.vcdn.biz/static/f/3056538781/image.jpg/pt/r193x272x4', new Date()));
-    // }) 
-    return null;
+  getMovie(id: number): Observable<IMovie>
+  { 
+    const factory = new MovieFactory();
+
+    return this.http.get(`http://localhost:8080/api/movies/${id}` )
+      .pipe(
+        map((item: any) => 
+          factory.createMovie(
+            item.movie_id,
+            item.title,
+            item.country,
+            item.poster,
+            item.year,
+            item.vod,
+            item.director,
+            item.actors,
+            item.imdb,
+            item.duraction,
+            item.description,
+            item.premier_date ? new Date(item.premier_date) : null,
+            item.genres,
+            item.gallery,
+        ))
+      );
   }
 }

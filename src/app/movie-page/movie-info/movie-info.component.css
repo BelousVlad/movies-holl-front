@@ -1,0 +1,30 @@
+.info-field{
+    display: flex;
+    align-content: stretch;
+    margin-top: 20px;
+}
+.info-field-title {
+    margin-right: 15px;
+}
+.info {
+    width: 40%;
+}
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.people {
+    width: 60%;
+}
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+    .people {
+        width: 100%;
+    }
+    .info {
+        width: 100%;
+    }
+}

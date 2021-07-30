@@ -14,6 +14,7 @@ export interface IMovie {
     description: string;
     premier_date: Date|null;
     genres: Array<Genre>;
+    gallery: Array<string>|null;
 }
 
 export class Movie implements IMovie {
@@ -29,8 +30,9 @@ export class Movie implements IMovie {
         public imdb: number|null,
         public duraction: number,
         public description: string,
-        public premier_date: Date,
-        public genres: Array<Genre> = []
+        public premier_date: Date|null,
+        public genres: Array<Genre> = [],
+        public gallery: Array<string>|null = null,
         ) {}
 }
 
@@ -47,8 +49,9 @@ export class MovieFactory {
         imdb: number|null,
         duraction: number,
         description: string,
-        premier_date: Date,
-        genres: Array<Genre>
+        premier_date: Date|null,
+        genres: Array<Genre>,
+        gallery: Array<string>|null = null,
     ): IMovie
     {
         return new Movie(
@@ -65,6 +68,7 @@ export class MovieFactory {
             description,
             premier_date,
             genres,
+            gallery
         )
     }
 }

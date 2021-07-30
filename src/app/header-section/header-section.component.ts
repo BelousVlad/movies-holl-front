@@ -41,7 +41,7 @@ export class HeaderSectionComponent implements OnInit, AfterViewInit {
   @HostListener('window:resize')
   onResize()
   {
-    this.isMobile = window.innerWidth <= this.mobile_breakpoint; 
+    this.isMobile = window.innerWidth < this.mobile_breakpoint; 
   }
 
   onMobileNavActiveChange(is_active: boolean) {

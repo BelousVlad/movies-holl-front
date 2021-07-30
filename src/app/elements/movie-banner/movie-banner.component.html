@@ -1,6 +1,11 @@
 <img class="banner-preview-img" src="{{movie.image}}" alt="">
 <p class="banner-title">{{movie.title}}</p>
 <p class="banner-text">
-    {{movie.premier_date | date: 'yyyy'}}, 
+    <ng-template [ngIf]="movie.premier_date">
+        {{movie.premier_date | date: 'yyyy'}}, 
+    </ng-template>
+    <ng-template [ngIf]="!movie.premier_date">
+        {{movie.year}}, 
+    </ng-template>
     <span class="genre-title" *ngFor="let genre of movie.genres">{{genre.title}}, </span>
 </p>
