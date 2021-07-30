@@ -39,21 +39,21 @@ export class MenusService {
 
   nav_list = [
     { text: 'Услуги', link: '#' },
-    { text: 'Услуги', link: '#' },
-    { text: 'Услуги', link: '#' },
-    { text: 'Услуги', link: '#' },
-    { text: 'Услуги', link: '#' },
+    { text: 'Для Бизнеса', link: '#' },
+    { text: 'Новости', link: '#' },
+    { text: 'Акции', link: '#' },
+    { text: 'Магазин', link: '#' },
+    { text: 'Мариуполь Online', link: '#' },
+    { text: 'Оплата', link: '#' },
   ]
 
   addition_nav_list = [
     { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Новости', link: '#' },
+    { text: 'Фильмы', link: '#' },
+    { text: 'Мультфильмы', link: '#' },
+    { text: 'Сериалы', link: '#' },
+    { text: 'Спорт', link: '#' },
+    { text: 'Шоу', link: '#' },
   ]
   
 

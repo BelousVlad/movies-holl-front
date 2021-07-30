@@ -16,9 +16,11 @@
                         <span>Добавить на будущее</span>
                         <span class="likes">likes</span>
                     </div>
-                    <button class="watch-btn" mat-flat-button>
-                        Смотреть
-                    </button>
+                    <a [href]="'https://megogo.net/ru/view/'+movie.megogo_id">
+                        <button class="watch-btn" mat-flat-button>
+                            Смотреть
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

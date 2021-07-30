@@ -33,6 +33,7 @@ export class MoviesService {
       .pipe(
         map(item => factory.createMovie(
           item.movie_id,
+          item.megogo_id,
           item.title,
           item.country,
           item.poster,
@@ -57,6 +58,7 @@ export class MoviesService {
         map((item: any) => 
           factory.createMovie(
             item.movie_id,
+            item.megogo_id,
             item.title,
             item.country,
             item.poster,

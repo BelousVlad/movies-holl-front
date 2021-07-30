@@ -2,6 +2,7 @@ import { Genre } from "./Genre";
 
 export interface IMovie {
     id: number;
+    megogo_id: number;
     title: string;
     country: string;
     image: string|null;
@@ -20,6 +21,7 @@ export interface IMovie {
 export class Movie implements IMovie {
     constructor(
         public id: number,
+        public megogo_id: number,
         public title: string,
         public country: string,
         public image: string|null,
@@ -39,6 +41,7 @@ export class Movie implements IMovie {
 export class MovieFactory {
     createMovie(
         id: number,
+        megogo_id: number,
         title: string,
         country: string,
         image: string|null,
@@ -56,6 +59,7 @@ export class MovieFactory {
     {
         return new Movie(
             id,
+            megogo_id,
             title,
             country,
             image,

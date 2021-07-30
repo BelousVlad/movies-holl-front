@@ -15,3 +15,12 @@ a {
 :host {
     display: flex;
 }
+@media (max-width: 1200px) {
+    a {
+        font-size: 13px;
+        margin-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+}
