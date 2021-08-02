@@ -1,4 +1,11 @@
 a {
     color: var(--front-white-color);
     text-decoration: none;
+    font-size: 13px;
+}
+
+@media (max-width: 992px) {
+    a {
+        font-size: 12px;
+    }
 }

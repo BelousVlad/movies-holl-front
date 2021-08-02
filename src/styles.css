@@ -58,7 +58,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 960px;
   }
   .extented-container{
-    width: 1040px;
+    width: 977px;
   }
 }
 @media (min-width: 1200px) {
@@ -66,7 +66,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 1140px;
   }
   .extented-container{
-    width: 1220px;
+    width: 1185px;
   }
 }
 @media (min-width: 1400px) {
@@ -74,7 +74,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 1320px;
   }
   .extented-container{
-    width: 1400px;
+    width: 1385px;
   }
 }
 

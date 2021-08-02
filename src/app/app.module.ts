@@ -63,7 +63,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MovieInfoComponent } from './movie-page/movie-info/movie-info.component';
-
+import { TelephoneCallbackComponent } from './elements/telephone-callback/telephone-callback.component';
+import { GenreMoviesBannersSliderComponent } from './movies-banners-slider/genre-movies-banners-slider/genre-movies-banners-slider.component';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,8 @@ import { MovieInfoComponent } from './movie-page/movie-info/movie-info.component
     MobileSliderItemComponent,
     MoviePageComponent,
     MovieInfoComponent,
+    TelephoneCallbackComponent,
+    GenreMoviesBannersSliderComponent,
   ],
   imports: [
     BrowserModule,

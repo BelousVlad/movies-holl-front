@@ -1,6 +1,6 @@
 :host {
     color: var(--front-white-color);
-    max-width: 180px;
+    width: 180px;
     display: block;
 }
 .banner-preview-img{

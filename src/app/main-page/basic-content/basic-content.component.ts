@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Genre } from 'src/app/domain-model/Genre';
+import { GenresService } from 'src/app/services/genres/genres.service';
 
 @Component({
   selector: 'app-basic-content',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private genresService: GenresService) { }
+
+  sliders_genres: Array<Genre> = [];
 
   ngOnInit(): void {
+    this.genresService.getGenreByTitle('Комедии').subscribe(
+      item => this.sliders_genres.push(item)
+    );
+    this.genresService.getGenreByTitle('Драмы').subscribe(
+      item => this.sliders_genres.push(item)
+    );
+    this.genresService.getGenreByTitle('Детективы').subscribe(
+      item => this.sliders_genres.push(item)
+    );
   }
 
 }

@@ -7,6 +7,10 @@ app-header.mobile {
 }
 .localization-tel-box{
     display: flex;
+    height: 100%;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
 }
 .localization-tel-box a{
     color: #fff;
@@ -23,5 +27,8 @@ app-header.mobile {
     margin-top: 20px;
 }
 app-mobile-header-nav {
+    flex-grow: 1;
+}
+.search-section-list{
     flex-grow: 1;
 }

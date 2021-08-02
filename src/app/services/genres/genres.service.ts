@@ -11,13 +11,7 @@ export class GenresService {
 
   constructor(private httpClient: HttpClient) { }
 
-  list = [
-    new Genre(1,'Боевик'),
-    new Genre(2,'Романтика'),
-    new Genre(3,'Детектив'),
-    new Genre(4,'Комедия'),
-    new Genre(5,'Фентези'),
-  ]
+
 
   getGenres(): Observable<Genre> {
     return this.httpClient.get('http://localhost:8080/api/genres')
@@ -27,5 +21,10 @@ export class GenresService {
       .pipe(
         map(item => new Genre(item.id, item.title))
       )
+  }
+
+  getGenreByTitle(title: string): Observable<Genre>
+  {
+    return this.httpClient.get<Genre>(`http://localhost:8080/api/genres/title/${title}`);
   }
 }

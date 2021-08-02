@@ -1,5 +1,6 @@
 :host {
     display: flex;
+    justify-content: space-between;
 }
 a {
     padding: 28px 10px;

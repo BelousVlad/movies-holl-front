@@ -16,3 +16,11 @@ section {
     text-decoration: none;
 }
 
+@media (max-width: 992px) {
+    .search-login-box{
+        justify-content: space-between;
+    }
+    section{
+        padding: 19px 0;
+    }
+}
