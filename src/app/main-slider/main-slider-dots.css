@@ -37,6 +37,35 @@
     transform: scale(1.5);
 }
 
-
+@media (max-width: 768px) {
+    .main-slider .slick-dots {
+        bottom: 55%;
+        display: flex;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .main-slider .slick-dots li{
+        flex-grow: 1;
+        margin: 0;
+        height: 2px;
+    }
+    /* #757575 */
+    .main-slider .slick-dots li>button{
+        background: #757575;
+        border: none;
+        border-radius: 0;
+        opacity: .2;
+    }
+    .main-slider .slick-dots li>button::before{
+        display: none;
+    }
+    .main-slider .slick-dots li.slick-active {
+        transform: none;
+    }
+    .main-slider .slick-dots li.slick-active>button {
+        background: var(--green2-color);
+        opacity: 1;
+    }
+}
 
 

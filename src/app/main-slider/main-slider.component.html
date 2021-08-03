@@ -2,11 +2,21 @@
         [config]="slideConfig"  
         #slickModal="slick-carousel">
     <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <div class="slide-content extented-container">
+        <div class="slide-box extented-container">
             <img src="{{ slide.image }}">
-            <h2 *ngIf="slide.title" class="slide-title">
-                {{slide.title}}
-            </h2>
+            <div class="slide-content">
+                <h2 *ngIf="slide.title" class="slide-title">
+                    {{slide.title}}
+                </h2>
+                <p class="slide-note">{{slide.note}}</p>
+                <a *ngIf="slide.link" [href]="slide.link">
+                    <button 
+                        mat-flat-button
+                        class="app-btn slide-link">
+                        {{slide.link_text}}
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </ngx-slick-carousel>

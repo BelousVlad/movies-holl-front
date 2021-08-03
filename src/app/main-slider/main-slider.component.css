@@ -14,30 +14,40 @@
     min-height: 153px;
     position: relative;
 }
-.slide-content.extented-container {
+.slide-box.extented-container {
     /* width: unset; */
     /* max-width: unset; */
     flex-direction: unset;
     align-items: unset;
 }
-.slide-content {
+.slide-box {
     /* width: 100%; */
     overflow: hidden;
     height: 100%;
     position: relative;
+    z-index: 2;
 }
 @media (max-width: 768px) {
-    .slide-content {
+    .slide-box {
         width: 100%;
     }
     .slide {
         padding-left: 5px;
         padding-right: 5px;
         width: 90vw;
-        height: 50vw;
+        height: 110vw;
+    }
+    .slide .slide-content {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        transition: .3s padding;
+    }
+    .slide.slick-current .slide-content {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
-.slide-content::after {
+.slide-box::after {
     content: '';
     background: #000;
     opacity: .5;
@@ -50,7 +60,7 @@
     transition: .5s all;
 }
 
-.slide.slick-center .slide-content::after {
+.slide.slick-center .slide-box::after {
     opacity: 0;
 }
 
@@ -63,7 +73,6 @@
     z-index: 1;
 }
 .slide-title {
-    z-index: 2;
     color: var(--front-white-color);
     font-size: 48px;
     width: 436px;
@@ -71,4 +80,50 @@
 ul.slick-dots li {
     border-radius: 50%;
     border: 2px solid #fff;   
+}
+.slide-content{
+    z-index: 3;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 63px;
+}
+.slide-link{
+    width: 218px;
+    height: 58px;
+}
+.slide-note {
+    font-size: 30px;
+    margin: 30px 0 45px;
+}
+.slide-link{
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .slide img{
+        height: 40%;
+    }
+    .slide-content{
+        position: absolute;
+        bottom: 0;
+        padding: 0;
+        justify-content: space-between;
+        height: 50%;
+        left: 0;
+    }
+    .slide-title{
+        font-size: 24px;
+        width: auto;
+    }
+    .slide-note {
+        display: none;
+    }
+    .slide-link {
+        width: 100%;
+        background: transparent;
+        border: 1px solid var(--green2-color);
+        color: var(--green2-color);
+    }
 }
