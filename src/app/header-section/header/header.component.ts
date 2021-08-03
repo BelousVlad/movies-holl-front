@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
   _onMobileNavActiveChange(is_active: boolean)
   {
-    // this.onMobileNavActiveChange.emit(is_active);
+    this.onMobileNavActiveChange.emit(is_active);
     this.is_mobile_nav_active = is_active;
     this.sidenavService.setState(this.is_mobile_nav_active);
   }

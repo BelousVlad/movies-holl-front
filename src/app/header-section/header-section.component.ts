@@ -24,8 +24,9 @@ export class HeaderSectionComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.sidenavService.setTemplate(this.mobileNavMenu)
   }
-
+  
   ngOnInit(): void {
+    
     this.menusService.getHeaderNavMenu().subscribe(
       item => this.nav_menu.push(item)
     )
@@ -34,7 +35,6 @@ export class HeaderSectionComponent implements OnInit, AfterViewInit {
     )
 
     this.onResize();
-    // console.log(this.header);
 
   }
   

@@ -6,6 +6,7 @@ import { Genre } from '../domain-model/Genre';
 import { Movie } from '../domain-model/Movie';
 import { GenresService } from '../services/genres/genres.service';
 import { MenuItem } from '../services/menus-service/menus.service';
+import { MobileNavContentService } from '../services/mobile-nav-content/mobile-nav-content.service';
 import { SidenavService } from '../services/sidenav/sidenav.service';
 import { MoviesSectionComponent } from './movies-section/movies-section.component';
 
@@ -51,9 +52,11 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   isMobile!: boolean;
 
   @ViewChild('mobile_filters') mobile_filters!: TemplateRef<any>;
+  @ViewChild('mobile_header') mobile_header!: TemplateRef<any>;
   @ViewChild(MoviesSectionComponent) movies_section!: MoviesSectionComponent;
 
-  constructor(private genresService: GenresService, private sidenavService: SidenavService) { }
+  constructor(private genresService: GenresService, private sidenavService: SidenavService,
+    private mobileNavService: MobileNavContentService) { }
   
   ngOnInit(): void {
     this.genresService.getGenres().subscribe(
@@ -96,10 +99,14 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   {
     this.sidenavService.setTemplate(this.mobile_filters);
     this.sidenavService.setActive();
+    this.mobileNavService.setView(this.mobile_header);
     this.sidenavService.getStateObserver().pipe(first(), delay(100)).subscribe(
       state => {
         if(!state)
+        {
           this.sidenavService.popTemplate();
+          this.mobileNavService.pop();
+        }
       }
     )
   }

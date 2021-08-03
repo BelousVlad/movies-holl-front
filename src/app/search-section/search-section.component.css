@@ -11,7 +11,7 @@ section {
 .container {
     justify-content: space-around;
 }
-.search-login-box a {
+.search-login-box{
     color: var(--front-white-color);
     text-decoration: none;
 }

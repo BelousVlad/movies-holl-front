@@ -7,14 +7,24 @@
     <ng-template #desktopBlock>
         <app-header-nav [nav_menu]='nav_menu'></app-header-nav>
         <div class="localization-tel-box">
-            <app-localization-select></app-localization-select>
+            <app-localization-select class="header-localization"></app-localization-select>
             <app-telephone-callback></app-telephone-callback>
         </div>
     </ng-template>
     <ng-template #mobileBlock>
-        <app-mobile-header-nav>
-            <img src="../../assets/images/logo.png" alt="">
-            <app-hiding-search></app-hiding-search>
+        <app-mobile-header-nav class="header-nav">
+            <ng-template [ngIf]="!show_mobile_nav">
+                <div class="standart-mobile-header-nav">
+                    <div class="logo-box">
+                        <img src="../../assets/images/logo.png" alt="">
+                    </div>
+                    <app-hiding-search></app-hiding-search> 
+                </div>
+            </ng-template>
+            <ng-template [ngIf]="show_mobile_nav">
+                <app-localization-select></app-localization-select>
+                <app-login></app-login>
+            </ng-template>
         </app-mobile-header-nav>
     </ng-template>
 
