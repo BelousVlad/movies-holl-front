@@ -4,3 +4,6 @@
 mat-sidenav-content {
     background: #00181C;
 }
+mat-sidenav{
+    padding: 9px 17px;
+}

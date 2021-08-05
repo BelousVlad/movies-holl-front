@@ -1,0 +1,21 @@
+.search-box {
+    display: flex;
+    height: 40px;
+    width: 340px;
+    border: 1px solid var(--gray2-color);
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+}
+.search-box input {
+    height: 100%;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+img {
+    margin-right: 10px;
+}

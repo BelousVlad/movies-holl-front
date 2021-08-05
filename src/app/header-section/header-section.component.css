@@ -40,20 +40,11 @@ app-mobile-header-nav {
         font-size: 12px;
     }
 }
-.standart-mobile-header-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-.standart-mobile-header-nav .logo-box{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
+
 .header-nav {
     font-size: 18px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 100%;
 }

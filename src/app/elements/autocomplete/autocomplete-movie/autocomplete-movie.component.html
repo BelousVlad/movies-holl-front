@@ -1,0 +1,9 @@
+<a [routerLink]="['/item', movie.id]">
+    <img [src]="movie.image" [alt]="movie.title">
+    <div class="info">
+        <div class="info-title">{{movie.title}}</div>
+        <span class="info-year">{{movie.year}}, 
+            <span>{{movie.genres[0].title}}</span></span>
+            <!-- <span *ngFor="let genre of movie.genres">{{genre.title}}, </span></span> -->
+    </div>
+</a>

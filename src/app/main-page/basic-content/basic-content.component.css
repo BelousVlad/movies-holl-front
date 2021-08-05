@@ -26,10 +26,10 @@ app-sentence-block {
     .sentence-block-margin {
         margin-right: 0;
     }
-    app-sentence-block:nth-child(2n-1) {
-        background: transparent;
-    }
     .extented-container {
         padding: 0 10px;
+    }
+    .tag-slider-section{
+        display: none;
     }
 }

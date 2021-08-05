@@ -6,6 +6,7 @@
 .frame-preview{
     width: 100%;
     position: relative;
+    min-height: 648px;
 }
 .frame-preview:after{
     content: '';

@@ -1,0 +1,6 @@
+<div class="standart-mobile-header-nav" [ngClass]="{'active-search': mobile_nav_search_active}">
+    <div class="logo-box" *ngIf="!mobile_nav_search_active">
+        <img src="../../assets/images/logo.png" alt="">
+    </div>
+    <app-hiding-search [(hide)]="mobile_nav_search_active" [style.height.px]="50"></app-hiding-search> 
+</div>

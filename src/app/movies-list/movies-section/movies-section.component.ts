@@ -30,7 +30,7 @@ export class MoviesSectionComponent implements OnInit {
 
   loadMovies() {
     this.movies = []
-    this.moviesService.getFiltered(this.list, this.genre, this.order_by, 40 )
+    this.moviesService.getFiltered(null, this.list, this.genre, this.order_by, 40 )
     .subscribe(item => {
         this.movies.push(item)
       });

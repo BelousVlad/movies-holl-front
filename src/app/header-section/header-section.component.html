@@ -14,12 +14,7 @@
     <ng-template #mobileBlock>
         <app-mobile-header-nav class="header-nav">
             <ng-template [ngIf]="!show_mobile_nav">
-                <div class="standart-mobile-header-nav">
-                    <div class="logo-box">
-                        <img src="../../assets/images/logo.png" alt="">
-                    </div>
-                    <app-hiding-search></app-hiding-search> 
-                </div>
+                <app-mobile-header-search [style.width.%]="100" class="header-nav"></app-mobile-header-search>
             </ng-template>
             <ng-template [ngIf]="show_mobile_nav">
                 <app-localization-select></app-localization-select>

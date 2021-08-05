@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    height: 400px;
+    background: rgba(0, 11, 13, 0.85);
+    backdrop-filter: blur(7px);
+    padding: 20px;
+}
+.items-box {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.items-box::-webkit-scrollbar{
+    width: 2px;
+}
+.items-box::-webkit-scrollbar-track {
+    background: #000;
+}
+.items-box::-webkit-scrollbar-thumb {
+    background: var(--green2-color);
+}

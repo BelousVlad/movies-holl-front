@@ -26,3 +26,8 @@
         padding: 40px 10px;
     }
 }
+@media (max-width: 992px) {
+    .sentence-link {
+        padding: 18px 25px;
+    }
+}

@@ -66,6 +66,10 @@ import { MovieInfoComponent } from './movie-page/movie-info/movie-info.component
 import { TelephoneCallbackComponent } from './elements/telephone-callback/telephone-callback.component';
 import { GenreMoviesBannersSliderComponent } from './movies-banners-slider/genre-movies-banners-slider/genre-movies-banners-slider.component';
 import { LoginComponent } from './elements/login/login.component';
+import { BorderedSearchComponent } from './elements/search/bordered-search/bordered-search.component';
+import { MobileHeaderSearchComponent } from './header-section/mobile-header-nav/mobile-header-search/mobile-header-search.component';
+import { AutocompleteComponent } from './elements/autocomplete/autocomplete.component';
+import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete-movie/autocomplete-movie.component';
 
 @NgModule({
   declarations: [
@@ -119,6 +123,10 @@ import { LoginComponent } from './elements/login/login.component';
     TelephoneCallbackComponent,
     GenreMoviesBannersSliderComponent,
     LoginComponent,
+    BorderedSearchComponent,
+    MobileHeaderSearchComponent,
+    AutocompleteComponent,
+    AutocompleteMovieComponent,
   ],
   imports: [
     BrowserModule,

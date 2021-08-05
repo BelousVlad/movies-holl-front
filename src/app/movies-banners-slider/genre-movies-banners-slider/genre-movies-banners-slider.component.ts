@@ -16,7 +16,7 @@ export class GenreMoviesBannersSliderComponent implements OnInit {
   constructor(private movieSevice: MoviesService) { }
 
   ngOnInit(): void {
-    this.movieSevice.getFiltered(null, this.genre).subscribe(
+    this.movieSevice.getFiltered(null, null, this.genre).subscribe(
       item => this.movies.push(item)
     )
   }

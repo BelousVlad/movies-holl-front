@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/domain-model/Movie';
 import { MoviesService } from 'src/app/services/movies/movies.service';
 
@@ -12,6 +12,8 @@ export class SearchComponent implements OnInit {
   search_text!: string
   movies: Array<Movie> = []
 
+  autocomlete_active: boolean = false;
+
   constructor(protected moviesService: MoviesService) { }
 
   ngOnInit(): void {
@@ -20,8 +22,24 @@ export class SearchComponent implements OnInit {
   applyFilter(val: string)
   {
     this.movies.splice(0,this.movies.length);
-    // this.moviesService.getFiltered(val).subscribe(
-    //   item => this.movies.push(item)
-    // )
+    if (val !== '')
+    {
+      this.moviesService.getFiltered(this.search_text).subscribe(item => {
+          this.movies.push(item)
+        }
+      )
+    }
+  }
+
+  @HostListener('document:click')
+  disableAutocomplete()
+  {
+    this.autocomlete_active = false;
+  }
+  @HostListener('click', ['$event'])
+  enableAutocomplete(event: MouseEvent)
+  {
+    this.autocomlete_active = true;
+    event.stopPropagation();
   }
 }

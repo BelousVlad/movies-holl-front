@@ -12,15 +12,19 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
-  getFiltered(group: string|null = "all", genre: Genre|null = null , sort_by: string|null = null, limit: number|null = null, offset: number|null = null ): Observable<IMovie> {
+  getFiltered(title: string|null = null, group: string|null = null, genre: Genre|null = null , sort_by: string|null = null, limit: number|null = null, offset: number|null = null ): Observable<IMovie> {
     const factory = new MovieFactory();
 
     let params = new HttpParams();
 
+    if(title)
+      params = params.append('title', title);
     if(sort_by)
       params = params.append('order_by', sort_by);
     if(genre && genre.id !== -1)
       params = params.append('genre', genre.id);
+    if(group)
+      params = params.append('vod', group);
     if(offset)
       params = params.append('offset', offset);
     if(limit)

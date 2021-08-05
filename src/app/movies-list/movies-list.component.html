@@ -6,7 +6,7 @@
 <!-- </app-switcher> -->
 
 <ng-template #lists_component>
-    <mat-button-toggle-group class="lists lists-box-group" [(value)]="selectedList" (change)="onListChange($event)">
+    <mat-button-toggle-group class="lists lists-box-group" [(value)]="selectedList" (change)="onListChange($event.value)">
         <mat-button-toggle *ngFor="let item of lists" [value]="item">{{item.text}}</mat-button-toggle>
     </mat-button-toggle-group>
 </ng-template>

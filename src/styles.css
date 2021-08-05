@@ -41,14 +41,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 620px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .container {
     width: 720px;
     justify-content: space-between;
     flex-direction: row;
   }
   .extented-container{
-    width: 800px;
+    width: 768px;
     flex-direction: row;
     justify-content: space-between;
   }

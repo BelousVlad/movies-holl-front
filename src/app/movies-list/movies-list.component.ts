@@ -19,9 +19,9 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
 
 
   lists = [
-    { text: 'Все'},
-    { text: 'Бесплатные'},
-    { text: 'По подписке'},
+    { text: 'Все', list: 'advod,svod,tvod,dto,fvod'},
+    { text: 'Бесплатные', list: 'advod,fvod' },
+    { text: 'Платные', list: 'svod,tvod,dto' },
   ]
   selectedList = this.lists[0];
 
@@ -70,6 +70,7 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     this.onResize();
     this.movies_section.genre = this.selectedGenre;
     this.movies_section.order_by = this.selectedSort.sort_by;
+    this.movies_section.list = this.selectedList.list;
     this.movies_section.refereshList();
 
   }
@@ -90,9 +91,11 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     this.movies_section.order_by = this.selectedSort.sort_by;
     this.movies_section.refereshList();
   }
-  onListChange(event: MatButtonToggleChange)
+  onListChange(value: { text: string, list: string})
   {
-    //TODO
+    this.selectedList = value;
+    this.movies_section.list = value.list;
+    this.movies_section.refereshList();
   }
 
   openMobileFilters()

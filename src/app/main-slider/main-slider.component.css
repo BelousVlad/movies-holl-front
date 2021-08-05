@@ -127,3 +127,8 @@ ul.slick-dots li {
         color: var(--green2-color);
     }
 }
+@media (min-width: 767px) {
+    .slide-title{
+        font-size: 46px;
+    }
+}
