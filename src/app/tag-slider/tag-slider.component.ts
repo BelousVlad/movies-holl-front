@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TagSliderItem } from './tag-slider-item';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { GenresService } from '../services/genres/genres.service';
+import { Genre } from '../domain-model/Genre';
 
 @Component({
   selector: 'app-tag-slider',
@@ -8,7 +10,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
   styleUrls: ['./tag-slider.component.css']
 })
 export class TagSliderComponent implements OnInit {
-  slides!: Array<TagSliderItem>;
+  slides: Array<Genre> = [];
   sliderConfig = {
     slidesToShow: 4,
     // centerMode: true,
@@ -32,18 +34,13 @@ export class TagSliderComponent implements OnInit {
   left_arrow_icon = faChevronLeft
   right_arrow_icon = faChevronRight
 
-  constructor() { }
+  constructor(private genresService: GenresService) { }
 
-  ngOnInit(): void {  
-    this.slides = [
-      new TagSliderItem('lorem1', ''),
-      new TagSliderItem('lorem2', ''),
-      new TagSliderItem('lorem3', ''),
-      new TagSliderItem('lorem4', ''),
-      new TagSliderItem('lorem5', ''),
-      new TagSliderItem('lorem6', ''),
-      new TagSliderItem('lorem7', ''),
-    ];
+  ngOnInit(): void {
+    this.genresService.getGenres()
+    .subscribe(
+      item => this.slides.push(item)
+    )
   }
 
 }

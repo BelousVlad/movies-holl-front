@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, HostListener, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
-import { MatSelectChange } from '@angular/material/select';
-import { delay, first, timeout } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { concatAll, delay, first, map, switchAll, switchMap, timeout } from 'rxjs/operators';
 import { Genre } from '../domain-model/Genre';
-import { Movie } from '../domain-model/Movie';
 import { GenresService } from '../services/genres/genres.service';
-import { MenuItem } from '../services/menus-service/menus.service';
 import { MobileNavContentService } from '../services/mobile-nav-content/mobile-nav-content.service';
 import { SidenavService } from '../services/sidenav/sidenav.service';
 import { MoviesSectionComponent } from './movies-section/movies-section.component';
@@ -16,8 +14,6 @@ import { MoviesSectionComponent } from './movies-section/movies-section.componen
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit, AfterViewInit {
-
-
   lists = [
     { text: 'Все', list: 'advod,svod,tvod,dto,fvod'},
     { text: 'Бесплатные', list: 'advod,fvod' },
@@ -26,7 +22,7 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   selectedList = this.lists[0];
 
   genres: Array<Genre> = [new Genre(-1, 'Все жанры')]
-  selectedGenre: Genre = this.genres[0];
+  selectedGenre!: Genre;
 
   sorts: Array<{
     title: string,
@@ -56,28 +52,44 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   @ViewChild(MoviesSectionComponent) movies_section!: MoviesSectionComponent;
 
   constructor(private genresService: GenresService, private sidenavService: SidenavService,
-    private mobileNavService: MobileNavContentService) { }
+    private mobileNavService: MobileNavContentService, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
-    this.genresService.getGenres().subscribe(
-      item => this.genres.push(item)
-    );
-    // this.movies_section.list = this.selectedList.;
     
+    
+    this.genresService.getGenres()
+    .subscribe({
+      next: (item) => this.genres.push(item),
+      complete: () => {
+        this.route.queryParamMap.pipe(
+          map((param) => Number(param.get('genre')))
+        ).subscribe(
+          item => {
+            const finded = this.genres.find(_=> _.id == item);
+            if(finded)
+              this.selectedGenre = finded
+            else
+              this.selectedGenre = this.genres[0];
+            this.updateValues()
+            this.movies_section.refereshList();
+        })
+      }
+    })
   }
   
   ngAfterViewInit(): void {
     this.onResize();
+  }
+
+  updateValues()
+  {
     this.movies_section.genre = this.selectedGenre;
     this.movies_section.order_by = this.selectedSort.sort_by;
     this.movies_section.list = this.selectedList.list;
-    this.movies_section.refereshList();
-
   }
 
   onGenreChanged(value: Genre)
   {
-    // console.log(this.selectedGenre)
     this.selectedGenre = value;
     this.movies_section.genre = this.selectedGenre
     this.movies_section.refereshList();

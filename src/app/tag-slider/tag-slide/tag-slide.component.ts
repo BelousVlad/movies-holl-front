@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TagSliderItem } from '../tag-slider-item';
+import { Router } from '@angular/router';
+import { Genre } from 'src/app/domain-model/Genre';
 
 @Component({
   selector: 'app-tag-slide',
@@ -8,11 +9,21 @@ import { TagSliderItem } from '../tag-slider-item';
 })
 export class TagSlideComponent implements OnInit {
 
-  @Input() item!: TagSliderItem;
+  @Input() item!: Genre;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
+  onClick(event: MouseEvent)
+  {
+    this.router.navigate(['/movies'], {
+      queryParams: {
+        genre: this.item.id
+      }
+    })
+    event.stopPropagation();
+  }
 }
