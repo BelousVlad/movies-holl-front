@@ -3,6 +3,8 @@
 </div>
 <nav>
     <ul>
-        <app-header-nav-items [items]="nav_menu"></app-header-nav-items>
+        <!-- <app-header-nav-items [items]="nav_menu"></app-header-nav-items> -->
+        <app-header-nav-item *ngFor="let item of nav_menu" [item]="item">
+        </app-header-nav-item>
     </ul>
 </nav>

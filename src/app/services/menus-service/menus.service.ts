@@ -1,7 +1,12 @@
 import { Injectable, Type } from '@angular/core';
 import { from, Observable } from 'rxjs';
-import { FacebookIconComponent } from 'src/app/elements/social-icons/facebook-icon/facebook-icon.component';
-import { SocialIconsComponent } from 'src/app/elements/social-icons/social-icons.component';
+
+
+export type MenuItem = {
+  text: string,
+  link: string,
+  menu?: Array<MenuItem>
+}
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +15,7 @@ export class MenusService {
 
   constructor() { }
 
-  list1 = [
+  list1: Array<MenuItem> = [
     {text: 'Интернет', link: 'https://format-tv.net/tariffs/'},
     {text: 'Телевиденье', link: 'https://format-tv.net/tariffs/'},
     {text: 'Умный дом', link: 'https://format-tv.net/video/'},
@@ -38,7 +43,29 @@ export class MenusService {
   ]
 
   nav_list = [
-    { text: 'Услуги', link: '#' },
+    { text: 'Услуги', link: '#', 
+      menu: [
+        { text: 'Интернет', link: '#' },
+        { text: 'Телевидение', link: '#' },
+        { text: 'Умный дом', link: '#' },
+        { text: 'Сервисный Центр', link: '#' },
+        { text: 'WEB Плеер', link: '#' },
+        { text: 'Для Бизнеса', link: '#' },
+        { text: 'Антивирус', link: '#' },
+        { text: 'Кинозал', link: '#', 
+          menu: [
+            { text: 'Интернет', link: '#' },
+            { text: 'Телевидение', link: '#' },
+            { text: 'Умный дом', link: '#' },
+            { text: 'Сервисный Центр', link: '#' },
+            { text: 'WEB Плеер', link: '#' },
+            { text: 'Для Бизнеса', link: '#' },
+            { text: 'Антивирус', link: '#' },
+            { text: 'Кинозал', link: '#' },
+          ]
+      },
+      ]
+    },
     { text: 'Для Бизнеса', link: '#' },
     { text: 'Новости', link: '#' },
     { text: 'Акции', link: '#' },
@@ -78,7 +105,3 @@ export class MenusService {
   }
 }
 
-export type MenuItem = {
-  text: string,
-  link: string
-}

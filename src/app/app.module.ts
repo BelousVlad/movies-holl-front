@@ -70,6 +70,9 @@ import { BorderedSearchComponent } from './elements/search/bordered-search/borde
 import { MobileHeaderSearchComponent } from './header-section/mobile-header-nav/mobile-header-search/mobile-header-search.component';
 import { AutocompleteComponent } from './elements/autocomplete/autocomplete.component';
 import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete-movie/autocomplete-movie.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -127,6 +130,8 @@ import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete
     MobileHeaderSearchComponent,
     AutocompleteComponent,
     AutocompleteMovieComponent,
+    HeaderNavItemComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
@@ -146,8 +151,9 @@ import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete
     MatListModule,
     HttpClientModule,
     MatTabsModule,
+    MatMenuModule,
   ],
-  providers: [SlickCarouselComponent],
-  bootstrap: [AppComponent]
+  providers: [ SlickCarouselComponent ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

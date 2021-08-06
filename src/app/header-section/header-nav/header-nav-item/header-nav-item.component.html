@@ -1,0 +1,27 @@
+<!-- <a *ngFor="let item of items" href="{{ item.link }}"> -->
+
+<a *ngIf="!item.menu" [href]="item.link" class="nav-item">
+    <li>
+        {{item.text}}
+    </li>
+</a>
+
+<li *ngIf="item.menu" 
+[matMenuTriggerFor]="menu" class="nav-item">
+    <span>
+        {{item.text}}
+    </span>
+    <img class="arrow-icon" src="../../../../assets/icons/nav-arrow.svg" alt="">
+    <mat-menu #menu="matMenu">
+        <li mat-menu-item *ngFor="let inner_item of item.menu">
+            <a [href]="inner_item.link" class="nav-item">
+                {{inner_item.text}}
+            </a>
+        </li>
+    </mat-menu>
+</li>
+
+<!-- <li *ngIf="item.menu" [matMenuTriggerFor]="menu">{{ item.text }}</li> -->
+
+
+<!-- </a> -->

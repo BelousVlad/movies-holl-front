@@ -5,6 +5,7 @@ import { BasicContentComponent } from './main-page/basic-content/basic-content.c
 import { MainPageComponent } from './main-page/main-page.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
+import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   { path: 'item/:id', component: MoviePageComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
       { path: '', component: BasicContentComponent }
     ]
   },
-  { path: '**', component: MainPageComponent}
+  { path: '**', component: Page404Component}
 ];
 
 @NgModule({
