@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -73,6 +73,10 @@ import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
 import { Page404Component } from './page404/page404.component';
+import { registerLocaleData } from '@angular/common';
+import localeUk from '@angular/common/locales/uk'
+
+registerLocaleData(localeUk);
 
 @NgModule({
   declarations: [
@@ -153,7 +157,9 @@ import { Page404Component } from './page404/page404.component';
     MatTabsModule,
     MatMenuModule,
   ],
-  providers: [ SlickCarouselComponent ],
+  providers: [ SlickCarouselComponent,
+    { provide: LOCALE_ID, useValue: 'ru' }
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

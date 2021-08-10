@@ -30,7 +30,7 @@ export class MoviesService {
     if(limit)
       params = params.append('limit', limit);
     
-    return this.http.get('http://localhost:8080/api/movies', { params })
+    return this.http.get('http://localhost:8080/ru/api/movies', { params })
       .pipe(
         mergeMap((item) => from(item as any[]),
       ))
@@ -57,7 +57,7 @@ export class MoviesService {
   { 
     const factory = new MovieFactory();
 
-    return this.http.get(`http://localhost:8080/api/movies/${id}` )
+    return this.http.get(`http://localhost:8080/ru/api/movies/${id}` )
       .pipe(
         map((item: any) => 
           factory.createMovie(

@@ -14,7 +14,7 @@ export class GenresService {
 
 
   getGenres(): Observable<Genre> {
-    return this.httpClient.get('http://localhost:8080/api/genres')
+    return this.httpClient.get('http://localhost:8080/ru/api/genres')
       .pipe(
         mergeMap(item => from(item as any[]))
       )
@@ -25,6 +25,6 @@ export class GenresService {
 
   getGenreByTitle(title: string): Observable<Genre>
   {
-    return this.httpClient.get<Genre>(`http://localhost:8080/api/genres/title/${title}`);
+    return this.httpClient.get<Genre>(`http://localhost:8080/ru/api/genres/title/${title}`);
   }
 }
