@@ -1,5 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
 import { filter, first, map, mergeAll, mergeMap, switchMap } from 'rxjs/operators';
 import { Genre } from 'src/app/domain-model/Genre';
@@ -10,7 +10,9 @@ import { IMovie, Movie, MovieFactory } from 'src/app/domain-model/Movie';
 })
 export class MoviesService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Inject(LOCALE_ID) public locale: string) {
+    
+  }
 
   getFiltered(title: string|null = null, group: string|null = null, genre: Genre|null = null , sort_by: string|null = null, limit: number|null = null, offset: number|null = null ): Observable<IMovie> {
     const factory = new MovieFactory();
@@ -30,7 +32,7 @@ export class MoviesService {
     if(limit)
       params = params.append('limit', limit);
     
-    return this.http.get('http://localhost:8080/ru/api/movies', { params })
+    return this.http.get(`http://localhost:8080/${this.locale}/api/movies`, { params })
       .pipe(
         mergeMap((item) => from(item as any[]),
       ))
@@ -54,10 +56,10 @@ export class MoviesService {
       )
   }
   getMovie(id: number): Observable<IMovie>
-  { 
+  {
     const factory = new MovieFactory();
 
-    return this.http.get(`http://localhost:8080/ru/api/movies/${id}` )
+    return this.http.get(`http://localhost:8080/${this.locale}/api/movies/${id}` )
       .pipe(
         map((item: any) => 
           factory.createMovie(

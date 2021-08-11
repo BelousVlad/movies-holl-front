@@ -3,7 +3,7 @@
     <li *ngIf="item.menu" [matMenuTriggerFor]="menu">{{ item.text }}</li>
     
     <mat-menu #menu="matMenu">
-        <a mat-menu-item *ngFor="let inner_item of item.menu" href="">
+        <a mat-menu-item *ngFor="let inner_item of item.menu" [href]="inner_item.link">
             {{inner_item.text}}
         </a>
     </mat-menu>

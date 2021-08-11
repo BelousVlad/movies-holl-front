@@ -10,7 +10,7 @@
       "i18n": {
         "sourceLocale": "ru",
         "locales": {
-          "ua": "src/i18n/messages.ua.xlf"
+          "uk": "src/i18n/messages.ua.xlf"
         }
       },
       "projectType": "application",
@@ -50,8 +50,8 @@
             ]
           },
           "configurations": {
-            "ua": {
-              "localize": ["ua"]
+            "uk": {
+              "localize": ["uk"]
             },
             "production": {
               "budgets": [
@@ -94,8 +94,8 @@
             "development": {
               "browserTarget": "movies-front:build:development"
             },
-            "ua": {
-              "browserTarget": "movies-front:build:ua"
+            "uk": {
+              "browserTarget": "movies-front:build:uk"
             }
           },
           "defaultConfiguration": "development"

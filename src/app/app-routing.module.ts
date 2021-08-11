@@ -19,11 +19,11 @@ const standart_navigation = [
 
 const routes: Routes = [
   {
-    path: "ua",
+    path: ":lang",
     children: standart_navigation
   },
   {
-    path: "ru",
+    path: ":lang",
     children: standart_navigation
   },
   // { path: '**', redirectTo: '/ru'},

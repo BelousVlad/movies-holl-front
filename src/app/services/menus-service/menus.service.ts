@@ -16,71 +16,71 @@ export class MenusService {
   constructor() { }
 
   list1: Array<MenuItem> = [
-    {text: 'Интернет', link: 'https://format-tv.net/tariffs/'},
-    {text: 'Телевиденье', link: 'https://format-tv.net/tariffs/'},
-    {text: 'Умный дом', link: 'https://format-tv.net/video/'},
-    {text: 'Кинозал', link: 'https://format-tv.net/'},
-    {text: 'Format Family', link: 'https://format-tv.net/format-family'},
-    {text: 'Web Плеер', link: 'https://tv.format-tv.net/'},
-    {text: 'Сервисный центр', link: 'https://format-tv.net/service-center'},
+    {text: $localize`Интернет`, link: 'https://format-tv.net/tariffs/'},
+    {text: $localize`Телевиденье`, link: 'https://format-tv.net/tariffs/'},
+    {text: $localize`Умный дом`, link: 'https://format-tv.net/video/'},
+    {text: $localize`Кинозал`, link: 'https://format-tv.net/'},
+    {text: $localize`Format Family`, link: 'https://format-tv.net/format-family'},
+    {text: $localize`Web Плеер`, link: 'https://tv.format-tv.net/'},
+    {text: $localize`Сервисный центр`, link: 'https://format-tv.net/service-center'},
   ]
 
   list2 = [
-    {text: 'Для бизнеса', link: 'https://format-tv.net/web-business'},
-    {text: 'Новости', link: 'https://format-tv.net/news/'},
-    {text: 'Акции', link: 'https://format-tv.net/offers/'},
-    {text: 'Мариуполь Online', link: 'https://format-tv.net/mariupol-online'},
-    {text: 'Магазин', link: 'https://format-tv.net/shop-2'},
-    {text: 'Оплата', link: 'https://format-tv.net/payment/'},
+    {text: $localize`Для бизнеса`, link: 'https://format-tv.net/web-business'},
+    {text: $localize`Новости`, link: 'https://format-tv.net/news/'},
+    {text: $localize`Акции`, link: 'https://format-tv.net/offers/'},
+    {text: $localize`Мариуполь Online`, link: 'https://format-tv.net/mariupol-online'},
+    {text: $localize`Магазин`, link: 'https://format-tv.net/shop-2'},
+    {text: $localize`Оплата`, link: 'https://format-tv.net/payment/'},
   ]
 
   list3 = [
-    {text: 'Карьера', link: 'https://format-tv.net/vacancies'},
-    {text: 'Контакты', link: 'https://format-tv.net/contacts'},
-    {text: 'Wi-Fi зоны', link: 'https://format-tv.net/wi-fi'},
-    {text: 'Наши продукты', link: 'https://format-tv.net/faq'},
-    {text: 'Отсавить отзыв', link: 'https://format-tv.net/reviews'},
+    {text: $localize`Карьера`, link: 'https://format-tv.net/vacancies'},
+    {text: $localize`Контакты`, link: 'https://format-tv.net/contacts'},
+    {text: $localize`Wi-Fi зоны`, link: 'https://format-tv.net/wi-fi'},
+    {text: $localize`Наши продукты`, link: 'https://format-tv.net/faq'},
+    {text: $localize`Отсавить отзыв`, link: 'https://format-tv.net/reviews'},
   ]
 
   nav_list = [
-    { text: 'Услуги', link: '#', 
+    { text: $localize`Услуги`, link: '#', 
       menu: [
-        { text: 'Интернет', link: '#' },
-        { text: 'Телевидение', link: '#' },
-        { text: 'Умный дом', link: '#' },
-        { text: 'Сервисный Центр', link: '#' },
-        { text: 'WEB Плеер', link: '#' },
-        { text: 'Для Бизнеса', link: '#' },
-        { text: 'Антивирус', link: '#' },
-        { text: 'Кинозал', link: '#', 
+        { text: $localize`Интернет`, link: '#' },
+        { text: $localize`Телевидение`, link: '#' },
+        { text: $localize`Умный дом`, link: '#' },
+        { text: $localize`Сервисный Центр`, link: '#' },
+        { text: $localize`WEB Плеер`, link: '#' },
+        { text: $localize`Для Бизнеса`, link: '#' },
+        { text: $localize`Антивирус`, link: '#' },
+        { text: $localize`Кинозал`, link: '#', 
           menu: [
-            { text: 'Интернет', link: '#' },
-            { text: 'Телевидение', link: '#' },
-            { text: 'Умный дом', link: '#' },
-            { text: 'Сервисный Центр', link: '#' },
-            { text: 'WEB Плеер', link: '#' },
-            { text: 'Для Бизнеса', link: '#' },
-            { text: 'Антивирус', link: '#' },
-            { text: 'Кинозал', link: '#' },
+            { text: $localize`Интернет`, link: '#' },
+            { text: $localize`Телевидение`, link: '#' },
+            { text: $localize`Умный дом`, link: '#' },
+            { text: $localize`Сервисный Центр`, link: '#' },
+            { text: $localize`WEB Плеер`, link: '#' },
+            { text: $localize`Для Бизнеса`, link: '#' },
+            { text: $localize`Антивирус`, link: '#' },
+            { text: $localize`Кинозал`, link: '#' },
           ]
       },
       ]
     },
-    { text: 'Для Бизнеса', link: '#' },
-    { text: 'Новости', link: '#' },
-    { text: 'Акции', link: '#' },
-    { text: 'Магазин', link: '#' },
-    { text: 'Мариуполь Online', link: '#' },
-    { text: 'Оплата', link: '#' },
+    { text: $localize`Для Бизнеса`, link: '#' },
+    { text: $localize`Новости`, link: '#' },
+    { text: $localize`Акции`, link: '#' },
+    { text: $localize`Магазин`, link: '#' },
+    { text: $localize`Мариуполь Online`, link: '#' },
+    { text: $localize`Оплата`, link: '#' },
   ]
 
   addition_nav_list = [
-    { text: 'Новости', link: '#' },
-    { text: 'Фильмы', link: '#' },
-    { text: 'Мультфильмы', link: '#' },
-    { text: 'Сериалы', link: '#' },
-    { text: 'Спорт', link: '#' },
-    { text: 'Шоу', link: '#' },
+    { text: $localize`Новости`, link: '#' },
+    { text: $localize`Фильмы`, link: '#' },
+    { text: $localize`Мультфильмы`, link: '#' },
+    { text: $localize`Сериалы`, link: '#' },
+    { text: $localize`Спорт`, link: '#' },
+    { text: $localize`Шоу`, link: '#' },
   ]
   
 

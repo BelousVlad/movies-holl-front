@@ -73,10 +73,7 @@ import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
 import { Page404Component } from './page404/page404.component';
-import { registerLocaleData } from '@angular/common';
-import localeUk from '@angular/common/locales/uk'
-
-registerLocaleData(localeUk);
+import { getLocaleId, registerLocaleData } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -158,7 +155,7 @@ registerLocaleData(localeUk);
     MatMenuModule,
   ],
   providers: [ SlickCarouselComponent,
-    { provide: LOCALE_ID, useValue: 'ru' }
+    // { provide: LOCALE_ID, useValue: getLocaleId() }
   ],
   bootstrap: [ AppComponent ]
 })
