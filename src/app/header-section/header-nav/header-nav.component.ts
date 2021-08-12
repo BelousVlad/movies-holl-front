@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
 import { MenuItem, MenusService } from 'src/app/services/menus-service/menus.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class HeaderNavComponent implements OnInit {
 
   @Input() nav_menu!: Array<MenuItem>
 
-  constructor(private menus: MenusService) { }
+  constructor(private menus: MenusService, @Inject(LOCALE_ID) public locale: string) { }
 
   ngOnInit(): void {
     if (!this.nav_menu) {

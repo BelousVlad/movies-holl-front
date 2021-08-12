@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import { Genre } from 'src/app/domain-model/Genre';
@@ -9,12 +9,12 @@ import { Genre } from 'src/app/domain-model/Genre';
 })
 export class GenresService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, @Inject(LOCALE_ID) public locale: string) { }
 
 
 
   getGenres(): Observable<Genre> {
-    return this.httpClient.get('http://localhost:8080/ru/api/genres')
+    return this.httpClient.get(`http://localhost:8080/${this.locale}/api/genres`)
       .pipe(
         mergeMap(item => from(item as any[]))
       )
@@ -25,6 +25,6 @@ export class GenresService {
 
   getGenreByTitle(title: string): Observable<Genre>
   {
-    return this.httpClient.get<Genre>(`http://localhost:8080/ru/api/genres/title/${title}`);
+    return this.httpClient.get<Genre>(`http://localhost:8080/${this.locale}/api/genres/title/${title}`);
   }
 }

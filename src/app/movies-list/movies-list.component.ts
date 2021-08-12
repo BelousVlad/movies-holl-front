@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, HostListener, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs';
-import { concatAll, delay, first, map, switchAll, switchMap, timeout } from 'rxjs/operators';
+import { delay, first, map, } from 'rxjs/operators';
 import { Genre } from '../domain-model/Genre';
 import { GenresService } from '../services/genres/genres.service';
 import { MobileNavContentService } from '../services/mobile-nav-content/mobile-nav-content.service';
@@ -15,13 +14,13 @@ import { MoviesSectionComponent } from './movies-section/movies-section.componen
 })
 export class MoviesListComponent implements OnInit, AfterViewInit {
   lists = [
-    { text: 'Все', list: 'advod,svod,tvod,dto,fvod'},
-    { text: 'Бесплатные', list: 'advod,fvod' },
-    { text: 'Платные', list: 'svod,tvod,dto' },
+    { text: $localize`Все`, list: 'advod,svod,tvod,dto,fvod'},
+    { text: $localize`Бесплатные`, list: 'advod,fvod' },
+    { text: $localize`Платные`, list: 'svod,tvod,dto' },
   ]
   selectedList = this.lists[0];
 
-  genres: Array<Genre> = [new Genre(-1, 'Все жанры')]
+  genres: Array<Genre> = [new Genre(-1, $localize`Все жанры`)]
   selectedGenre!: Genre;
 
   sorts: Array<{
@@ -29,15 +28,15 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     sort_by: string
   }> = [
     {
-      title: 'По имени',
+      title: $localize`По имени`,
       sort_by: 'title'
     },
     {
-      title: 'По дате добавления',
+      title: $localize`По дате добавления`,
       sort_by: 'id'
     },
     {
-      title: 'По дате выпуска',
+      title: $localize`По дате выпуска`,
       sort_by: 'premier_date'
     },
 
@@ -135,8 +134,20 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     {
       
     }
-
   }
 
+  toDefaultFilters()
+  {
+    this.selectedGenre = this.genres[0];
+    this.selectedList = this.lists[0];
+    this.selectedSort = this.sorts[0];
+    this.updateValues();
+    this.movies_section.refereshList();
+  }
+
+  closeMobileFilters()
+  {
+    this.sidenavService.setInactive();
+  }
 
 }

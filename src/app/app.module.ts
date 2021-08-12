@@ -74,6 +74,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
 import { Page404Component } from './page404/page404.component';
 import { getLocaleId, registerLocaleData } from '@angular/common';
+import { BonusesSectionComponent } from './bonuses-section/bonuses-section.component';
+import { BonusesSliderComponent } from './bonuses-section/bonuses-slider/bonuses-slider.component';
 
 @NgModule({
   declarations: [
@@ -133,6 +135,8 @@ import { getLocaleId, registerLocaleData } from '@angular/common';
     AutocompleteMovieComponent,
     HeaderNavItemComponent,
     Page404Component,
+    BonusesSectionComponent,
+    BonusesSliderComponent,
   ],
   imports: [
     BrowserModule,

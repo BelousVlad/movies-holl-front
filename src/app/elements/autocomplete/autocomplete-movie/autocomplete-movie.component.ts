@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
 import { Movie } from 'src/app/domain-model/Movie';
 
 @Component({
@@ -10,7 +10,7 @@ export class AutocompleteMovieComponent implements OnInit {
 
   @Input() movie!: Movie;
 
-  constructor() { }
+  constructor(@Inject(LOCALE_ID) public locale: string) { }
 
   ngOnInit(): void {
   }

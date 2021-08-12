@@ -1,4 +1,7 @@
 a {
-    color: var(--front-white-color);
     text-decoration: none;
+    color: var(--gray2-color);
+}
+.active { 
+    color: var(--front-white-color);
 }

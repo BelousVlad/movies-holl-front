@@ -2,18 +2,5 @@
     <div class="extented-container">
         <app-burger-menu [isActive]="is_mobile_nav_active" (onActiveChange)="_onMobileNavActiveChange($event)"></app-burger-menu>
         <ng-content></ng-content>
-        <!-- <div *ngIf="is_mobile_nav_active; then local_tel; else content"></div>
-        <ng-template #content>
-            <ng-content></ng-content>
-            
-        </ng-template>
-        <ng-template #local_tel>
-            <div class="mobile-login-localization">
-                <app-localization-select></app-localization-select>
-                <a href="">
-                    Войти
-                </a>
-            </div>
-        </ng-template> -->
     </div>
 </header>

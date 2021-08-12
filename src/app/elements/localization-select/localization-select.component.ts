@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-localization-select',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocalizationSelectComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(LOCALE_ID) public locale: string) { }
 
   ngOnInit(): void {
   }

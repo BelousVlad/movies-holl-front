@@ -2,19 +2,494 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="ru" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="7708270344948043036" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{inner_item.text}}"/> </source>
+      <trans-unit id="9160934205853432244" datatype="html">
+        <source>Имя</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/header-section/header-nav/header-nav-items/header-nav-items.component.html</context>
-          <context context-type="linenumber">7,9</context>
+          <context context-type="sourcefile">src/app/callback/callback.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="test" datatype="html">
-        <source> Привет
-</source>
+      <trans-unit id="4549570742212095687" datatype="html">
+        <source>Телефон</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="sourcefile">src/app/callback/callback.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2785915033243934104" datatype="html">
+        <source> Перезвонить мне </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/callback/callback.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4678859078674056742" datatype="html">
+        <source>Нажимая на кнопку Вы даете согласие на <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [style.color]=&quot;&apos;var(--green-color)&apos;&quot;&gt;"/>обработку данных<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/callback/callback.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4110862139406169746" datatype="html">
+        <source>КИНОЗАЛ НА ВСЕХ УСТРОЙСТВАХ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/devices-applications-section/devices-applications-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1108325141980802141" datatype="html">
+        <source>Ищите наше приложение на своем Smart TV, планшете и смартфоне и смотрите ТВ и кино везде, где вам удобно.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/devices-applications-section/devices-applications-section.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="925091968260703217" datatype="html">
+        <source>Поиск</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/elements/search/search.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5110588445975229939" datatype="html">
+        <source>Абонентский отдел</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6251329075149049207" datatype="html">
+        <source>Техподдержка</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2313142560347728492" datatype="html">
+        <source>О компании</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5742773926179423260" datatype="html">
+        <source>Политика конфидициальности</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4341343687288210399" datatype="html">
+        <source>Структура собственности</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="848891158508051049" datatype="html">
+        <source>Публичный договор</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2357133194017233064" datatype="html">
+        <source> © Формат ㉔. Все права защищены 2021 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7709162945966442252" datatype="html">
+        <source>Попробуйте бесплатный просмотр фильмов и сериалов</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9019074907389728158" datatype="html">
+        <source>Первые 14 дней подписки</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4097024697141093280" datatype="html">
+        <source>Попробовать за 1 грн</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9109515981804200085" datatype="html">
+        <source>Подписка MEGOGO для настоящих киноманов</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6089714533597388785" datatype="html">
+        <source>Более 12 000 фильмов и мультфильмов, сериалы START и MORE TV</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5863409199577311888" datatype="html">
+        <source>Смотреть за 129 грн</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4416290763660062288" datatype="html">
+        <source></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-page/basic-content/basic-content.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6097712257627499264" datatype="html">
+        <source>Продолжительность:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3804538178952794232" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ movie.duraction / 60 | number:&apos;1.0-0&apos;}}"/> мин.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{movie.imdb || &apos;Отсутствует&apos;}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2693373871943015444" datatype="html">
+        <source>Жанры:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2564889043577272435" datatype="html">
+        <source>Год:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7476825070325914449" datatype="html">
+        <source>Страна:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5891224620983616908" datatype="html">
+        <source>Режиссёр:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3565943666698919590" datatype="html">
+        <source>Актёры:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-info/movie-info.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4227617886383235176" datatype="html">
+        <source>В избранное</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-page.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1825808293827948684" datatype="html">
+        <source>Добавить на будущее</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-page.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1485603269161987709" datatype="html">
+        <source> Смотреть </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movie-page/movie-page.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6947088436700692458" datatype="html">
+        <source>Фильмы</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4263485993966020120" datatype="html">
+        <source>Фильтры</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2346887479560339104" datatype="html">
+        <source>Очистить</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7838083891686478188" datatype="html">
+        <source>Сортировать</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="100122645678049645" datatype="html">
+        <source>Жанры</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8681793891983971203" datatype="html">
+        <source>Все</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4399599282020603355" datatype="html">
+        <source>Бесплатные</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8598106043941197255" datatype="html">
+        <source>Платные</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="857737797942872806" datatype="html">
+        <source>Все жанры</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7074471452806030129" datatype="html">
+        <source>По имени</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5681426869895393236" datatype="html">
+        <source>По дате добавления</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5576195195739229060" datatype="html">
+        <source>По дате выпуска</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movies-list/movies-list.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4132707887864531134" datatype="html">
+        <source>Интернет</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1681611016879300911" datatype="html">
+        <source>Телевиденье</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2432737080255188337" datatype="html">
+        <source>Умный дом</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3435684982811118634" datatype="html">
+        <source>Кинозал</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7930311255934301416" datatype="html">
+        <source>Format Family</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="354588244476654838" datatype="html">
+        <source>Web Плеер</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3011294408889703576" datatype="html">
+        <source>Сервисный центр</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8488128066195766124" datatype="html">
+        <source>Для бизнеса</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6233962831675264711" datatype="html">
+        <source>Новости</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6558432752763324441" datatype="html">
+        <source>Акции</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3741743656406192699" datatype="html">
+        <source>Мариуполь Online</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7152929435561828649" datatype="html">
+        <source>Магазин</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3662080089377716791" datatype="html">
+        <source>Оплата</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9054646840307078034" datatype="html">
+        <source>Карьера</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6204065670847243062" datatype="html">
+        <source>Контакты</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4052742614102355640" datatype="html">
+        <source>Wi-Fi зоны</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="847128442348677554" datatype="html">
+        <source>Наши продукты</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3766174313097425602" datatype="html">
+        <source>Отсавить отзыв</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3683004319871381669" datatype="html">
@@ -24,11 +499,91 @@
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4132707887864531134" datatype="html">
-        <source>Интернет</source>
+      <trans-unit id="4353251071559703189" datatype="html">
+        <source>Телевидение</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4883461652084014699" datatype="html">
+        <source>Сервисный Центр</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2758289548881227651" datatype="html">
+        <source>WEB Плеер</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3653331395710130561" datatype="html">
+        <source>Для Бизнеса</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2036509021195806314" datatype="html">
+        <source>Антивирус</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5834672288444682483" datatype="html">
+        <source>Мультфильмы</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4826572428846131629" datatype="html">
+        <source>Сериалы</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8436641033474373429" datatype="html">
+        <source>Спорт</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8259954440845458542" datatype="html">
+        <source>Шоу</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/menus-service/menus.service.ts</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
     </body>

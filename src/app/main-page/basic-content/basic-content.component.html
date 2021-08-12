@@ -1,6 +1,6 @@
 <section class="sentence-section">
     <div class="extented-container">
-        <app-sentence-block
+        <!-- <app-sentence-block
             title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus pariatur reprehenderit quidem unde facere officia."
             text="Lorem ipsum dolor sit amet."
             link_text="Lorem, ipsum dolor."
@@ -11,26 +11,31 @@
         <app-sentence-block
             title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus pariatur reprehenderit quidem unde facere officia."
             text="Lorem ipsum dolor sit amet."
-            link_text="Lorem, ipsum dolor."
+            link_text="Смотреть за 129 грн"
             href="#">
-        </app-sentence-block>  
+        </app-sentence-block>   -->
+
+        <app-sentence-block
+            *ngFor="let sentence of sentences"
+            [title]="sentence.title"
+            [text]="sentence.text"
+            [link_text]="sentence.link_text"
+            [href]="sentence.href"
+        ></app-sentence-block>
+
     </div>
 
 </section>
 
-<h1 i18n="@@test">
-    Привет
-</h1>
-
 <section class="tag-slider-section">
     <div class="container">
-        <app-tag-slider [style.width]="'100%'"></app-tag-slider>
+        <app-tag-slider [style.width.%]="100"></app-tag-slider>
     </div>
 </section>
 
 <div class="container">
     <!-- <app-movies-banners-slider [style.width]="'100%'">
     </app-movies-banners-slider> -->
-    <app-genre-movies-banners-slider [style.width]="'100%'" *ngFor="let genre of sliders_genres" [genre]="genre"></app-genre-movies-banners-slider>
+    <app-genre-movies-banners-slider [style.width.%]="100" *ngFor="let genre of sliders_genres" [genre]="genre"></app-genre-movies-banners-slider>
     <!-- sliders_genres -->
 </div>

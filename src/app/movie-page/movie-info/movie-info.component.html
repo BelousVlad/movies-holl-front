@@ -1,35 +1,35 @@
 <div class="info-container">
     <div class="info">
         <div class="info-field">
-            <div class="info-field-title">Продолжительность:</div>
-            <div>{{ movie.duraction / 60 | number:'1.0-0'}} мин.</div>
+            <div class="info-field-title" i18n>Продолжительность:</div>
+            <div i18n>{{ movie.duraction / 60 | number:'1.0-0'}} мин.</div>
         </div>
         <div class="info-field">
             <div class="info-field-title">Imdb:</div>
-            <div>{{movie.imdb || 'Отсутствует'}}</div>
+            <div i18n>{{movie.imdb || 'Отсутствует'}}</div>
         </div>
         <div class="info-field">
-            <div class="info-field-title">Жанры:</div>
+            <div class="info-field-title" i18n>Жанры:</div>
             <div>
                 <span *ngFor="let genre of movie.genres">{{genre.title}} </span>
             </div>
         </div>
         <div class="info-field">
-            <div class="info-field-title">Год:</div>
+            <div class="info-field-title" i18n>Год:</div>
             <div>{{movie.year}}</div>
         </div>
         <div class="info-field">
-            <div class="info-field-title">Страна:</div>
+            <div class="info-field-title" i18n>Страна:</div>
             <div>{{movie.country}}</div>
         </div>
     </div>
     <div class="people">
         <div class="info-field">
-            <div class="info-field-title">Режиссёр:</div>
+            <div class="info-field-title" i18n>Режиссёр:</div>
             <div>{{movie.director}}</div>
         </div>
         <div class="info-field">
-            <div class="info-field-title">Актёры:</div>
+            <div class="info-field-title" i18n>Актёры:</div>
             <div>{{movie.actors}}</div>
         </div>
     </div>

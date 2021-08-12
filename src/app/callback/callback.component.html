@@ -1,10 +1,10 @@
 <div class="box">
-    <input class="name-input" type="text" placeholder="Имя" appInput>
-    <input class="tel-input" type="tel" placeholder="Телефон" appInput>
+    <input class="name-input" type="text" i18n-placeholder placeholder="Имя" appInput>
+    <input class="tel-input" type="tel" i18n-placeholder placeholder="Телефон" appInput>
     
-    <app-basic-button>
-        Lorem, ipsum dolor.
+    <app-basic-button i18n>
+        Перезвонить мне
     </app-basic-button>
 </div>
 
-<p class="terms">Нажимая на кнопку Вы даете согласие на <span [style.color]="'var(--green-color)'">обработку данных</span></p>
+<p class="terms" i18n>Нажимая на кнопку Вы даете согласие на <span [style.color]="'var(--green-color)'">обработку данных</span></p>

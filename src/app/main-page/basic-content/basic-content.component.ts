@@ -11,6 +11,26 @@ export class BasicContentComponent implements OnInit {
 
   constructor(private genresService: GenresService) { }
 
+  sentences: Array<{
+    title: string,
+    text: string,
+    link_text: string,
+    href: string,
+  }> = [
+    {
+      title: $localize`Попробуйте бесплатный просмотр фильмов и сериалов`,
+      text: $localize`Первые 14 дней подписки`,
+      link_text: $localize`Попробовать за 1 грн`,
+      href: ``
+    },
+    {
+      title: $localize`Подписка MEGOGO для настоящих киноманов`,
+      text: $localize`Более 12 000 фильмов и мультфильмов, сериалы START и MORE TV`,
+      link_text: $localize`Смотреть за 129 грн`,
+      href: $localize``
+    }
+  ]
+
   sliders_genres: Array<Genre> = [];
 
   ngOnInit(): void {

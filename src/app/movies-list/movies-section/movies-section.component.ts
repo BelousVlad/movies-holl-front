@@ -19,8 +19,7 @@ export class MoviesSectionComponent implements OnInit {
   constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-    // this.loadMovies();
-
+    
   }
 
   refereshList()

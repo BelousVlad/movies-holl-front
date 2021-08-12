@@ -12,7 +12,7 @@
 </ng-template>
 
 <div class="container">
-    <h2 [style.font-size.px]="32">Фильмы</h2>
+    <h2 [style.font-size.px]="32" i18n>Фильмы</h2>
 </div>
 
 <section class="control-section">
@@ -43,13 +43,14 @@
             mat-flat-button 
             (click)="openMobileFilters()"
             class="app-btn filters-btn"
+            i18n
             >Фильтры</button>
     </ng-template>
 
     <ng-template #mobile_header>
         <div>
-            <button mat-button>Фильтры</button>
-            <button mat-button>Очистить</button>
+            <button mat-button i18n (click)="closeMobileFilters()">Фильтры</button>
+            <button mat-button i18n (click)="toDefaultFilters()">Очистить</button>
         </div>
     </ng-template>
 
@@ -58,9 +59,9 @@
             <div class="slidenav-lists-box">
                 <ng-template [ngTemplateOutlet]="lists_component"></ng-template>
             </div>
-            <h3>Сортировать</h3>
+            <h3 i18n>Сортировать</h3>
             <app-mobile-slider [items]="sorts" [(selected)]="selectedSort" (selectedChange)="onSortChange($event)"></app-mobile-slider>
-            <h3>Жанры</h3>
+            <h3 i18n>Жанры</h3>
             <mat-selection-list [multiple]="false" (selectionChange)="onGenreChanged($event.option.value)">
                 <mat-list-option *ngFor="let genre of genres" [value]="genre" [selected]="genre == selectedGenre">
                     {{genre.title}}

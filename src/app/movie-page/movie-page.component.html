@@ -11,13 +11,13 @@
                 </div>
                 <div class="movie-page-banner-title">
                     <h2 class="movie-title">{{movie?.title}}</h2>
-                    <div class="info-panel">
-                        <span>В избранное</span>
-                        <span>Добавить на будущее</span>
+                    <!-- <div class="info-panel">
+                        <span i18n>В избранное</span>
+                        <span i18n>Добавить на будущее</span>
                         <span class="likes">likes</span>
-                    </div>
+                    </div> -->
                     <a [href]="'https://megogo.net/ru/view/'+movie.megogo_id">
-                        <button class="watch-btn" mat-flat-button>
+                        <button class="watch-btn" mat-flat-button i18n>
                             Смотреть
                         </button>
                     </a>

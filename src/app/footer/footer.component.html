@@ -14,13 +14,13 @@
         <div class="footer-block support-block">
             <div class="subscriber-list">
                 <ul>
-                    <li>Абонентский отдел</li>
+                    <li i18n>Абонентский отдел</li>
                     <a *ngFor="let sub of subscriber_list" href="tel: {{sub.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{sub.text}}</li></a>
                 </ul>
             </div>
             <div class="technical-list">
                 <ul>
-                    <li>Техподдержка</li>
+                    <li i18n>Техподдержка</li>
                     <a *ngFor="let tech of tech_sup_list" href="tel: {{tech.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{tech.text}}</li></a>
                 </ul>
             </div>
@@ -31,13 +31,13 @@
         </div>
     </div>
     <div class="container documents-container">
-        <a class="documents-link" href="">О компании</a>
-        <a class="documents-link mobile-visible" href="">Политика конфидициальности</a>
-        <a class="documents-link mobile-visible" href="">Структура собственности</a>
-        <a class="documents-link" href="">Публичный договор</a>
+        <a class="documents-link" href="" i18n>О компании</a>
+        <a class="documents-link mobile-visible" href="" i18n>Политика конфидициальности</a>
+        <a class="documents-link mobile-visible" href="" i18n>Структура собственности</a>
+        <a class="documents-link" href="" i18n>Публичный договор</a>
     </div>
     <div class="copyright-box">
-        <div class="container">
+        <div class="container" i18n>
             © Формат ㉔. Все права защищены 2021
         </div>
     </div>
