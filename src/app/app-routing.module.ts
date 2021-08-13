@@ -26,7 +26,7 @@ const routes: Routes = [
     path: ":lang",
     children: standart_navigation
   },
-  // { path: '**', redirectTo: '/ru'},
+  { path: '', pathMatch: 'full' , redirectTo: '/ru'},
   { path: '**', component: Page404Component}
 ];
 
