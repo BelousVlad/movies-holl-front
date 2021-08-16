@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, LOCALE_ID, OnInit, Output } from '@angular/core';
 import { MenuItem } from 'src/app/services/menus-service/menus.service';
+import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-addition-mobile-nav-items',
@@ -9,8 +10,9 @@ import { MenuItem } from 'src/app/services/menus-service/menus.service';
 export class AdditionMobileNavItemsComponent implements OnInit {
 
   @Input() items!: Array<MenuItem>
+  @Output() onNavigate = new EventEmitter()
 
-  constructor() { }
+  constructor(@Inject(LOCALE_ID) public lang: string) { }
 
   ngOnInit(): void {
   }

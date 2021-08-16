@@ -6,31 +6,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   selector: 'app-burger-menu',
   templateUrl: './burger-menu.component.html',
   styleUrls: ['./burger-menu.component.css'],
-  // animations: [
-  //   trigger('anim', [
-  //     state('active', style({
-  //     })),
-  //     transition('active <=> inactive',[
-  //       query('@lineAnim', [
-  //         animateChild()
-  //       ])
-  //     ])
-
-  //   ]),
-  //   trigger('lineAnim', [
-  //     state('active', style({
-  //       transform: 'translateX(100px)'
-  //     })),
-  //     transition('* <=> active', [
-  //       query(':self', [
-  //         stagger(150,[animate('.5s')])
-  //       ])
-  //     ])
-  //   ])
-  // ],
-  // host: {
-  //   '[@anim]': 'isActive ? "active": "inactive"'
-  // }
 })
 export class BurgerMenuComponent implements OnInit {
 

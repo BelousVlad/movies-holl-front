@@ -38,7 +38,7 @@
 
 <ng-template #mobileMenuTemp>
     <nav>
-        <app-addition-mobile-nav-items [items]='addition_nav_menu'></app-addition-mobile-nav-items>
+        <app-addition-mobile-nav-items (onNavigate)="show_mobile_nav = false" [items]='addition_nav_menu'></app-addition-mobile-nav-items>
     </nav>
     <nav class="mobile-panel-nav">
         <img class="mobile-panel-nav-img" src="../../assets/images/logo.png" alt="">

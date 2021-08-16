@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'src/app/services/menus-service/menus.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class AdditionNavItemsComponent implements OnInit {
 
   @Input() items!: Array<MenuItem>
 
-  constructor() { }
+  constructor(private router: Router,  @Inject(LOCALE_ID) public lang: string ) { }
 
   ngOnInit(): void {
   }

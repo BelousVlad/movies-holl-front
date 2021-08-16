@@ -1,5 +1,6 @@
 import { AfterContentInit, AfterViewInit, Component, ElementRef, HostListener, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MenuItem, MenusService } from '../services/menus-service/menus.service';
+import { MobileNavContentService } from '../services/mobile-nav-content/mobile-nav-content.service';
 import { SidenavService } from '../services/sidenav/sidenav.service';
 
 @Component({
@@ -33,7 +34,6 @@ export class HeaderSectionComponent implements OnInit, AfterViewInit {
     this.menusService.getAdditionalNavMenu().subscribe(
       item => this.addition_nav_menu.push(item)
     )
-
     this.onResize();
 
   }

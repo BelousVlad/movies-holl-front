@@ -76,6 +76,8 @@ import { Page404Component } from './page404/page404.component';
 import { getLocaleId, registerLocaleData } from '@angular/common';
 import { BonusesSectionComponent } from './bonuses-section/bonuses-section.component';
 import { BonusesSliderComponent } from './bonuses-section/bonuses-slider/bonuses-slider.component';
+import { CloseSidenavDirective } from './directives/close-sidenav/close-sidenav.directive';
+import { PageControllComponent } from './movies-list/movies-section/page-controll/page-controll.component';
 
 @NgModule({
   declarations: [
@@ -137,6 +139,8 @@ import { BonusesSliderComponent } from './bonuses-section/bonuses-slider/bonuses
     Page404Component,
     BonusesSectionComponent,
     BonusesSliderComponent,
+    CloseSidenavDirective,
+    PageControllComponent,
   ],
   imports: [
     BrowserModule,
