@@ -11,7 +11,6 @@ import { MovieElementComponent } from './movie-element/movie-element.component';
 })
 export class MoviesListContainerComponent implements OnInit {
 
-
   constructor() { }
 
   ngOnInit(): void {

@@ -14,6 +14,10 @@ export class MoviesSectionComponent implements OnInit {
   @Input() list!: string;
   @Input() genre!: Genre;
 
+  page: number = 0;
+  limit: number = 42;
+  max_items!: number;
+
   movies: Array<IMovie> = []
 
   constructor(private moviesService: MoviesService) { }
@@ -22,14 +26,46 @@ export class MoviesSectionComponent implements OnInit {
     
   }
 
+  prevPage()
+  {
+    if (this.page > 0)
+    {
+      this.page--;
+      this.refereshList();
+    }
+  }
+  nextPage()
+  {
+    if(this.page < this.max_pages-1)
+    {
+      this.page++;
+      this.refereshList();
+    }
+  }
+
+  get max_pages()
+  {
+    return Math.ceil(this.max_items / this.limit);
+  }
+
   refereshList()
   {
+    this.loadCount();
     this.loadMovies();
+  }
+
+  private loadCount()
+  {
+    this.moviesService.getCount(this.genre.id == -1 ? null: this.genre)
+    .subscribe(
+      item =>
+        this.max_items = item
+    )
   }
 
   loadMovies() {
     this.movies = []
-    this.moviesService.getFiltered(null, this.list, this.genre, this.order_by, 40 )
+    this.moviesService.getFiltered(null, this.list, this.genre, this.order_by, this.limit, this.limit*this.page )
     .subscribe(item => {
         this.movies.push(item)
       });

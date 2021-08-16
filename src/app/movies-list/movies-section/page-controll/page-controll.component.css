@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+}
+.arrow {
+    margin: 0 20px;
+}
+.splitter {
+    margin: 0 3px;
+    color: var(--gray2-color);
+}
+.max-page {
+    color: var(--gray2-color);
+}

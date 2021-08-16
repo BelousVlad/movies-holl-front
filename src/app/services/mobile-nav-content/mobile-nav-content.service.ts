@@ -27,6 +27,7 @@ export class MobileNavContentService {
   pop()
   {
     this.stack.pop();
+    
     if (this.stack.length > 0)
       this.observer.next(this.stack[this.stack.length-1]);
     else

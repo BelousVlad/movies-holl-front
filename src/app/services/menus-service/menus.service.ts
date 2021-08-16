@@ -45,42 +45,31 @@ export class MenusService {
   nav_list = [
     { text: $localize`Услуги`, link: '#', 
       menu: [
-        { text: $localize`Интернет`, link: '#' },
-        { text: $localize`Телевидение`, link: '#' },
-        { text: $localize`Умный дом`, link: '#' },
-        { text: $localize`Сервисный Центр`, link: '#' },
-        { text: $localize`WEB Плеер`, link: '#' },
-        { text: $localize`Для Бизнеса`, link: '#' },
-        { text: $localize`Антивирус`, link: '#' },
-        { text: $localize`Кинозал`, link: '#', 
-          menu: [
-            { text: $localize`Интернет`, link: '#' },
-            { text: $localize`Телевидение`, link: '#' },
-            { text: $localize`Умный дом`, link: '#' },
-            { text: $localize`Сервисный Центр`, link: '#' },
-            { text: $localize`WEB Плеер`, link: '#' },
-            { text: $localize`Для Бизнеса`, link: '#' },
-            { text: $localize`Антивирус`, link: '#' },
-            { text: $localize`Кинозал`, link: '#' },
-          ]
-      },
+        { text: $localize`Интернет`, link: 'https://format-tv.net/tariffs/' },
+        { text: $localize`Телевидение`, link: 'https://format-tv.net/tariffs/' },
+        { text: $localize`Умный дом`, link: 'https://format-tv.net/video/' },
+        { text: $localize`Сервисный Центр`, link: 'https://format-tv.net/service-center/' },
+        { text: $localize`WEB Плеер`, link: 'https://tv.format-tv.net/auth' },
+        { text: $localize`Для Бизнеса`, link: 'https://format-tv.net/web-business/' },
+        { text: $localize`Антивирус`, link: 'https://format-tv.net/antivirus/' },
+        { text: $localize`Кинозал`, link: 'https://online.format-tv.net/' },
       ]
     },
-    { text: $localize`Для Бизнеса`, link: '#' },
-    { text: $localize`Новости`, link: '#' },
-    { text: $localize`Акции`, link: '#' },
-    { text: $localize`Магазин`, link: '#' },
-    { text: $localize`Мариуполь Online`, link: '#' },
-    { text: $localize`Оплата`, link: '#' },
+    { text: $localize`Для Бизнеса`, link: 'https://format-tv.net/web-business/' },
+    { text: $localize`Новости`, link: 'https://format-tv.net/news/' },
+    { text: $localize`Акции`, link: 'https://format-tv.net/offers/' },
+    { text: $localize`Магазин`, link: 'https://format-tv.net/shop-2/' },
+    { text: $localize`Мариуполь Online`, link: 'https://format-tv.net/mariupol-online/' },
+    { text: $localize`Оплата`, link: 'https://format-tv.net/payment/' },
   ]
 
   addition_nav_list = [
-    { text: $localize`Новости`, link: '#' },
-    { text: $localize`Фильмы`, link: '#' },
-    { text: $localize`Мультфильмы`, link: '#' },
-    { text: $localize`Сериалы`, link: '#' },
-    { text: $localize`Спорт`, link: '#' },
-    { text: $localize`Шоу`, link: '#' },
+    // { text: $localize`Новости`, link: '' },
+    { text: $localize`Фильмы`, link: '114' },
+    { text: $localize`Мультфильмы`, link: '121' },
+    { text: $localize`Семейные`, link: '116' },
+    { text: $localize`Спортивные`, link: '120' },
+    { text: $localize`Ужасы`, link: '109' },
   ]
   
 

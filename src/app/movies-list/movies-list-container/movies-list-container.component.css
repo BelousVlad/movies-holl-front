@@ -5,6 +5,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 500px;
 }
 @media (max-width: 768px) {
     .list-content {

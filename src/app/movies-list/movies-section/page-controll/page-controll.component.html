@@ -1,0 +1,13 @@
+<div class="arrow" (click)="onPrevPage.emit();">
+    <img src="../../../../assets/icons/left-page-arrow.svg" alt="">
+</div>
+
+<div class="pages">
+    <span class="current-page">{{page}}</span>
+    <span class="splitter">/</span>
+    <span class="max-page">{{max_page}}</span>
+</div>
+
+<div class="arrow" (click)="onNextPage.emit()">
+    <img src="../../../../assets/icons/right-page-arrow.svg" alt="">
+</div>

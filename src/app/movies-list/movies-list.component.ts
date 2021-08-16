@@ -90,7 +90,8 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   onGenreChanged(value: Genre)
   {
     this.selectedGenre = value;
-    this.movies_section.genre = this.selectedGenre
+    this.movies_section.genre = this.selectedGenre;
+    this.movies_section.page = 0;
     this.movies_section.refereshList();
   }
   onSortChange(value: {

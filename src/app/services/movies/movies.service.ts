@@ -1,9 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable, LOCALE_ID } from '@angular/core';
-import { from, Observable, of } from 'rxjs';
-import { filter, first, map, mergeAll, mergeMap, switchMap } from 'rxjs/operators';
+import { from, Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
 import { Genre } from 'src/app/domain-model/Genre';
-import { IMovie, Movie, MovieFactory } from 'src/app/domain-model/Movie';
+import { IMovie, MovieFactory } from 'src/app/domain-model/Movie';
 
 @Injectable({
   providedIn: 'root'
@@ -80,5 +80,13 @@ export class MoviesService {
             item.gallery,
         ))
       );
+  }
+  getCount(genre: Genre|null): Observable<any>
+  {
+    let params = new HttpParams();
+    if(genre)
+      params = params.append('genre', genre.id);
+    
+    return this.http.get('http://localhost:8080/api/get_max', { params })
   }
 }
