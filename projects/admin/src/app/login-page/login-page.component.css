@@ -1,0 +1,12 @@
+.login-card {
+    width: 400px;
+    margin: auto;
+}
+section {
+    display: flex;
+    height: 100%;
+}
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+}
