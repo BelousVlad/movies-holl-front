@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { AutocompleteMovieComponent } from './autocomplete-movie/autocomplete-movie.component';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-autocomplete',
@@ -7,7 +6,6 @@ import { AutocompleteMovieComponent } from './autocomplete-movie/autocomplete-mo
   styleUrls: ['./autocomplete.component.css']
 })
 export class AutocompleteComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

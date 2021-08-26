@@ -4,7 +4,6 @@
     <div ngxSlickItem 
         *ngFor="let movie of movies" class="slide"> 
 
-        <app-movie-banner [movie]="movie">
-        </app-movie-banner>
+        <app-movie-element [movie]="movie"></app-movie-element>
     </div>
 </ngx-slick-carousel>

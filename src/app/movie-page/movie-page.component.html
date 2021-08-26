@@ -16,7 +16,7 @@
                         <span i18n>Добавить на будущее</span>
                         <span class="likes">likes</span>
                     </div> -->
-                    <a [href]="'https://megogo.net/ru/view/'+movie.megogo_id">
+                    <a [href]="'https://megogo.net/ru/view/'+movie?.megogo_id">
                         <button class="watch-btn" mat-flat-button i18n>
                             Смотреть
                         </button>
@@ -27,17 +27,17 @@
     </div>
 </section>
 
-<section>
+<section class="tabs-section">
     <div *ngIf="movie" class="container">
         <mat-tab-group class="movie-description" dynamicHeight>
-            <mat-tab label="Short tab">
+            <mat-tab i18n-label label="Описание">
                 <app-movie-info [movie]="movie"></app-movie-info>
             </mat-tab>
-            <mat-tab label="Long tab">
+            <mat-tab *ngIf="movie.gallery && movie.gallery.length > 0" i18n-label label="Кадры">
                 <div class="gallery-container">
                     <img class="gallery-img" *ngFor="let url of movie.gallery" [src]="url" alt="">
                 </div>
             </mat-tab>
-          </mat-tab-group>
+        </mat-tab-group>
     </div>
 </section>

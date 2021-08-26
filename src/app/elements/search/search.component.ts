@@ -37,7 +37,7 @@ export class SearchComponent implements OnInit {
     this.autocomlete_active = false;
   }
   @HostListener('click', ['$event'])
-  enableAutocomplete(event: MouseEvent)
+  enableAutocomplete(event: FocusEvent|MouseEvent)
   {
     this.autocomlete_active = true;
     event.stopPropagation();

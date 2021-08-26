@@ -32,7 +32,7 @@ export class MoviesService {
     if(limit)
       params = params.append('limit', limit);
     
-    return this.http.get(`http://localhost:8080/${this.locale}/api/movies`, { params })
+    return this.http.get(`http://bonus.format-tv.net/api/${this.locale}/movies`, { params })
       .pipe(
         mergeMap((item) => from(item as any[]),
       ))
@@ -59,7 +59,7 @@ export class MoviesService {
   {
     const factory = new MovieFactory();
 
-    return this.http.get(`http://localhost:8080/${this.locale}/api/movies/${id}` )
+    return this.http.get(`http://bonus.format-tv.net/api/${this.locale}/movies/${id}` )
       .pipe(
         map((item: any) => 
           factory.createMovie(
@@ -87,6 +87,6 @@ export class MoviesService {
     if(genre)
       params = params.append('genre', genre.id);
     
-    return this.http.get('http://localhost:8080/api/get_max', { params })
+    return this.http.get('http://bonus.format-tv.net/api/get_max', { params })
   }
 }

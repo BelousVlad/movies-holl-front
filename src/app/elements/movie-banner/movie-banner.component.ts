@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMovie, Movie } from '../../domain-model/Movie';
+import { IMovie } from '../../domain-model/Movie';
 
 @Component({
   selector: 'app-movie-banner',

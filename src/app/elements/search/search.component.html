@@ -1,4 +1,8 @@
-<input autocomplete="off" #search matInput type="text" i18n-placeholder placeholder="Поиск" [(ngModel)]="search_text" (ngModelChange)="applyFilter($event)">
-<app-autocomplete class="autocomplete" *ngIf="autocomlete_active">
-    <app-autocomplete-movie (click)="search_text = ''; applyFilter(search_text)" *ngFor="let movie of movies" [movie]="movie"></app-autocomplete-movie>
+<input autocomplete="off" #search matInput type="text" i18n-placeholder placeholder="Поиск" (focus)="enableAutocomplete($event)" [(ngModel)]="search_text" (ngModelChange)="applyFilter($event)">
+<app-autocomplete class="autocomplete" *ngIf="autocomlete_active && movies.length > 0">
+    <app-autocomplete-movie 
+        (onNavigate)="search_text = ''; applyFilter(search_text); disableAutocomplete()" 
+        *ngFor="let movie of movies"
+        [movie]="movie">
+    </app-autocomplete-movie>
 </app-autocomplete>

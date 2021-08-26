@@ -26,7 +26,6 @@ export class MoviePageComponent implements OnInit {
       })
     )
     .subscribe(item => {
-      console.log(item)
         if(item.gallery && item.gallery.length > 0)
           this.frame_preview = item.gallery[0];
         this.movie = item

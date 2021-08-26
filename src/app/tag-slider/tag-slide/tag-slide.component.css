@@ -2,6 +2,7 @@
     max-width: 284px;
     height: 153px;
     display: block;
+    cursor: pointer;
 }
 a {
     display: flex;

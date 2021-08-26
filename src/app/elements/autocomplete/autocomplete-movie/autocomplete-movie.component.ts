@@ -1,4 +1,4 @@
-import { Component, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, LOCALE_ID, OnInit, Output } from '@angular/core';
 import { Movie } from 'src/app/domain-model/Movie';
 
 @Component({
@@ -9,6 +9,7 @@ import { Movie } from 'src/app/domain-model/Movie';
 export class AutocompleteMovieComponent implements OnInit {
 
   @Input() movie!: Movie;
+  @Output() onNavigate = new EventEmitter();  
 
   constructor(@Inject(LOCALE_ID) public locale: string) { }
 

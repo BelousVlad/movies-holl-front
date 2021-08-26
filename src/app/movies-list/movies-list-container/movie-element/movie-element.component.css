@@ -1,6 +1,4 @@
-a {
-    text-decoration: none;
-}
 :host {
     margin-bottom: 60px;
+    cursor: pointer;
 }
