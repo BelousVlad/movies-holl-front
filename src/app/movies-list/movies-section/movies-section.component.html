@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="movies.length">
     <app-page-controll 
     [page]="page+1"
     [max_page]="max_pages"
@@ -7,11 +7,15 @@
     ></app-page-controll>
 </div>
 
-<app-movies-list-container>
+<app-movies-list-container *ngIf="movies.length">
     <app-movie-element [style.margin-right.px]="30" *ngFor="let movie of movies" [movie]="movie"></app-movie-element>
 </app-movies-list-container>
 
-<div class="container">
+<div class="container not-movies-container" *ngIf="!movies.length">
+    <app-not-movies [style.width.%]="100"></app-not-movies>
+</div>
+
+<div class="container" *ngIf="movies.length">
     <app-page-controll 
     [page]="page+1"
     [max_page]="max_pages"

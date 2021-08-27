@@ -77,6 +77,7 @@ import { CloseSidenavDirective } from './directives/close-sidenav/close-sidenav.
 import { PageControllComponent } from './movies-list/movies-section/page-controll/page-controll.component';
 import { BonusSectionComponent } from './bonus-section/bonus-section.component';
 import { BonusSliderComponent } from './bonus-section/bonus-slider/bonus-slider.component';
+import { NotMoviesComponent } from './movies-list/movies-section/not-movies/not-movies.component';
 
 @NgModule({
   declarations: [
@@ -140,6 +141,7 @@ import { BonusSliderComponent } from './bonus-section/bonus-slider/bonus-slider.
     PageControllComponent,
     BonusSectionComponent,
     BonusSliderComponent,
+    NotMoviesComponent,
   ],
   imports: [
     BrowserModule,
