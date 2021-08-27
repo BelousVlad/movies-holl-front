@@ -1,8 +1,37 @@
-app-movie-banner {
+app-movie-element {
+    display: block;
     margin: 0 auto;
 }
 @media (max-width: 1200px) {
     .slide {
         margin-right: 20px;
+    }
+}
+:host { 
+    display: block;
+    position: relative;
+}
+.banners-arrows-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.banners-slider-prev-arrow,
+.banners-slider-next-arrow {
+    position: absolute;
+}
+.banners-slider-prev-arrow {
+    transform: translate(-80%);
+    left: 0;
+}
+.banners-slider-next-arrow {
+    transform: translate(30%);
+    right: 0;
+}
+@media (max-width: 576px) {
+    .banners-arrows-container {
+        /* padding: 0 20px; */
+        /* width: calc(100% + 20px); */
+        display: none;
     }
 }

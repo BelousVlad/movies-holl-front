@@ -11,6 +11,8 @@ import { MoviesService } from 'src/app/services/movies/movies.service';
 export class GenreMoviesBannersSliderComponent implements OnInit {
 
   @Input() genre!: Genre;
+  @Input() controll_id!: String;
+  
   movies: Array<Movie> = [];
 
   constructor(private movieSevice: MoviesService) { }

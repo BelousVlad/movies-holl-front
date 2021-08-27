@@ -1,7 +1,7 @@
 :host {
     position: relative;
 }
-.arrows-container {
+.tag-arrows-container {
     position: absolute;
     top: 50%;
     color: var(--green-color);
@@ -21,7 +21,4 @@
 .tag-slider-next-arrow{
     right: 0;
     transform: translateX(10%);
-}
-@media (min-width: 768px) {
-    
 }

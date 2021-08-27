@@ -36,6 +36,11 @@
 <div class="container">
     <!-- <app-movies-banners-slider [style.width]="'100%'">
     </app-movies-banners-slider> -->
-    <app-genre-movies-banners-slider [style.width.%]="100" *ngFor="let genre of sliders_genres" [genre]="genre"></app-genre-movies-banners-slider>
+    <app-genre-movies-banners-slider [style.width.%]="100" 
+        *ngFor="let genre of sliders_genres; index as i"
+        [genre]="genre"
+        [controll_id]="'genre_banner'+i"
+        >
+    </app-genre-movies-banners-slider>
     <!-- sliders_genres -->
 </div>

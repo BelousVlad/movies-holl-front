@@ -3,7 +3,11 @@
     #slickModal="slick-carousel">
     <div ngxSlickItem 
         *ngFor="let bonus of bonuses" class="slide">
-        
+
         <img [src]="bonus.image" alt="">
     </div>
 </ngx-slick-carousel>
+<div class="container bonus-arrows-container">
+    <app-arrow-left class="bonus-slider-prev-arrow"></app-arrow-left>
+    <app-arrow-right class="bonus-slider-next-arrow"></app-arrow-right>
+</div>

@@ -1,5 +1,36 @@
 .slide img {
+    margin: 0 auto;
     width: 289px;
 }
-.slide {
+
+:host { 
+    display: block;
+    position: relative;
+}
+.bonus-arrows-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bonus-slider-prev-arrow,
+.bonus-slider-next-arrow {
+    position: absolute;
+}
+.bonus-slider-prev-arrow {
+    transform: translate(-80%);
+    left: 0;
+}
+.bonus-slider-next-arrow {
+    transform: translate(30%);
+    right: 0;
+}
+@media (max-width: 576px) {
+    .bonus-arrows-container {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .slide {
+        margin-right: 20px;
+    }
 }

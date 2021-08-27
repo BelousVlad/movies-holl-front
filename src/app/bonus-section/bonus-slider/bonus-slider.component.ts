@@ -13,8 +13,16 @@ export class BonusSliderComponent implements OnInit {
     slidesToShow: 4,
     arrows: true,
     slidesToScroll: 4,
-    // infinite: false,
+    appendArrows: '.bonus-arrows-container',
+    nextArrow: '.bonus-slider-next-arrow',
+    prevArrow: '.bonus-slider-prev-arrow',
     responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3
+        }
+      },
       {
         breakpoint: 1200,
         settings: {

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TagSliderItem } from './tag-slider-item';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { GenresService } from '../services/genres/genres.service';
 import { Genre } from '../domain-model/Genre';
@@ -15,7 +14,7 @@ export class TagSliderComponent implements OnInit {
     slidesToShow: 4,
     // centerMode: true,
     dots: false,
-    appendArrows: '.arrows-container',
+    appendArrows: '.tag-arrows-container',
     initialSlide: 0,
     // centerPadding: '40px'
     // variableWidth: true
