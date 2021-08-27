@@ -2,7 +2,8 @@
     [config]="sliderConfig"
     #slickModal="slick-carousel">
     <div ngxSlickItem 
-        *ngFor="let item of items" class="slide">
-        <img [src]="item.img" alt="">
+        *ngFor="let bonus of bonuses" class="slide">
+        
+        <img [src]="bonus.image" alt="">
     </div>
 </ngx-slick-carousel>

@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     background: var(--back-dark-color);
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
 
 *{
   box-sizing: border-box;

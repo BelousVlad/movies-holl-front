@@ -1,0 +1,19 @@
+.bonus-btn {
+    width: 289px;
+    height: 58px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.bonus-head {
+    font-size: 36px;
+    font-weight: 400;
+}
+.green-text {
+    color: var(--green2-color);
+}
+.bonus-cashback {
+    font-size: 24px;
+}
+section {
+    margin: 70px 0;
+}

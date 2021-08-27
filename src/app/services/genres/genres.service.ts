@@ -9,12 +9,12 @@ import { Genre } from 'src/app/domain-model/Genre';
 })
 export class GenresService {
 
-  constructor(private httpClient: HttpClient, @Inject(LOCALE_ID) public locale: string) { }
+  constructor(private httpClient: HttpClient, @Inject(LOCALE_ID) public locale: string, @Inject('api_url') private url: string) { }
 
 
 
   getGenres(): Observable<Genre> {
-    return this.httpClient.get(`http://bonus.format-tv.net/api/${this.locale}/genres`)
+    return this.httpClient.get(`${this.url}/${this.locale}/genres`)
       .pipe(
         mergeMap(item => from(item as any[]))
       )
@@ -25,6 +25,6 @@ export class GenresService {
 
   getGenreByTitle(title: string): Observable<Genre>
   {
-    return this.httpClient.get<Genre>(`http://bonus.format-tv.net/api/${this.locale}/genres/title/${title}`);
+    return this.httpClient.get<Genre>(`${this.url}/${this.locale}/genres/title/${title}`);
   }
 }

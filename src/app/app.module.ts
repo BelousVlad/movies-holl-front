@@ -73,11 +73,10 @@ import { AutocompleteMovieComponent } from './elements/autocomplete/autocomplete
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderNavItemComponent } from './header-section/header-nav/header-nav-item/header-nav-item.component';
 import { Page404Component } from './page404/page404.component';
-import { getLocaleId, registerLocaleData } from '@angular/common';
-import { BonusesSectionComponent } from './bonuses-section/bonuses-section.component';
-import { BonusesSliderComponent } from './bonuses-section/bonuses-slider/bonuses-slider.component';
 import { CloseSidenavDirective } from './directives/close-sidenav/close-sidenav.directive';
 import { PageControllComponent } from './movies-list/movies-section/page-controll/page-controll.component';
+import { BonusSectionComponent } from './bonus-section/bonus-section.component';
+import { BonusSliderComponent } from './bonus-section/bonus-slider/bonus-slider.component';
 
 @NgModule({
   declarations: [
@@ -137,10 +136,10 @@ import { PageControllComponent } from './movies-list/movies-section/page-control
     AutocompleteMovieComponent,
     HeaderNavItemComponent,
     Page404Component,
-    BonusesSectionComponent,
-    BonusesSliderComponent,
     CloseSidenavDirective,
     PageControllComponent,
+    BonusSectionComponent,
+    BonusSliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -164,6 +163,8 @@ import { PageControllComponent } from './movies-list/movies-section/page-control
   ],
   providers: [ SlickCarouselComponent,
     // { provide: LOCALE_ID, useValue: getLocaleId() }
+    { provide: 'api_url', useValue: "http://bonus.format-tv.net/api/" }
+    
   ],
   bootstrap: [ AppComponent ]
 })

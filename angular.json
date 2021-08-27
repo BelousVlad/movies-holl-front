@@ -40,6 +40,7 @@
               "src/styles.css",
               "src/app/main-slider/main-slider-dots.css",
               "src/assets/css/app-input.css",
+              "src/assets/css/fonts.css",
               "src/app/tag-slider/tag-slider.css",
               "node_modules/slick-carousel/slick/slick-theme.scss",
               "node_modules/slick-carousel/slick/slick.scss"

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BonusesSectionComponent } from './bonuses-section.component';
+import { BonusSectionComponent } from './bonus-section.component';
 
-describe('BonusesSectionComponent', () => {
-  let component: BonusesSectionComponent;
-  let fixture: ComponentFixture<BonusesSectionComponent>;
+describe('BonusSectionComponent', () => {
+  let component: BonusSectionComponent;
+  let fixture: ComponentFixture<BonusSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BonusesSectionComponent ]
+      declarations: [ BonusSectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BonusesSectionComponent);
+    fixture = TestBed.createComponent(BonusSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { Bonus, IBonus } from 'src/app/domain-model/Bonus/Bonus';
 
 @Injectable({
   providedIn: 'root'
@@ -9,19 +11,25 @@ export class BonusesService {
 
   constructor(private http: HttpClient) { }
 
-  getBonuses(limit: number|null = null, offset: number| null = null): Observable<{img: string}>
+  getBonuses(limit: number|null = null, offset: number| null = null): Observable<IBonus>
   {
-    let params = new HttpParams();
-
+    let data = new FormData();
+    
     if(limit) 
     {
-      params = params.append('limit', limit);
+      data.append('limit', limit.toString());
     }
     if(offset)
     {
-      params = params.append('offset', offset);
+      data.append('offset', offset.toString());
     }
 
-    return this.http.post<{img: string}>('https://format-tv.net/bonus/items/get_items', { params });
+    return this.http.post('https://format-tv.net/bonus2/items/get_items', data).pipe(
+      mergeMap(items => from(items as any[]))
+    ).pipe(
+      map((item: any) => 
+        new Bonus(item.img)
+      )
+    );
   }
 }

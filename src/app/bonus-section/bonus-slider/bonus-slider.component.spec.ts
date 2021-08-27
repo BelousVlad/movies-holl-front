@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BonusesSliderComponent } from './bonuses-slider.component';
+import { BonusSliderComponent } from './bonus-slider.component';
 
-describe('BonusesSliderComponent', () => {
-  let component: BonusesSliderComponent;
-  let fixture: ComponentFixture<BonusesSliderComponent>;
+describe('BonusSliderComponent', () => {
+  let component: BonusSliderComponent;
+  let fixture: ComponentFixture<BonusSliderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BonusesSliderComponent ]
+      declarations: [ BonusSliderComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BonusesSliderComponent);
+    fixture = TestBed.createComponent(BonusSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
