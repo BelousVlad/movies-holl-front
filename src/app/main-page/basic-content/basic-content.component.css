@@ -6,15 +6,15 @@ app-sentence-block {
     margin-right: 40px;
 }
 .sentence-section{
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 110px;
+    margin-bottom: 60px;
 }
 .tag-slider-section {
     background: var(--dark-color);
     overflow: hidden;
     width: 100%;
     padding: 20px 0;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
 }
 .extented-container{
     flex-wrap: nowrap;
@@ -32,4 +32,7 @@ app-sentence-block {
     .tag-slider-section{
         display: none;
     }
+}
+app-genre-movies-banners-slider {
+    margin-bottom: 110px;
 }

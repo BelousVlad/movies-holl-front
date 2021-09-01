@@ -1,3 +1,9 @@
+:host {
+    display: flex;
+}
+nav {
+    flex-grow: 1;
+}
 nav ul {
     display: flex;
 }
@@ -11,9 +17,6 @@ nav a {
 a {
     color: var(--front-white-color);
     text-decoration: none;
-}
-:host {
-    display: flex;
 }
 .logo {
     display: flex;

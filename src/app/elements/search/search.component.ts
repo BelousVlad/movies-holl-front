@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { Movie } from 'src/app/domain-model/Movie';
 import { MoviesService } from 'src/app/services/movies/movies.service';
 
@@ -8,6 +8,8 @@ import { MoviesService } from 'src/app/services/movies/movies.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
+  @Output() onFocus = new EventEmitter<boolean>()
 
   search_text!: string
   movies: Array<Movie> = []

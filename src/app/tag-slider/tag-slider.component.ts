@@ -9,7 +9,10 @@ import { Genre } from '../domain-model/Genre';
   styleUrls: ['./tag-slider.component.css']
 })
 export class TagSliderComponent implements OnInit {
-  slides: Array<Genre> = [];
+  slides: Array<{
+    genre: Genre,
+    isActive: boolean,
+  }> = [];
   sliderConfig = {
     slidesToShow: 4,
     // centerMode: true,
@@ -37,9 +40,9 @@ export class TagSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.genresService.getGenres()
-    .subscribe(
-      item => this.slides.push(item)
-    )
+    .subscribe({
+      next: item => this.slides.push({genre: item, isActive: false}),
+      // complete: () => {console.log('complete')}
+    })
   }
-
 }

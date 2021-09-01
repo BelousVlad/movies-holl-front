@@ -1,3 +1,3 @@
-<a (click)="onClick($event)">
-    <span>{{item.title}}</span>
+<a (click)="onClick($event)" [ngClass]="{'active': item.isActive}">
+    <span>{{item.genre.title}}</span>
 </a>

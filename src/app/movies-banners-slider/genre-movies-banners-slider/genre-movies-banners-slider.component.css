@@ -1,0 +1,16 @@
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    align-items: center;
+}
+.genre-link {
+    font-size: 18px;
+    color: var(--front-white-color);
+    text-decoration: none;
+}
+.genre-title{
+    font-size: 36px;
+    margin: 0;
+}

@@ -5,15 +5,17 @@ app-header.mobile {
     right: 0;
     z-index: 30;
 }
+app-header-nav{
+    flex-grow: 1;
+}
 .localization-tel-box{
     display: flex;
     height: 100%;
     align-items: center;
-    flex-grow: 1;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.localization-tel-box a{
-    color: #fff;
+.localization-tel-box>*{
+    margin-left: 73px;
 }
 .mobile-panel-nav{
     border-top: 1px solid rgba(117, 117, 117, .2);

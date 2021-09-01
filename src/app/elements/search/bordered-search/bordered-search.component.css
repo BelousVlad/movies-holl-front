@@ -1,21 +1,24 @@
 .search-box {
     display: flex;
     height: 40px;
-    width: 300px;
+    width: 340px;
     border: 1px solid var(--gray2-color);
     align-items: center;
     padding-left: 25px;
     padding-right: 25px;
     position: relative;
+    align-items: center;
+    transition: .2s all;
 }
-.search-box input {
-    height: 100%;
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: #fff;
+.search-box:hover,
+.search-box.focused {
+    border-color: var(--green-color)
 }
 img {
-    margin-right: 10px;
+    margin-right: 13px;
+    width: 29px;
+    height: 29px;
+}
+app-search {
+    height: 100%;
 }

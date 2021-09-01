@@ -5,11 +5,14 @@
 }
 .banner-preview-img{
     width: 100%;
+    margin-bottom: 15px;
+}
+.banner-title{
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 21px;
 }
 .banner-text{
     color: var(--gray2-color);
-    font-size: 12px;
-}
-.banner-title{
-    margin-bottom: 1px;
+    font-size: 16px;
 }

@@ -6,4 +6,6 @@ a {
     padding: 28px 10px;
     color: var(--front-white-color);
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
 }

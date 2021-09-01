@@ -7,9 +7,9 @@ import { Genre } from 'src/app/domain-model/Genre';
   templateUrl: './tag-slide.component.html',
   styleUrls: ['./tag-slide.component.css']
 })
-export class TagSlideComponent implements OnInit {
+export class TagSlideComponent<T extends { genre: Genre, isActive: boolean}> implements OnInit {
 
-  @Input() item!: Genre;
+  @Input() item!: T;
 
   constructor(private router: Router) { }
 
@@ -19,11 +19,15 @@ export class TagSlideComponent implements OnInit {
 
   onClick(event: MouseEvent)
   {
-    this.router.navigate(['/movies'], {
-      queryParams: {
-        genre: this.item.id
-      }
-    })
-    event.stopPropagation();
+    console.log(123);
+    console.log(this.item)
+    if(this.item.isActive) {
+      this.router.navigate(['/movies'], {
+        queryParams: {
+          genre: this.item.genre.id
+        }
+      })
+    }
+    // event.stopPropagation();
   }
 }

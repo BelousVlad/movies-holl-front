@@ -7,5 +7,6 @@
     <ng-template [ngIf]="!movie.premier_date">
         {{movie.year}}, 
     </ng-template>
-    <span class="genre-title" *ngFor="let genre of movie.genres">{{genre.title}}, </span>
+    <!-- <span class="genre-title" *ngFor="let genre of movie.genres">{{genre.title}}, </span> -->
+    <span class="genre-title" >{{movie.genres[0].title}}</span>
 </p>
