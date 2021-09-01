@@ -10,23 +10,34 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { SliderPageComponent } from './slider-page/slider-page.component';
+import { SliderSettingsComponent } from './slider-page/slider-settings/slider-settings.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    LoginComponent
+    LoginComponent,
+    SliderPageComponent,
+    SliderSettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    // { provide: 'api_url', useValue: "http://bonus.format-tv.net/api/" }
+    { provide: 'api_url', useValue: "/api/slider" }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

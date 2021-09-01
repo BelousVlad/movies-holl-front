@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SliderService } from '../../services/slider.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login!: String;
+  password!: String;
+
+  constructor(private sliderService: SliderService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onLogin() {
+    this.sliderService.login(this.login as string, this.password as string)
+      .subscribe(isLogin => {
+        this.router.navigate(['slider'])
+    })
   }
 
 }

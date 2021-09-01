@@ -24,7 +24,7 @@ export class MovieElementComponent implements OnInit {
 
     this.down.subscribe(
       _ => {
-        const timer_ = timer(100);
+        const timer_ = timer(200);
         this.up.pipe(takeUntil(timer_)).subscribe(_ => this.toItem())
       }
     )

@@ -1,7 +1,7 @@
 .search-box {
     display: flex;
     height: 40px;
-    width: 340px;
+    width: 300px;
     border: 1px solid var(--gray2-color);
     align-items: center;
     padding-left: 25px;

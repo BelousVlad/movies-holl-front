@@ -24,7 +24,7 @@ export class BonusesService {
       data.append('offset', offset.toString());
     }
 
-    return this.http.post('https://format-tv.net/bonus2/items/get_items', data).pipe(
+    return this.http.post('https://format-tv.net/bonus/items/get_items', data).pipe(
       mergeMap(items => from(items as any[]))
     ).pipe(
       map((item: any) => 
