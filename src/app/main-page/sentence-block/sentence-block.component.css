@@ -1,8 +1,9 @@
 :host{
     background: var(--dark-color);
     color: var(--front-white-color);
-    padding: 57px 63px 106px 64px;
-    height: 337px;
+    /* height: 337px; */
+    /* max-height: 418px; */
+    padding: 57px 60px 60px 60px;
 }
 
 .sentense-title{
@@ -22,12 +23,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* justify-content: space-between; */
 }
 
 .sentence-link{
     padding: 10px 60px;
     border-color: var(--green-color);
     color: var(--green-color);
+}
+.sentence-link-a{
+    margin-top: auto;
 }
 @media (max-width: 768px) {
     :host {
@@ -62,4 +67,11 @@
     /* .sentence-link {
         padding: 18px 25px;
     } */
+    .sentense-title {
+        /* font-size: 28px;
+        line-height: 28px; */
+    }
+    :host {
+        padding: 30px 40px;
+    }
 }

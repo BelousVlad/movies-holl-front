@@ -2,15 +2,15 @@ app-sentence-block {
     width: 49%;
     margin-bottom: 50px;
 }
-app-sentence-block:last-child {
-    margin-bottom: 0;
-}
 .sentence-block-margin {
     margin-right: 40px;
 }
 .sentence-section{
     margin-top: var(--section-margin);
     margin-bottom: 60px;
+}
+.sentence-section .extented-container {
+    align-items: stretch;
 }
 .tag-slider-section {
     background: var(--dark-color);
@@ -22,9 +22,13 @@ app-sentence-block:last-child {
 .extented-container{
     flex-wrap: nowrap;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 769px) {
     app-sentence-block {
         width: 100%;
+    }
+    app-sentence-block:last-child {
+        margin-bottom: 0;
     }
     .sentence-block-margin {
         margin-right: 0;
