@@ -54,6 +54,7 @@ app-sentence-block {
     align-self: center;
     position: relative;
     z-index: 20;
+    cursor: pointer;
 }
 .genres-slider-section {
     overflow: hidden;

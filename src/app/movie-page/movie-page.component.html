@@ -11,11 +11,6 @@
                 </div>
                 <div class="movie-page-banner-title">
                     <h2 class="movie-title">{{movie?.title}}</h2>
-                    <!-- <div class="info-panel">
-                        <span i18n>В избранное</span>
-                        <span i18n>Добавить на будущее</span>
-                        <span class="likes">likes</span>
-                    </div> -->
                     <a [href]="'https://megogo.net/ru/view/'+movie?.megogo_id">
                         <button class="watch-btn" mat-flat-button i18n>
                             Смотреть
@@ -30,10 +25,20 @@
 <section class="tabs-section">
     <div *ngIf="movie" class="container">
         <mat-tab-group class="movie-description" dynamicHeight>
-            <mat-tab i18n-label label="Описание">
+            <mat-tab>
+                <ng-template mat-tab-label i18n>
+                    <span class="tab-label">
+                        Описание
+                    </span>
+                </ng-template>
                 <app-movie-info [movie]="movie"></app-movie-info>
             </mat-tab>
-            <mat-tab *ngIf="movie.gallery && movie.gallery.length > 0" i18n-label label="Кадры">
+            <mat-tab *ngIf="movie.gallery && movie.gallery.length > 0">
+                <ng-template mat-tab-label i18n>
+                    <span class="tab-label">
+                        Кадры
+                    </span>
+                </ng-template>
                 <div class="gallery-container">
                     <img class="gallery-img" *ngFor="let url of movie.gallery" [src]="url" alt="">
                 </div>

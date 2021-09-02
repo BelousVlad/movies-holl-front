@@ -12,7 +12,7 @@
 </ng-template>
 
 <div class="container">
-    <h2 [style.font-size.px]="32" i18n>Фильмы</h2>
+    <h2 class="movies-title" i18n>Фильмы</h2>
 </div>
 
 <section class="control-section">
@@ -22,7 +22,7 @@
                 <ng-template [ngTemplateOutlet]='lists_component'></ng-template>
             </div>
             <div class="panel-item genres-list">
-                <mat-form-field >
+                <mat-form-field>
                     <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event.value)">
                         <mat-option *ngFor="let genre of genres" [value]="genre">
                             {{genre.title}}

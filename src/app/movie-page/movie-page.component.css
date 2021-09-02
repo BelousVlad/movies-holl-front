@@ -93,6 +93,9 @@
 .tabs-section {
     margin-bottom: 50px;
 }
+.tab-label {
+    font-size: 18px;
+}
 @media (max-width: 768px) {
     .frame-preview {
         display: none;

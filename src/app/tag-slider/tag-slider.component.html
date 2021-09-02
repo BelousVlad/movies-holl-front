@@ -2,7 +2,7 @@
         [config]="sliderConfig"  
         #slickModal="slick-carousel">
         <div *ngFor="let item of slides" class="slide">
-            <app-tag-slide ngxSlickItem [item]="item" [style.margin]="'0 auto'">
+            <app-tag-slide ngxSlickItem [genre]="item" [style.margin]="'0 auto'">
             </app-tag-slide>
         </div>
 </ngx-slick-carousel>

@@ -28,10 +28,12 @@
 }
 ::ng-deep mat-button-toggle-group.lists-box-group .mat-button-toggle-label-content {
     line-height: 37px;
+    font-size: 18px;
 }
 mat-button-toggle-group.lists-box-group {
     border-radius: 0;
-    border: 1px solid var(--green-color)
+    border: 1px solid var(--green-color);
+    overflow: visible;
 }
 mat-button-toggle-group.lists-box-group .mat-button-toggle-appearance-standard {
     background: transparent;
@@ -43,6 +45,7 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-appearance-standard {
 
 mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
     background: var(--green-color);
+    box-shadow: 0px 0px 7.80366px rgba(0, 249, 12, 0.7);
 }
 .sorts-box mat-button-toggle-group{
     border-radius: 0;
@@ -59,6 +62,7 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
 }
 ::ng-deep .mat-button-toggle-button {
     height: 100%;
+    font-size: 18px !important;
 }
 ::ng-deep .sorts-box mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-label-content{
     color: var(--green-color);
@@ -129,4 +133,9 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
 .slidenav-menu app-mobile-slider {
     margin-bottom:  18px;
     display: block;
+}
+.movies-title {
+    font-size: 32px;
+    margin-top: 38px;
+    margin-bottom: 48px;
 }

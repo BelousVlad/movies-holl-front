@@ -11,3 +11,7 @@
 .max-page {
     color: var(--gray2-color);
 }
+.current-page,
+.max-page {
+    font-size: 18px;
+}

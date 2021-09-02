@@ -6,7 +6,7 @@
         </div>
         <div class="info-field">
             <div class="info-field-title">Imdb:</div>
-            <div i18n>{{movie.imdb || 'Отсутствует'}}</div>
+            <div i18n>{{movie.imdb != 0 ? movie.imdb : 'Отсутствует'}}</div>
         </div>
         <div class="info-field">
             <div class="info-field-title" i18n>Жанры:</div>
