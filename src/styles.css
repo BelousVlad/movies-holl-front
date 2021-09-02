@@ -14,7 +14,8 @@ body { margin: 0; }
   --green-color: #00BA0F;
   --green2-color: #008C0B;
   --gray2-color: #757575;
-  font-family: 'Myriad Pro', sans-serif;
+  --section-margin: 110px;
+  font-family: 'Myriad Pro', sans-serif !important;
 }
 .extented-container,
 .container{
@@ -75,6 +76,11 @@ body { margin: 0; }
   }
   .extented-container{
     width: 1385px;
+  }
+}
+@media (max-width: 769px) {
+  * {
+    --section-margin: 78px;
   }
 }
 

@@ -7,12 +7,13 @@ section {
     background-image: url('../../assets/images/callback-section-bg.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
-    background-position: right;
+    background-position: center;
+    background-color: #00090d;
 }
 
 @media (max-width: 768px) {
     section {
-        padding: 25px 0;
+        padding: 40px 0;
         background-position: calc(100% + 30vw) 0;
     }
 }

@@ -27,8 +27,9 @@ export class BonusSliderComponent implements OnInit {
         breakpoint: 1200,
         settings: {
           variableWidth: true,
+          slidesToScroll: 1,
         }
-      }
+      },
     ]
   }
 

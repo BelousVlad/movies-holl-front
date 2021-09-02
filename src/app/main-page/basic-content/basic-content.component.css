@@ -2,11 +2,14 @@ app-sentence-block {
     width: 49%;
     margin-bottom: 50px;
 }
+app-sentence-block:last-child {
+    margin-bottom: 0;
+}
 .sentence-block-margin {
     margin-right: 40px;
 }
 .sentence-section{
-    margin-top: 110px;
+    margin-top: var(--section-margin);
     margin-bottom: 60px;
 }
 .tag-slider-section {
@@ -14,7 +17,7 @@ app-sentence-block {
     overflow: hidden;
     width: 100%;
     padding: 20px 0;
-    margin-bottom: 110px;
+    margin-bottom: var(--section-margin);
 }
 .extented-container{
     flex-wrap: nowrap;
@@ -33,6 +36,19 @@ app-sentence-block {
         display: none;
     }
 }
-app-genre-movies-banners-slider {
-    margin-bottom: 110px;
+.genre-slider {
+    margin-bottom: var(--section-margin);
+}
+.genre-slider.last {
+    margin-bottom: 25px;
+}
+.genres-container {
+    flex-direction: column;
+    margin-bottom: var(--section-margin);
+}
+.genres-next-button {
+    align-self: center;
+}
+.genres-slider-section {
+    overflow: hidden;
 }

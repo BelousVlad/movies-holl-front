@@ -7,3 +7,11 @@ mat-sidenav-content {
 mat-sidenav{
     padding: 9px 17px;
 }
+app-devices-applications-section {
+    margin-bottom: var(--section-margin);
+    display: block;
+}
+app-bonus-section {
+    margin-bottom: var(--section-margin);
+    display: block;
+}

@@ -10,7 +10,6 @@
     line-height: 36px;
     margin-bottom: 25px;
 }
-
 .sentence-text{
     margin-bottom: 48px;
     font-size: 15px;
@@ -30,19 +29,37 @@
     border-color: var(--green-color);
     color: var(--green-color);
 }
-
-.sentence-link a{
-    color: var(--green-color);
-    text-decoration: none;
-}
-
 @media (max-width: 768px) {
     :host {
-        padding: 40px 10px;
+        padding: 40px 6px;
+        height: unset;
+    }
+    .sentense-title{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    .sentence-text{
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 17px;
+    }
+    .sentence-link{
+        width: calc(100% - 15px);
+        height: 58px;
+        padding: unset;
+        display: block;
+        margin: 0 4px 0 11px;
+    }
+    .sentence-link-a {
+        text-decoration: none;
+        width: 100%;
+        display: block;
     }
 }
 @media (max-width: 992px) {
-    .sentence-link {
+    /* .sentence-link {
         padding: 18px 25px;
-    }
+    } */
 }

@@ -4,16 +4,45 @@
     font-size: 18px;
     margin-top: 30px;
 }
+.bonus-btn,
+.bonus-head,
+.bonus-cashback {
+    margin-left: 15.5px;
+}
+@media (max-width: 1400px) {
+    .bonus-btn,
+    .bonus-head,
+    .bonus-cashback {
+        margin-left: 39px;
+    }
+}
+@media (max-width: 1200px) {
+    .bonus-btn,
+    .bonus-head,
+    .bonus-cashback {
+        margin-left: 0;
+    }
+}
 .bonus-head {
     font-size: 36px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 .green-text {
     color: var(--green2-color);
 }
 .bonus-cashback {
     font-size: 24px;
+    margin-bottom: 28px;
 }
 section {
-    margin: 70px 0;
+    overflow: hidden;
+}
+@media (max-width: 769px) {
+    .bonus-head {
+        font-size: 24px;
+    }
+    .bonus-cashback {
+        font-size: 18px;
+    }
 }

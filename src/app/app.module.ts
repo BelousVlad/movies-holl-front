@@ -78,6 +78,10 @@ import { PageControllComponent } from './movies-list/movies-section/page-control
 import { BonusSectionComponent } from './bonus-section/bonus-section.component';
 import { BonusSliderComponent } from './bonus-section/bonus-slider/bonus-slider.component';
 import { NotMoviesComponent } from './movies-list/movies-section/not-movies/not-movies.component';
+import { RefreshButtonComponent } from './elements/refresh-button/refresh-button.component';
+import { TelegramIconComponent } from './elements/social-icons/telegram-icon/telegram-icon.component';
+import { PrinterestIconComponent } from './elements/social-icons/printerest-icon/printerest-icon.component';
+import { TwitterIconComponent } from './elements/social-icons/twitter-icon/twitter-icon.component';
 
 @NgModule({
   declarations: [
@@ -142,6 +146,10 @@ import { NotMoviesComponent } from './movies-list/movies-section/not-movies/not-
     BonusSectionComponent,
     BonusSliderComponent,
     NotMoviesComponent,
+    RefreshButtonComponent,
+    TelegramIconComponent,
+    PrinterestIconComponent,
+    TwitterIconComponent,
   ],
   imports: [
     BrowserModule,

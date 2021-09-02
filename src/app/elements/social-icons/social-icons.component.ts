@@ -11,9 +11,6 @@ export class SocialIconsComponent implements OnInit {
 
   constructor() { }
   
-  ngAfterViewInit(): void {
-  }
-
   ngOnInit(): void {
     
   }

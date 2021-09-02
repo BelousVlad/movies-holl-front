@@ -1,6 +1,9 @@
 app-movie-element {
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+}
+.slide {
+    display: flex;
+    justify-content: center;
 }
 @media (max-width: 1200px) {
     .slide {

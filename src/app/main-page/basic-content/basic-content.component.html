@@ -18,14 +18,15 @@
     </div>
 </section>
 
-<div class="container">
-    <!-- <app-movies-banners-slider [style.width]="'100%'">
-    </app-movies-banners-slider> -->
-    <app-genre-movies-banners-slider [style.width.%]="100" 
-        *ngFor="let genre of sliders_genres; index as i"
-        [genre]="genre"
-        [controll_id]="'genre_banner'+i"
-        >
-    </app-genre-movies-banners-slider>
-    <!-- sliders_genres -->
-</div>
+<section class="genres-slider-section">
+    <div class="container genres-container">
+        <app-genre-movies-banners-slider [style.width.%]="100" 
+            *ngFor="let genre of sliders_genres; index as i"
+            [genre]="genre"
+            [controll_id]="'genre_banner'+i"
+            class="genre-slider"
+            [ngClass]="{'last': i === sliders_genres.length-1}">
+        </app-genre-movies-banners-slider>
+        <app-refresh-button (click)="onNextClick()" class="genres-next-button"></app-refresh-button>
+    </div>
+</section>

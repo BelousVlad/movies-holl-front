@@ -32,17 +32,31 @@ export class BasicContentComponent implements OnInit {
   ]
 
   sliders_genres: Array<Genre> = [];
+  genres: Array<Genre> = [];
+
+  add_genre_count = 2;
+  genre_current = 0;
 
   ngOnInit(): void {
-    this.genresService.getGenreByTitle('Комедии').subscribe(
-      item => this.sliders_genres.push(item)
-    );
-    this.genresService.getGenreByTitle('Драмы').subscribe(
-      item => this.sliders_genres.push(item)
-    );
-    this.genresService.getGenreByTitle('Детективы').subscribe(
-      item => this.sliders_genres.push(item)
-    );
+    this.genresService.getGenres().subscribe({
+      next: item => this.genres.push(item),
+      complete: () => {
+        this.addGenreSliders(3);
+      }
+    })
+  }
+
+  addGenreSliders(count: number) {
+    let i = this.genre_current; 
+    for(; i < this.genres.length && i < this.genre_current + count; ++i)
+    {
+      this.sliders_genres.push(this.genres[i]);
+    }
+    this.genre_current = i;
+  }
+
+  onNextClick() {
+    this.addGenreSliders(this.add_genre_count)
   }
 
 }
