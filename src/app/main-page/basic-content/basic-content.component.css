@@ -52,6 +52,8 @@ app-sentence-block {
 }
 .genres-next-button {
     align-self: center;
+    position: relative;
+    z-index: 20;
 }
 .genres-slider-section {
     overflow: hidden;
