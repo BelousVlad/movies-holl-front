@@ -1,10 +1,4 @@
 
-<!-- <app-switcher [items]="swichItems"> -->
-    <!-- <ng-template #template1 let-item let-id="index">
-        <a href="#">{{item.text}}</a>
-    </ng-template> -->
-<!-- </app-switcher> -->
-
 <ng-template #lists_component>
     <mat-button-toggle-group class="lists lists-box-group" [(value)]="selectedList" (change)="onListChange($event.value)">
         <mat-button-toggle *ngFor="let item of lists" [value]="item">{{item.text}}</mat-button-toggle>
@@ -21,13 +15,46 @@
             <div class="lists-box panel-item">
                 <ng-template [ngTemplateOutlet]='lists_component'></ng-template>
             </div>
-            <div class="panel-item genres-list">
-                <mat-form-field>
-                    <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event.value)">
-                        <mat-option *ngFor="let genre of genres" [value]="genre">
+            <div class="panel-item genres-list" (click)="enableAutocomplete($event)">
+                <mat-form-field appearance="fill"
+                (focusin)="active_genre_autocomplete = true"
+                >
+                    <input
+                        type="text"
+                        matInput
+                        autocomplete="false"
+                        [formControl]="genresFormControl"
+                        [ngModel]="selectedGenre.title"
+                        class="selected-genre-input"
+                        >
+                        <!-- [ngModel]="selectedGenre" -->
+                        <!-- [matAutocomplete]="genres_auto" -->
+                    <span matSuffix>
+                        <app-arrow-down></app-arrow-down>
+                    </span>
+
+                    <app-autocomplete
+                        class="genres_autocomplete"
+                        *ngIf="active_genre_autocomplete"
+                        >
+                        <mat-selection-list role="list" 
+                            [multiple]="false"
+                            (selectionChange)="onGenreChanged($event.option.value)"
+                            >
+                            <mat-list-option *ngFor="let genre of filteredGenres | async" [value]="genre">
+                                {{genre.title}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </app-autocomplete>
+                    
+                    <!-- <mat-autocomplete autoActiveFirstOption [displayWith]="genreDisplay" (optionSelected)="onGenreChanged($event.option.value)"
+                        #genres_auto="matAutocomplete">
+                        <mat-option *ngFor="let genre of filteredGenres | async" [value]="genre">
                             {{genre.title}}
                         </mat-option>
-                    </mat-select>
+                    </mat-autocomplete> -->
+                    <!-- <mat-select [style.width.px]='155' [(value)]="selectedGenre" [style.text-align]="'center'" (selectionChange)="onGenreChanged($event.value)">
+                    </mat-select> -->
                 </mat-form-field>
             </div>
             <div class="panel-item sorts-box">

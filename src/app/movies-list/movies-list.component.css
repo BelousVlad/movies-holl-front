@@ -16,6 +16,7 @@
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
     background-color: #fff0;
+    padding-right: 2em !important;
 }
 ::ng-deep .mat-select-arrow {
     color: #ffff;
@@ -73,13 +74,13 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
 .sorts-box {
     flex-grow: 1;
 }
-@media (min-width: 992px) {
+@media (min-width: 1400px) {
     .genres-list {
         border-right: none;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .panel-item {
         flex-grow: 1;
         display: flex;
@@ -90,12 +91,12 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
         margin-right: 0;
     }
 }
-@media (max-width: 1200px) and (min-width: 768px) {
+@media (max-width: 1400px) and (min-width: 768px) {
     .lists-box {
         border-right: none;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
     .sorts-box {
         border-top: 3px solid rgba(50, 50, 50, 1);
     }
@@ -138,4 +139,27 @@ mat-button-toggle-group.lists-box-group .mat-button-toggle-checked {
     font-size: 32px;
     margin-top: 38px;
     margin-bottom: 48px;
+}
+.selected-genre-input{
+    font-size: 18px;
+    text-align: center;
+}
+.genres-list:hover .selected-genre-input{
+    color: var(--green-color);
+}
+::ng-deep .genres-list:hover app-arrow-down path{
+    fill: var(--green-color);
+}
+.selected-genre-input,
+app-arrow-down {
+    cursor: pointer;
+}
+.genres_autocomplete {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+::ng-deep .genres-list .mat-form-field-infix {
+    position: static !important;
 }

@@ -36,11 +36,12 @@ a{
 .social-list{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 }
 .social-list-container {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .support-block{
     min-width: 288px;
@@ -87,6 +88,7 @@ a{
     }
     .support-block {
         align-self: center;
+        overflow: hidden;
     }
     .documents-link:not(.mobile-visible){
         display: none;

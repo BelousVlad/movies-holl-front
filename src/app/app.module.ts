@@ -82,6 +82,9 @@ import { RefreshButtonComponent } from './elements/refresh-button/refresh-button
 import { TelegramIconComponent } from './elements/social-icons/telegram-icon/telegram-icon.component';
 import { PrinterestIconComponent } from './elements/social-icons/printerest-icon/printerest-icon.component';
 import { TwitterIconComponent } from './elements/social-icons/twitter-icon/twitter-icon.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon';
+import { ArrowDownComponent } from './elements/arrows/arrow-down/arrow-down.component';
 
 @NgModule({
   declarations: [
@@ -150,11 +153,14 @@ import { TwitterIconComponent } from './elements/social-icons/twitter-icon/twitt
     TelegramIconComponent,
     PrinterestIconComponent,
     TwitterIconComponent,
+    ArrowDownComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatIconModule,
     SlickCarouselModule,
     MatCarouselModule,
     FormsModule,
@@ -170,6 +176,7 @@ import { TwitterIconComponent } from './elements/social-icons/twitter-icon/twitt
     HttpClientModule,
     MatTabsModule,
     MatMenuModule,
+    MatAutocompleteModule,
   ],
   providers: [ SlickCarouselComponent,
     // { provide: LOCALE_ID, useValue: getLocaleId() }

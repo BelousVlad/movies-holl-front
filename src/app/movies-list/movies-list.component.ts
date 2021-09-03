@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, HostListener, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { delay, first, map, } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { delay, first, map, startWith, } from 'rxjs/operators';
 import { Genre } from '../domain-model/Genre';
 import { GenresService } from '../services/genres/genres.service';
 import { MobileNavContentService } from '../services/mobile-nav-content/mobile-nav-content.service';
@@ -13,6 +15,10 @@ import { MoviesSectionComponent } from './movies-section/movies-section.componen
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit, AfterViewInit {
+
+  genresFormControl = new FormControl();
+  filteredGenres!: Observable<Array<Genre>>;
+
   lists = [
     { text: $localize`Все`, list: 'advod,svod,tvod,dto,fvod'},
     { text: $localize`Бесплатные`, list: 'advod,fvod' },
@@ -21,7 +27,7 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   selectedList = this.lists[0];
 
   genres: Array<Genre> = [new Genre(-1, $localize`Все жанры`)]
-  selectedGenre!: Genre;
+  selectedGenre: Genre = this.genres[0];
 
   sorts: Array<{
     title: string,
@@ -39,7 +45,10 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
       title: $localize`По дате выпуска`,
       sort_by: 'premier_date'
     },
-
+    {
+      title: $localize`По по рейтингу`,
+      sort_by: 'imdb'
+    },
   ]
 
   selectedSort = this.sorts[0];
@@ -54,8 +63,6 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
     private mobileNavService: MobileNavContentService, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
-    
-    
     this.genresService.getGenres()
     .subscribe({
       next: (item) => this.genres.push(item),
@@ -67,11 +74,14 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
             const finded = this.genres.find(_=> _.id == item);
             if(finded)
               this.selectedGenre = finded
-            else
-              this.selectedGenre = this.genres[0];
             this.updateValues()
             this.movies_section.refereshList();
         })
+
+        this.filteredGenres = this.genresFormControl.valueChanges.pipe(
+          startWith(''),
+          map(_ => this._genreFilter(_))
+        )
       }
     })
   }
@@ -149,6 +159,27 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   closeMobileFilters()
   {
     this.sidenavService.setInactive();
+  }
+
+  active_genre_autocomplete: boolean = false;
+
+  private _genreFilter(filter: string): Array<Genre> {
+    if(filter)
+      return this.genres.slice().sort((genre, genre2) => genre.title.includes(filter) ? -1 : 1);
+    return this.genres;
+  }
+
+  @HostListener('document:click', ['$event'])
+  disableAutocomplete(event: any)
+  {
+    this.active_genre_autocomplete = false;
+  }
+  // @HostListener('click', ['$event'])
+
+  enableAutocomplete(event: FocusEvent|MouseEvent)
+  {
+    this.active_genre_autocomplete = true;
+    event.stopPropagation();
   }
 
 }
