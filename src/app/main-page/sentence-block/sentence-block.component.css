@@ -30,6 +30,7 @@
     padding: 10px 60px;
     border-color: var(--green-color);
     color: var(--green-color);
+    font-size: 18px;
 }
 .sentence-link-a{
     margin-top: auto;

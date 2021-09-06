@@ -174,7 +174,6 @@ export class MoviesListComponent implements OnInit, AfterViewInit {
   {
     this.active_genre_autocomplete = false;
   }
-  // @HostListener('click', ['$event'])
 
   enableAutocomplete(event: FocusEvent|MouseEvent)
   {

@@ -2,7 +2,11 @@
     display: flex;
 }
 .arrow {
-    margin: 0 20px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.arrow:active {
+    transform: scale(1.1);
 }
 .splitter {
     margin: 0 3px;

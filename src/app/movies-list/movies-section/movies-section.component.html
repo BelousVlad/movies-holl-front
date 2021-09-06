@@ -1,4 +1,4 @@
-<div class="container" *ngIf="movies.length">
+<div class="container" *ngIf="movies.length" #top_controll>
     <app-page-controll 
     [page]="page+1"
     [max_page]="max_pages"

@@ -43,6 +43,10 @@ export class MoviesSectionComponent implements OnInit {
     }
   }
 
+  private navigate_top_controll() {
+
+  }
+
   get max_pages()
   {
     return Math.ceil(this.max_items / this.limit);
