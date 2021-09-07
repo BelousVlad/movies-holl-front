@@ -1,5 +1,11 @@
-<div class="localization-box">
-    <a href="/uk" [ngClass]="{'active': locale == 'uk'}">UA</a>
-    <span>|</span>
-    <a href="/ru" [ngClass]="{'active': locale == 'ru'}">RU</a>
+<div class="localization-box" (click)="select.open()">
+    <div class="select-value">{{select.value}}</div>
+    <mat-select class="localization-select" panelClass="localization-panel" #select [value]="locale">
+        <a href="/ua">
+            <mat-option value="Ua">UA</mat-option>
+        </a>
+        <a href="/ru">
+            <mat-option value="Ru">RU</mat-option>
+        </a>
+    </mat-select>
 </div>

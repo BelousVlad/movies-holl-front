@@ -12,6 +12,4 @@ export class InputDirective implements OnInit{
   ngOnInit(): void {
     this.renderer.addClass(this.el.nativeElement, 'app-input');
   }
-
-
 }

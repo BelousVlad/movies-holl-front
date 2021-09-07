@@ -3,8 +3,9 @@
 </a>
 <nav>
     <ul>
-        <!-- <app-header-nav-items [items]="nav_menu"></app-header-nav-items> -->
+        <app-telephone-callback></app-telephone-callback>
         <app-header-nav-item *ngFor="let item of nav_menu" [item]="item">
         </app-header-nav-item>
+        <app-localization-select class="header-localization"></app-localization-select>
     </ul>
 </nav>

@@ -34,9 +34,6 @@ app-mobile-header-nav {
 .search-section-list{
     flex-grow: 1;
 }
-.header-localization {
-    font-size: 13px;
-}
 @media (max-width: 992px) {
     .header-localization {
         font-size: 12px;

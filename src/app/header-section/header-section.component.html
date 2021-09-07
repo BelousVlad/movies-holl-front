@@ -1,15 +1,11 @@
  <app-header
-            [style.height.px]='82'
+            [style.height.px]='62'
             (onMobileNavActiveChange)="onMobileNavActiveChange($event)"
             [ngClass]="{mobile: isMobile}">
 
     <div *ngIf="isMobile; then mobileBlock; else desktopBlock"></div>
     <ng-template #desktopBlock>
         <app-header-nav [nav_menu]='nav_menu'></app-header-nav>
-        <div class="localization-tel-box">
-            <app-localization-select class="header-localization"></app-localization-select>
-            <app-telephone-callback></app-telephone-callback>
-        </div>
     </ng-template>
     <ng-template #mobileBlock>
         <app-mobile-header-nav class="header-nav">
@@ -24,7 +20,7 @@
 
 </app-header>
 
-<div *ngIf="isMobile" [style.height.px]="82"></div>
+<div *ngIf="isMobile" [style.height.px]="62"></div>
 
 <div *ngIf="isMobile; else searchSection"></div>
 <ng-template #searchSection>

@@ -1,11 +1,18 @@
 :host {
     display: flex;
+    align-self: stretch;
 }
 nav {
     flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
 }
 nav ul {
     display: flex;
+    font-size: 16px;
+    margin: 0;
 }
 nav li {
     list-style-type: none;
@@ -23,7 +30,8 @@ a {
     align-items: center;
 }
 .logo img {
-    width: 100%;
+    width: 193px;
+    height: 43px;
 }
 @media (max-width: 1200px) {
     .logo{

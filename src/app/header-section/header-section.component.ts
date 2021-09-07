@@ -10,7 +10,7 @@ import { SidenavService } from '../services/sidenav/sidenav.service';
 })
 export class HeaderSectionComponent implements OnInit, AfterViewInit {
 
-  private mobile_breakpoint = 815;
+  private mobile_breakpoint = 992;
 
   isMobile!: boolean
   show_mobile_nav!: boolean

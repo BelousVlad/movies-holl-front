@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Genre } from 'src/app/domain-model/Genre';
-import { IMovie, Movie } from 'src/app/domain-model/Movie';
+import { IMovie } from 'src/app/domain-model/Movie';
 import { MoviesService } from 'src/app/services/movies/movies.service';
 
 @Component({
@@ -20,6 +20,8 @@ export class MoviesSectionComponent implements OnInit {
 
   movies: Array<IMovie> = []
 
+  @ViewChild('top_controll') top_controll!: ElementRef;
+
   constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
@@ -33,6 +35,7 @@ export class MoviesSectionComponent implements OnInit {
       this.page--;
       this.refereshList();
     }
+    this.navigate_top_controll()
   }
   nextPage()
   {
@@ -41,10 +44,11 @@ export class MoviesSectionComponent implements OnInit {
       this.page++;
       this.refereshList();
     }
+    this.navigate_top_controll()
   }
 
   private navigate_top_controll() {
-
+    this.top_controll.nativeElement.scrollIntoView();
   }
 
   get max_pages()

@@ -11,18 +11,20 @@
                 <a *ngFor="let record of list3" href="{{record.link}}"><li>{{record.text}}</li></a>
             </ul>
         </div>
-        <div class="footer-block support-block">
-            <div class="subscriber-list">
-                <ul>
-                    <li i18n>Абонентский отдел</li>
-                    <a *ngFor="let sub of subscriber_list" href="tel: {{sub.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{sub.text}}</li></a>
-                </ul>
-            </div>
-            <div class="technical-list">
-                <ul>
-                    <li i18n>Техподдержка</li>
-                    <a *ngFor="let tech of tech_sup_list" href="tel: {{tech.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{tech.text}}</li></a>
-                </ul>
+        <div class="footer-block socials-block">
+            <div class="support-block">
+                <div class="subscriber-list">
+                    <ul>
+                        <li i18n>Абонентский отдел</li>
+                        <a *ngFor="let sub of subscriber_list" href="tel: {{sub.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{sub.text}}</li></a>
+                    </ul>
+                </div>
+                <div class="technical-list">
+                    <ul>
+                        <li i18n>Техподдержка</li>
+                        <a *ngFor="let tech of tech_sup_list" href="tel: {{tech.tel}}"><li><img src="../../assets/icons/footer-telephone.svg">{{tech.text}}</li></a>
+                    </ul>
+                </div>
             </div>
                 
             <div class="social-list-container">
