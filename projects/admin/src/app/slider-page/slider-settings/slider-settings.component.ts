@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ISlide } from '../../domain-model/Slide';
 import { SliderService } from '../../services/slider.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SliderService } from '../../services/slider.service';
 })
 export class SliderSettingsComponent implements OnInit {
 
-  slides!: Array<any>;
+  slides!: Array<ISlide>;
 
   constructor(private sliderService: SliderService) { }
 

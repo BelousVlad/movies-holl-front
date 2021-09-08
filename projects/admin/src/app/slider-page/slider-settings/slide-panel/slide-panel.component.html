@@ -1,0 +1,39 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <span>
+                #{{slide.slide_id}}
+            </span>
+            <span class="header-id-title-separator">
+                -
+            </span>
+            <span>
+                {{slide.title}}
+            </span>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="inputs-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Заголовок</mat-label>
+            <input type="text" matInput [(ngModel)]="slide.title">
+        </mat-form-field>
+        <img mat-card-image (click)="file_input.click()" [src]="loaded_img || slide.image || 'assets/unknow-image.jpg'" class="image">
+        <input type="file" (change)="onLoadImage($event)" #file_input hidden>
+        <mat-form-field appearance="fill">
+            <mat-label>Описание</mat-label>
+            <textarea type="text" matInput [(ngModel)]="slide.note"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Тест кнопки</mat-label>
+            <input type="text" matInput [(ngModel)]="slide.link_text"/>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Ссылка кнопки</mat-label>
+            <input type="text" matInput [(ngModel)]="slide.link"/>
+        </mat-form-field>
+    </div>
+    <mat-action-row>
+        <button mat-raised-button class="cancel-btn" (click)="onCancel()">Отмена</button>
+        <button mat-raised-button class="save-btn"   (click)="onSave()"  >Сохранить</button>
+    </mat-action-row>
+</mat-expansion-panel>

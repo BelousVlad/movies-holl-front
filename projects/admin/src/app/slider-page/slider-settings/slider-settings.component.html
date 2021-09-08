@@ -1,3 +1,8 @@
-<p *ngFor="let slide of slides">
-    {{slide.title}}
-</p>
+<mat-accordion>
+    <app-slide-panel *ngFor="let slide of slides" [slide]="slide">
+        
+    </app-slide-panel>
+    <!-- <p *ngFor="let slide of slides">
+        {{slide.title}}
+    </p> -->
+</mat-accordion>

@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SliderPageComponent } from './slider-page/slider-page.component';
 import { SliderSettingsComponent } from './slider-page/slider-settings/slider-settings.component';
 import { FormsModule } from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { SlidePanelComponent } from './slider-page/slider-settings/slide-panel/slide-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     LoginPageComponent,
     LoginComponent,
     SliderPageComponent,
-    SliderSettingsComponent
+    SliderSettingsComponent,
+    SlidePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +32,11 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
-    MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    MatExpansionModule,
+    MatCardModule,
   ],
   providers: [
     // { provide: 'api_url', useValue: "http://bonus.format-tv.net/api/" }

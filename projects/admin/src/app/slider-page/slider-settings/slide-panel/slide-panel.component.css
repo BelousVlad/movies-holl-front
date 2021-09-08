@@ -1,0 +1,36 @@
+.panel-header{
+    padding-top: 20px;
+}
+.header-id-title-separator {
+    position: relative;
+    display: block;
+    width: 10px;
+    margin: 0 10px;
+}
+.header-id-title-separator::after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    top: 50%;
+}
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cancel-btn {
+    background: red;
+}
+.save-btn {
+    background: green;
+}
+.image {
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 572px;
+    max-width: 100%;
+}

@@ -20,7 +20,12 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.sliderService.login(this.login as string, this.password as string)
       .subscribe(isLogin => {
-        this.router.navigate(['slider'])
+        console.log('isLogin', isLogin)
+        if(isLogin)
+        {
+          console.log(this.router); 
+          this.router.navigate(['slider'])
+        }
     })
   }
 

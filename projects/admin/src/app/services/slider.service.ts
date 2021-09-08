@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ISlide } from '../domain-model/Slide';
 
 @Injectable({
   providedIn: 'root'
@@ -13,29 +13,51 @@ export class SliderService{
 
   constructor(private http: HttpClient, @Inject('api_url') private url: string) { }
   
-  login(login: string, password: string): Observable<Boolean>{
+  login(login: string, password: string): Observable<boolean> {
 
     const data = new FormData();
     data.append('login', login);
     data.append('password', password);
 
     return this.http.post(`${this.url}/login`, data).pipe(
-      map((response: any) => {
-        if(response.session_id)
-          this.session = response.session_id;
-        return response.ok === 'ok';
-      })
+      map((response: any) => response.ok === 'ok')
     )
   }
 
-  isLogin(): Observable<Boolean> {
+  isLogin(): Observable<boolean> {
     return this.http.get<any>(`${this.url}/is_login`).pipe(
       map(response => response.login)
     )
   }
     
-  getSlides(): Observable<any> {
-    return this.http.get(`${this.url}/get_slides`)
+  getSlides(): Observable<Array<ISlide>> {
+    return this.http.get<Array<ISlide>>(`${this.url}/get_slides`).pipe(
+      map(arr => arr.map(slide => {
+        slide.image = `${this.url}/image_slide/${slide.image}`;
+        return slide;
+      }))
+    )
+  }
+
+  saveSlide(slide: ISlide): Observable<boolean> {
+
+    const data = new FormData();
+
+    const obj = {
+      'title': slide.title,
+      'note': slide.note,
+      'link': slide.link,
+      'link_text': slide.link_text,
+      'slide_id': slide.slide_id,
+    }
+    data.append('slide', JSON.stringify(obj));
+
+    if(slide.image)
+      data.append('image', slide.image);
+    
+    return this.http.post(`${this.url}/save_slide`, data).pipe(
+      map((response: any) => response.ok)
+    )
   }
 
 }
