@@ -16,6 +16,7 @@ import { SliderSettingsComponent } from './slider-page/slider-settings/slider-se
 import { FormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SlidePanelComponent } from './slider-page/slider-settings/slide-panel/slide-panel.component';
+import { SlideNewPanelComponent } from './slider-page/slider-settings/slide-new-panel/slide-new-panel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SlidePanelComponent } from './slider-page/slider-settings/slide-panel/s
     LoginComponent,
     SliderPageComponent,
     SliderSettingsComponent,
-    SlidePanelComponent
+    SlidePanelComponent,
+    SlideNewPanelComponent
   ],
   imports: [
     BrowserModule,

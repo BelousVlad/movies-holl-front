@@ -1,7 +1,6 @@
 <mat-accordion>
-    <app-slide-panel *ngFor="let slide of slides" [slide]="slide">
-        
-    </app-slide-panel>
+    <app-slide-new-panel (onSaved)="loadSlides()"></app-slide-new-panel>
+    <app-slide-panel *ngFor="let slide of slides" [slide]="slide" (onRemoved)="loadSlides()" (onSaved)="loadSlides()"></app-slide-panel>
     <!-- <p *ngFor="let slide of slides">
         {{slide.title}}
     </p> -->

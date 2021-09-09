@@ -40,9 +40,7 @@ export class SliderService{
   }
 
   saveSlide(slide: ISlide): Observable<boolean> {
-
     const data = new FormData();
-
     const obj = {
       'title': slide.title,
       'note': slide.note,
@@ -56,6 +54,14 @@ export class SliderService{
       data.append('image', slide.image);
     
     return this.http.post(`${this.url}/save_slide`, data).pipe(
+      map((response: any) => response.ok)
+    )
+  }
+
+  removeSlide(slide_id: number): Observable<boolean> {
+    const data = new FormData();
+    data.append('slide_id', String(slide_id));
+    return this.http.post(`${this.url}/remove_slide`, data).pipe(
       map((response: any) => response.ok)
     )
   }

@@ -1,5 +1,5 @@
 export interface ISlide {
-    slide_id: number;
+    slide_id?: number;
     title?: string;
     note?: string;
     link?: string;

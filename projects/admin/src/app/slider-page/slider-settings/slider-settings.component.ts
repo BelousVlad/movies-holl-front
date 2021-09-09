@@ -14,9 +14,13 @@ export class SliderSettingsComponent implements OnInit {
   constructor(private sliderService: SliderService) { }
 
   ngOnInit(): void {
+    this.loadSlides();
+  }
+  
+  loadSlides() {
     this.sliderService.getSlides().subscribe(
       items => this.slides = items
-    )
+    )  
   }
 
 }

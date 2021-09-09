@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ISlide } from '../../../domain-model/Slide';
 import { SliderService } from '../../../services/slider.service';
 
@@ -10,6 +11,10 @@ import { SliderService } from '../../../services/slider.service';
 export class SlidePanelComponent implements OnInit {
 
   @Input() slide!: ISlide;
+
+  @Output() onSaved = new EventEmitter<ISlide>();
+  @Output() onCanceled = new EventEmitter();
+  @Output() onRemoved = new EventEmitter();
 
   @ViewChild('file_input') input!: ElementRef<HTMLInputElement>
   fileReader = new FileReader();
@@ -31,12 +36,24 @@ export class SlidePanelComponent implements OnInit {
 
   onSave() {
     this.sliderService.saveSlide(this.slide).subscribe(
-      console.log
+      (is) => {
+        if(is)
+          this.onSaved.emit(this.slide)
+      }
     )
   }
 
   onCancel() {
+    this.onCanceled.emit();
+  }
 
+  onRemove() {
+    if(this.slide.slide_id)
+      this.sliderService.removeSlide(this.slide.slide_id).subscribe(
+        is => {
+          this.onRemoved.emit()
+        }
+      )
   }
 
   ngOnInit(): void {

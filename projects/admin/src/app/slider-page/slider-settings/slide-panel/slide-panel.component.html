@@ -1,6 +1,6 @@
-<mat-expansion-panel>
+<mat-expansion-panel #panel>
     <mat-expansion-panel-header>
-        <mat-panel-title>
+        <mat-panel-title *ngIf="slide.slide_id">
             <span>
                 #{{slide.slide_id}}
             </span>
@@ -10,6 +10,9 @@
             <span>
                 {{slide.title}}
             </span>
+        </mat-panel-title>
+        <mat-panel-title *ngIf="!slide.slide_id">
+            <span>Новый слайд</span>
         </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="inputs-container">
@@ -33,7 +36,8 @@
         </mat-form-field>
     </div>
     <mat-action-row>
+        <button mat-raised-button class="cancel-btn" (click)="onRemove()" *ngIf="slide.slide_id">Удалить</button>
         <button mat-raised-button class="cancel-btn" (click)="onCancel()">Отмена</button>
-        <button mat-raised-button class="save-btn"   (click)="onSave()"  >Сохранить</button>
+        <button mat-raised-button class="save-btn"   (click)="onSave(); panel.close()"  >Сохранить</button>
     </mat-action-row>
 </mat-expansion-panel>
