@@ -97,14 +97,13 @@ ul.slick-dots li {
         padding-left: 5vw;
         padding-right: 5vw;
         transition: .3s padding;
+        top: 50%;
+        height: unset;
+        justify-content: flex-start;
     }
     .slide.slick-current .slide-content {
         padding-left: 0;
         padding-right: 0;
-        position: absolute;
-        top: 50%;
-        height: unset;
-        justify-content: flex-start;
     }
     .slide img{
         height: 40%;

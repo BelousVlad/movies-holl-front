@@ -10,7 +10,8 @@ import { SliderService } from '../../../services/slider.service';
 })
 export class SlidePanelComponent implements OnInit {
 
-  @Input() slide!: ISlide;
+  @Input('slide') slideInput!: ISlide;
+  slide: ISlide = {};
 
   @Output() onSaved = new EventEmitter<ISlide>();
   @Output() onCanceled = new EventEmitter();
@@ -44,6 +45,7 @@ export class SlidePanelComponent implements OnInit {
   }
 
   onCancel() {
+    this.slideEqualsInput();
     this.onCanceled.emit();
   }
 
@@ -56,7 +58,17 @@ export class SlidePanelComponent implements OnInit {
       )
   }
 
+  private slideEqualsInput() {
+    this.slide.slide_id = this.slideInput.slide_id;
+    this.slide.title = this.slideInput.title;
+    this.slide.note = this.slideInput.note;
+    this.slide.link_text = this.slideInput.link_text;
+    this.slide.link = this.slideInput.link;
+    this.slide.image = this.slideInput.image;
+  }
+
   ngOnInit(): void {
+    this.slideEqualsInput();
   }
 
 }

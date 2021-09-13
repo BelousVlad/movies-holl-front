@@ -33,7 +33,8 @@ export class SliderService{
   getSlides(): Observable<Array<ISlide>> {
     return this.http.get<Array<ISlide>>(`${this.url}/get_slides`).pipe(
       map(arr => arr.map(slide => {
-        slide.image = `${this.url}/image_slide/${slide.image}`;
+        if(slide.image)
+          slide.image = `${this.url}/image_slide/${slide.image}`;
         return slide;
       }))
     )

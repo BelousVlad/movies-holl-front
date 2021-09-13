@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SlidesService } from '../services/slides/slides.service';
+// import { SliderService } from 'projects/admin/src/app/services/slider.service';
 import { SlideItem } from './SlideItem';
-import "jquery";
 
 @Component({
   selector: 'app-main-slider',
@@ -35,7 +36,7 @@ export class MainSliderComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(private slidesService: SlidesService) { }
 
   ngOnInit(): void {
     this.slides = [
@@ -44,6 +45,9 @@ export class MainSliderComponent implements OnInit {
       new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
       new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
     ]
+    this.slidesService.getSlides().subscribe(
+      res => this.slides = res
+    )
   }
 
 }

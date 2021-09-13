@@ -37,7 +37,7 @@
     </div>
     <mat-action-row>
         <button mat-raised-button class="cancel-btn" (click)="onRemove()" *ngIf="slide.slide_id">Удалить</button>
-        <button mat-raised-button class="cancel-btn" (click)="onCancel()">Отмена</button>
+        <button mat-raised-button class="cancel-btn" (click)="onCancel(); panel.close()">Отмена</button>
         <button mat-raised-button class="save-btn"   (click)="onSave(); panel.close()"  >Сохранить</button>
     </mat-action-row>
 </mat-expansion-panel>
