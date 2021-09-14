@@ -6,6 +6,7 @@ export type MenuItem = {
   text: string,
   link: string,
   menu?: Array<MenuItem>
+  icon?: string,
 }
 
 @Injectable({
@@ -45,14 +46,14 @@ export class MenusService {
   nav_list = [
     { text: $localize`Услуги`, link: '#', 
       menu: [
-        { text: $localize`Интернет`, link: 'https://format-tv.net/tariffs/' },
-        { text: $localize`Телевидение`, link: 'https://format-tv.net/tariffs/' },
-        { text: $localize`Умный дом`, link: 'https://format-tv.net/video/' },
-        { text: $localize`Сервисный Центр`, link: 'https://format-tv.net/service-center/' },
-        { text: $localize`WEB Плеер`, link: 'https://tv.format-tv.net/auth' },
-        { text: $localize`Для Бизнеса`, link: 'https://format-tv.net/web-business/' },
-        { text: $localize`Антивирус`, link: 'https://format-tv.net/antivirus/' },
-        { text: $localize`Кинозал`, link: 'https://online.format-tv.net/' },
+        { text: $localize`Интернет`, link: 'https://format-tv.net/tariffs/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/web-icon.png' },
+        { text: $localize`Телевидение`, link: 'https://format-tv.net/tariffs/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/tv-icon.png' },
+        { text: $localize`Умный дом`, link: 'https://format-tv.net/video/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/cctv-icon.png' },
+        { text: $localize`Сервисный Центр`, link: 'https://format-tv.net/service-center/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/service_center-icon.png' },
+        { text: $localize`WEB Плеер`, link: 'https://tv.format-tv.net/auth', icon: 'https://format-tv.net/wp-content/uploads/2019/06/interactive-icon.png' },
+        { text: $localize`Для Бизнеса`, link: 'https://format-tv.net/web-business/', icon: 'https://format-tv.net/wp-content/uploads/2021/07/for-business.svg' },
+        { text: $localize`Антивирус`, link: 'https://format-tv.net/antivirus/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/antivirus-icon.png' },
+        { text: $localize`Кинозал`, link: 'https://online.format-tv.net/', icon: 'https://format-tv.net/wp-content/uploads/2019/06/cinema-icon.png' },
       ]
     },
     { text: $localize`Для Бизнеса`, link: 'https://format-tv.net/web-business/' },

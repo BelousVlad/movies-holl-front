@@ -8,6 +8,8 @@ import { MenuItem } from 'src/app/services/menus-service/menus.service';
 })
 export class HeaderNavItemComponent implements OnInit {
   @Input() item!: MenuItem
+  show_menu = false;
+
   constructor() { }
 
   ngOnInit(): void {

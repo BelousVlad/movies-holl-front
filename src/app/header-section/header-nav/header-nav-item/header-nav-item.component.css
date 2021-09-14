@@ -37,3 +37,44 @@ li {
         width: 10px;
     }
 }
+.show-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 68px;
+    background: rgba(0,0,0,0.5);
+    z-index: 15;
+    transform: scale(1, 1);
+    transition: -webkit-transform 0.3s ease 0s, opacity 0.2s ease 0.1s;
+    border-bottom: 1px solid rgb(112, 112, 112);
+    display: flex;
+}
+.show-menu-bg {
+    position: fixed;
+    background: #000;
+    opacity: .3;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 14;
+}
+.show-menu-item {
+    width: 12.5%;
+    padding: 10px 45px 0 25px;
+    display: block;
+    color: var(--front-white-color);
+    text-decoration: none;
+}
+.show-menu-item img {
+    height: auto;
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+.show-menu-item p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 23px;
+}

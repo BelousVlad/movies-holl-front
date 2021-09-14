@@ -85,6 +85,7 @@ import { TwitterIconComponent } from './elements/social-icons/twitter-icon/twitt
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
 import { ArrowDownComponent } from './elements/arrows/arrow-down/arrow-down.component';
+import { MobilePanelNavItemComponent } from './header-section/mobile-nav-menu/mobile-panel-nav-items/mobile-panel-nav-item/mobile-panel-nav-item.component';
 
 @NgModule({
   declarations: [
@@ -154,6 +155,7 @@ import { ArrowDownComponent } from './elements/arrows/arrow-down/arrow-down.comp
     PrinterestIconComponent,
     TwitterIconComponent,
     ArrowDownComponent,
+    MobilePanelNavItemComponent,
     
   ],
   imports: [

@@ -39,12 +39,12 @@ export class MainSliderComponent implements OnInit {
   constructor(private slidesService: SlidesService) { }
 
   ngOnInit(): void {
-    this.slides = [
-      new SlideItem('../assets/images/banner.png', 'Удивительное путешествие доктора Дулиттла', 'Смотрите 22 000 фильмов','#', 'link_text'),
-      new SlideItem('https://format-tv.net/bonus2/uploads/1625486589-item-image-596-uk.png'),
-      new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
-      new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
-    ]
+    // this.slides = [
+    //   new SlideItem('../assets/images/banner.png', 'Удивительное путешествие доктора Дулиттла', 'Смотрите 22 000 фильмов','#', 'link_text'),
+    //   new SlideItem('https://format-tv.net/bonus2/uploads/1625486589-item-image-596-uk.png'),
+    //   new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
+    //   new SlideItem('https://format-tv.net/bonus2/uploads/old_items/id_403.png'),
+    // ]
     this.slidesService.getSlides().subscribe(
       res => this.slides = res
     )

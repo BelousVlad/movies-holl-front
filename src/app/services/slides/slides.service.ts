@@ -10,7 +10,7 @@ import { SlideItem } from 'src/app/main-slider/SlideItem';
 export class SlidesService {
 
   constructor(private http: HttpClient, @Inject('api_url') public url: String) {
-    this.url = '/api/slider';
+    this.url += '/slider';
   }
 
   getSlides(): Observable<Array<SlideItem>> {///slider

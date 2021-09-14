@@ -1,27 +1,21 @@
-<!-- <a *ngFor="let item of items" href="{{ item.link }}"> -->
-
-<a *ngIf="!item.menu" [href]="item.link" class="nav-item">
-    <li>
+<a *ngIf="!item.menu" [href]="item.link" class="nav-item" >
+    <span>
         {{item.text}}
-    </li>
+    </span>
 </a>
 
-<li *ngIf="item.menu" 
-[matMenuTriggerFor]="menu" class="nav-item">
+<a *ngIf="item.menu" class="nav-item" (click)="show_menu = !show_menu">
     <span>
         {{item.text}}
     </span>
     <img class="arrow-icon" src="../../../../assets/icons/nav-arrow.svg" alt="">
-    <mat-menu #menu="matMenu">
-        <li mat-menu-item *ngFor="let inner_item of item.menu">
-            <a [href]="inner_item.link" class="nav-item">
-                {{inner_item.text}}
-            </a>
-        </li>
-    </mat-menu>
-</li>
+</a>
 
-<!-- <li *ngIf="item.menu" [matMenuTriggerFor]="menu">{{ item.text }}</li> -->
+<div *ngIf="item.menu && show_menu" class="show-menu">
+    <a *ngFor="let menu_item of item.menu" [href]="menu_item.link" class="show-menu-item">
+        <img *ngIf="menu_item.icon" [src]="menu_item.icon" alt="">
+        <p>{{menu_item.text}}</p>
+    </a>
+</div>
 
-
-<!-- </a> -->
+<div *ngIf="item.menu && show_menu" class="show-menu-bg" (click)="show_menu = false"></div>

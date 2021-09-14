@@ -1,0 +1,11 @@
+.nav-item {
+    color: var(--gray2-color);
+    text-decoration: none;
+    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 35px;
+    display: block;
+}
+.menu{
+    list-style-type: none;
+}

@@ -47,3 +47,8 @@ app-mobile-header-nav {
     align-items: center;
     height: 100%;
 }
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}

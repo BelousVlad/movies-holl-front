@@ -7,6 +7,9 @@ mat-sidenav-content {
 mat-sidenav{
     padding: 9px 17px;
 }
+::ng-deep mat-sidenav .mat-drawer-inner-container {
+    overflow: hidden;
+}
 app-devices-applications-section {
     margin-bottom: var(--section-margin);
     display: block;

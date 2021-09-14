@@ -1,0 +1,13 @@
+<a *ngIf="!item.menu" href="{{item.link}}" class="nav-item">{{item.text}}</a>
+<a *ngIf="item.menu" class="nav-item" (click)="show_menu = !show_menu">
+    {{item.text}}
+    <img class="arrow-icon" src="../../../../assets/icons/nav-arrow-mobile.svg" alt="">
+</a>
+
+<ul *ngIf="item.menu && show_menu" class="menu">
+    <li *ngFor="let menu_item of item.menu">
+        <a [href]="menu_item.link" class="nav-item">
+            {{menu_item.text}}
+        </a>
+    </li>
+</ul>
