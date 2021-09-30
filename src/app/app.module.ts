@@ -86,6 +86,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
 import { ArrowDownComponent } from './elements/arrows/arrow-down/arrow-down.component';
 import { MobilePanelNavItemComponent } from './header-section/mobile-nav-menu/mobile-panel-nav-items/mobile-panel-nav-item/mobile-panel-nav-item.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SetPhoneDialogComponent } from './dialogs/set-phone-dialog/set-phone-dialog.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -156,6 +159,7 @@ import { MobilePanelNavItemComponent } from './header-section/mobile-nav-menu/mo
     TwitterIconComponent,
     ArrowDownComponent,
     MobilePanelNavItemComponent,
+    SetPhoneDialogComponent,
     
   ],
   imports: [
@@ -179,6 +183,8 @@ import { MobilePanelNavItemComponent } from './header-section/mobile-nav-menu/mo
     MatTabsModule,
     MatMenuModule,
     MatAutocompleteModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [ SlickCarouselComponent,
     // { provide: LOCALE_ID, useValue: getLocaleId() }

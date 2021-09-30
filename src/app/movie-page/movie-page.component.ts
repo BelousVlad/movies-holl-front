@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Movie } from '../domain-model/Movie';
 import { MoviesService } from '../services/movies/movies.service';
+import { SubscribeService } from '../services/subscribe/subscribe.service';
 
 @Component({
   selector: 'app-movie-page',
@@ -15,7 +16,7 @@ export class MoviePageComponent implements OnInit, AfterViewInit {
   movie!: Movie;
   frame_preview!: string;
 
-  constructor(private route: ActivatedRoute, private moviesService: MoviesService, private viewportScroller: ViewportScroller) {}
+  constructor(private route: ActivatedRoute, private moviesService: MoviesService, private viewportScroller: ViewportScroller, private subService: SubscribeService) {}
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
@@ -30,6 +31,14 @@ export class MoviePageComponent implements OnInit, AfterViewInit {
         this.movie = item
       }
     )
+  }
+
+  onWatchClick() {
+    this.subService.start().subscribe(
+      res => {
+        console.log('sub_end');
+      }
+    );
   }
 
   ngAfterViewInit(): void {

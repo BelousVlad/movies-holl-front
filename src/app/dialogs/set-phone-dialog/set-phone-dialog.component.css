@@ -1,0 +1,9 @@
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+::ng-deep .mat-list-item-disabled {
+    opacity: .5;
+}
+::ng-deep .mat-list-item.mat-list-item-disabled:focus {
+    background: #000;
+}

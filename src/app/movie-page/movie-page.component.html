@@ -11,11 +11,11 @@
                 </div>
                 <div class="movie-page-banner-title">
                     <h2 class="movie-title">{{movie?.title}}</h2>
-                    <a [href]="'https://megogo.net/ru/view/'+movie?.megogo_id">
-                        <button class="watch-btn" mat-flat-button i18n>
+                    <!-- <a [href]="'https://megogo.net/ru/view/'+movie?.megogo_id"> -->
+                        <button class="watch-btn" mat-flat-button i18n (click)="onWatchClick()">
                             Смотреть
                         </button>
-                    </a>
+                    <!-- </a> -->
                     <!-- <a [href]="'https://megogo.net/ru/view/'+movie?.megogo_id">
                         <button class="watch-btn" mat-flat-button i18n>
                             Смотреть

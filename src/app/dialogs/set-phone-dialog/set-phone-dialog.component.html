@@ -1,0 +1,27 @@
+
+<mat-card>
+    <mat-card-title>
+        Выберите номер телефона
+    </mat-card-title>
+    <mat-card-subtitle>
+        На него прийдёи сообщение с логином и паролем
+    </mat-card-subtitle>
+    <mat-selection-list *ngIf="!custom_phone" #shoes [multiple]="false" [(ngModel)]="selected_phone" >
+        <mat-list-option *ngFor="let phone of data.phones; let i = index" [value]="{phone: phone, id: i}" [selected]="i === 0">
+            {{phone}}
+            <mat-divider *ngIf="i !== data.phones.length-1"></mat-divider>
+        </mat-list-option>
+    </mat-selection-list>
+    <mat-form-field *ngIf="custom_phone">
+        <mat-label>
+            Введите номер
+        </mat-label>
+        <input type="tel" matInput [(ngModel)]="inputed_phone" [formControl]="phoneControll">
+    </mat-form-field>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary" *ngIf="!custom_phone" (click)="custom_phone=true">Другой номер</button>
+        <button mat-raised-button color="primary" *ngIf="custom_phone" (click)="custom_phone=false">Назад</button>
+        <!-- <button mat-raised-button color="primary" [mat-dialog-close]="{ input: custom_phone && inputed_phone, select: selected_phone }">ОК</button> -->
+        <button mat-raised-button color="primary" (click)="sendPhone()">ОК</button>
+    </mat-card-actions>
+</mat-card>
